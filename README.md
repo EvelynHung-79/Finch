@@ -20,11 +20,19 @@ https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00716/125280/FINCH-Prompt
 If you use FINCH / FinchPress, please cite the paper.
 
 ```bibtex
-@article{finch2025,
-  title   = {FINCH: Prompt-guided Key-Value Cache Compression},
-  journal = {Transactions of the Association for Computational Linguistics},
-  year    = {2025},
-  doi     = {10.1162/tacl_a_00716}
+@article{10.1162/tacl_a_00716,
+    author = {Corallo, Giulio and Papotti, Paolo},
+    title = {FINCH: Prompt-guided Key-Value Cache Compression for Large Language Models},
+    journal = {Transactions of the Association for Computational Linguistics},
+    volume = {12},
+    pages = {1517-1532},
+    year = {2024},
+    month = {11},
+    abstract = {Recent large language model applications, such as Retrieval-Augmented Generation and chatbots, have led to an increased need to process longer input contexts. However, this requirement is hampered by inherent limitations. Architecturally, models are constrained by a context window defined during training. Additionally, processing extensive texts requires substantial GPU memory. We propose a novel approach, Finch, to compress the input context by leveraging the pre-trained model weights of the self-attention. Given a prompt and a long text, Finch iteratively identifies the most relevant Key (K) and Value (V) pairs over chunks of the text conditioned on the prompt. Only such pairs are stored in the KV cache, which, within the space constrained by the context window, ultimately contains a compressed version of the long text. Our proposal enables models to consume large inputs even with high compression (up to 93x) while preserving semantic integrity without the need for fine-tuning.},
+    issn = {2307-387X},
+    doi = {10.1162/tacl_a_00716},
+    url = {https://doi.org/10.1162/tacl_a_00716},
+    eprint = {https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00716/2480391/tacl_a_00716.pdf},
 }
 ```
 
@@ -41,11 +49,12 @@ pip install kvpress
 ```python
 from transformers import pipeline
 from kvpress import FinchPress
+import torch
 
 # 1) Build the KVPress generation pipeline
 device = "cuda:0"  # or "auto" / "cpu"
 model = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-model_kwargs = {"attn_implementation": "flash_attention_2"}
+model_kwargs = {"attn_implementation": "flash_attention_2", "torch_dtype": torch.bfloat16}
 
 pipe = pipeline(
     "kv-press-text-generation",
