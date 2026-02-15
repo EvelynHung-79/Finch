@@ -1,115 +1,83 @@
 import logging
 import os
+import pathlib
+import warnings
 import datasets
 import hydra
 import omegaconf
 import transformers
-from accelerate import Accelerator
-from omegaconf import DictConfig
 import torch
-
-from nn_core.common import PROJECT_ROOT
-
-# Force the execution of __init__.py if this file is executed directly.
-import context_compression # noqa
-
+from accelerate import Accelerator
 from accelerate.logging import get_logger
+
+# --- 1. 手動設定 PROJECT_ROOT 與 過濾 Log ---
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+# 強制過濾無意義的警告訊息
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
+logging.getLogger("hydra").setLevel(logging.WARNING)
+logging.getLogger("accelerate").setLevel(logging.WARNING)
+
+# 2. 屏蔽 Hugging Face 相關日誌
+logging.getLogger("transformers").setLevel(logging.ERROR)
+logging.getLogger("huggingface_hub").setLevel(logging.ERROR)
+logging.getLogger("datasets").setLevel(logging.ERROR)
+
+# 3. 屏蔽環境與核心警告
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3" 
+warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 logger = get_logger(__name__)
 
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
-
+# --- 2. 核心邏輯保持不變 ---
 def print_trainable_parameters(model):
-    """
-    Prints the number of trainable parameters in the model.
-    """
     trainable_params, all_param = 0, 0
     for _, param in model.named_parameters():
         all_param += param.numel()
         if param.requires_grad: trainable_params += param.numel()
-    logger.info(f"trainable params: {trainable_params} || all params: {all_param} || trainable %: {100 * trainable_params / all_param}")
+    logger.info(f"trainable params: {trainable_params} || all params: {all_param}")
 
-
-def run(cfg: DictConfig):
-    """Generic train loop.
-
-    Args:
-        cfg: run configuration, defined by Hydra in /conf
-
-    Returns:
-        the run directory inside the storage_dir used by the current experiment
-    """
-    accelerator_log_kwargs = {}
-    if not cfg.trainers.mode == "eval":
-        if cfg.trainers.training_config.with_tracking:
-            accelerator_log_kwargs["log_with"] = cfg.trainers.training_config.report_to
-            accelerator_log_kwargs["project_dir"] = cfg.trainers.training_config.output_dir
-        accelerator = Accelerator(
-            gradient_accumulation_steps=cfg.trainers.training_config.gradient_accumulation_steps,
-            **accelerator_log_kwargs)
-    else:
-        if cfg.trainers.evaluation_config.with_tracking:
-            accelerator_log_kwargs["log_with"] = cfg.trainers.evaluation_config.report_to
-            accelerator_log_kwargs["project_dir"] = cfg.trainers.evaluation_config.output_dir
-        accelerator = Accelerator(**accelerator_log_kwargs)
-
-    logging.basicConfig(
-        format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
-        datefmt="%m/%d/%Y %H:%M:%S",
-        level=logging.INFO,
-    )
-    logger.info(accelerator.state, main_process_only=False)
-    if accelerator.is_local_main_process:
-        datasets.utils.logging.set_verbosity_warning()
-        transformers.logging.set_verbosity_warning()
-    else:
-        datasets.utils.logging.set_verbosity_error()
-        transformers.logging.set_verbosity_error()
-    # Instantiate tokenizer and datasets
-    logger.info(f"Instantiating <{cfg.tokenizers['_target_']}>")
+def run(cfg: omegaconf.DictConfig):
+    accelerator = Accelerator(log_with="wandb")
+    
+    # 設定標準 Python Logging
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+    
+    # 實例化 Tokenizer 與 Model
+    logger.info(f"Loading Tokenizer...")
     tokenizer = hydra.utils.instantiate(cfg.tokenizers, _recursive_=False)
 
-    # Instantiate model
-    logger.info(f"Instantiating <{cfg.models['_target_']}>")
+    if tokenizer.pad_token is None:
+        # Llama 3 預設沒有 pad_token，通常設為 eos_token
+        tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.pad_token_id = tokenizer.eos_token_id
+        logger.info(f"Setting pad_token to eos_token: {tokenizer.pad_token}")
+    
+    logger.info(f"Loading Model: {cfg.models['_target_']}")
     model = hydra.utils.instantiate(cfg.models)
-    if model.dtype == torch.float32:
-        model = model.half()
-    if not cfg.trainers.mode == "eval":
-        print_trainable_parameters(model=model)
+    
+    if model.dtype != torch.bfloat16:
+        print("Switching model to bfloat16")
+        model = model.to(torch.bfloat16)
+    
+    model.resize_token_embeddings(len(tokenizer))
+    logger.info(f"Resized model embeddings to match tokenizer length: {len(tokenizer)}")
 
-    # Instantiate trainer
-    logger.info(f"Instantiating <{cfg.trainers['_target_']}>")
+    # 實例化 Trainer 並執行測試
     trainer = hydra.utils.instantiate(cfg.trainers, _recursive_=False)
-
-    if not cfg.trainers.mode == "eval":
-        logger.info(f"Instantiating <{cfg.custom_datasets.train['_target_']}>")
-        ds_train_obj = hydra.utils.instantiate(cfg.custom_datasets.train, tokenizer=tokenizer, model=model, _recursive_=False)
-        logger.info(f"Instantiating <{cfg.custom_datasets.validation['_target_']}>")
-        ds_valid_obj = hydra.utils.instantiate(cfg.custom_datasets.validation, tokenizer=tokenizer, model=model, _recursive_=False)
-        logger.info(f"Instantiating <{cfg.predictors['_target_']}>")
-        predictor_config = cfg.predictors
-        logger.info("Starting training!")
-        trainer.train(accelerator=accelerator, model=model, tokenizer=tokenizer, ds_train_obj=ds_train_obj, ds_val_obj=ds_valid_obj, predictor_config=predictor_config)
-        logger.info("Training finished!")
-
+    
     if cfg.trainers.mode in ["train_eval", "eval"]:
-        # Instantiate the metric
-        logger.info(f"Instantiating <{cfg.custom_datasets.test['_target_']}>")
         ds_eval_obj = hydra.utils.instantiate(cfg.custom_datasets.test, tokenizer=tokenizer, model=model, _recursive_=False)
-        logger.info(f"Instantiating <{cfg.predictors['_target_']}>")
         predictor_config = cfg.predictors
-
-        logger.info("Starting testing!")
+        logger.info("Starting Evaluation!")
         trainer.evaluate(accelerator=accelerator, model=model, tokenizer=tokenizer, ds_eval_obj=ds_eval_obj, predictor_config=predictor_config)
-        logger.info("Testing finished!")
 
-
-@hydra.main(config_path=str(PROJECT_ROOT / "conf"), config_name="default", version_base="1.2")
+@hydra.main(config_path="../../conf", config_name="default", version_base="1.2")
 def main(cfg: omegaconf.DictConfig):
-    """Run the main function."""
     run(cfg)
-
 
 if __name__ == "__main__":
     main()

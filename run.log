@@ -1,0 +1,222 @@
+[2026-02-12 17:20:14,152][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-12 17:20:14,164][__main__][INFO] - Loading Tokenizer...
+[2026-02-12 17:20:18,230][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-12 17:20:20,038][__main__][INFO] - Starting Evaluation!
+[2026-02-12 17:20:20,590][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-12 17:20:48,830][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 10:49:12,683][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 10:49:12,683][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 10:49:25,616][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 10:49:30,746][__main__][INFO] - Starting Evaluation!
+[2026-02-13 10:49:31,678][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 10:49:46,016][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 10:51:41,922][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 10:51:41,922][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 10:51:49,308][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 10:51:51,311][__main__][INFO] - Starting Evaluation!
+[2026-02-13 10:51:51,757][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 10:52:05,971][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 13:35:45,223][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 13:35:45,223][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 13:35:48,035][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 13:35:49,352][__main__][INFO] - Starting Evaluation!
+[2026-02-13 13:35:49,803][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 13:36:04,043][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 15:37:38,909][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 15:37:38,909][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 15:37:41,872][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 15:37:42,965][__main__][INFO] - Starting Evaluation!
+[2026-02-13 15:37:43,446][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 15:37:56,802][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 16:04:42,797][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 16:04:42,797][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 16:04:45,578][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-13 16:04:45,578][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 16:04:46,685][__main__][INFO] - Starting Evaluation!
+[2026-02-13 16:04:47,155][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 16:05:00,588][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 16:55:32,253][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 16:55:32,253][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 16:55:35,130][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-13 16:55:35,130][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 16:55:36,221][__main__][INFO] - Starting Evaluation!
+[2026-02-13 16:55:37,085][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 16:55:50,763][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 17:57:59,490][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 17:57:59,490][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 17:58:02,210][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-13 17:58:02,211][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 17:58:03,227][__main__][INFO] - Starting Evaluation!
+[2026-02-13 17:58:03,672][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 17:58:16,833][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 18:00:48,986][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 18:00:48,986][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 18:00:51,690][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-13 18:00:51,690][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 18:00:52,696][__main__][INFO] - Starting Evaluation!
+[2026-02-13 18:00:53,113][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 18:01:06,182][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 19:54:25,061][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 19:54:25,062][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 19:54:28,168][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-13 19:54:28,168][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-13 19:54:29,173][__main__][INFO] - Starting Evaluation!
+[2026-02-13 19:54:29,602][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-13 19:54:42,440][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-13 20:22:14,814][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-13 20:22:14,815][__main__][INFO] - Loading Tokenizer...
+[2026-02-13 20:22:17,496][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-13 20:22:17,497][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-14 10:37:58,203][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-14 10:37:58,203][__main__][INFO] - Loading Tokenizer...
+[2026-02-14 10:38:02,853][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-14 10:38:02,855][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-14 10:53:17,744][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-14 10:53:17,744][__main__][INFO] - Loading Tokenizer...
+[2026-02-14 10:53:22,267][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-14 10:53:22,270][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-14 10:53:23,464][__main__][INFO] - Starting Evaluation!
+[2026-02-14 10:53:23,893][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-14 10:53:56,028][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-14 11:53:33,497][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-14 11:53:33,497][__main__][INFO] - Loading Tokenizer...
+[2026-02-14 11:53:38,517][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-14 11:53:38,520][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-14 11:53:39,737][__main__][INFO] - Starting Evaluation!
+[2026-02-14 11:53:40,174][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-14 11:54:11,922][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-14 11:55:56,298][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-14 11:55:56,299][__main__][INFO] - Loading Tokenizer...
+[2026-02-14 11:56:01,506][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-14 11:56:01,508][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-14 11:56:02,807][__main__][INFO] - Starting Evaluation!
+[2026-02-14 11:56:03,261][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-14 11:56:34,691][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-14 12:02:51,751][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-14 12:02:51,751][__main__][INFO] - Loading Tokenizer...
+[2026-02-14 12:02:56,374][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-14 12:02:56,376][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-14 12:02:57,561][__main__][INFO] - Starting Evaluation!
+[2026-02-14 12:02:58,002][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-14 12:03:28,340][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-14 12:11:01,687][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-14 12:11:01,687][__main__][INFO] - Loading Tokenizer...
+[2026-02-14 12:11:06,251][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-14 12:11:06,254][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-14 12:11:07,517][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-14 12:11:07,534][__main__][INFO] - Starting Evaluation!
+[2026-02-14 12:11:07,959][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-14 12:11:38,622][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-14 12:12:40,541][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-14 12:12:40,541][__main__][INFO] - Loading Tokenizer...
+[2026-02-14 12:12:45,949][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-14 12:12:45,952][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-14 12:12:47,230][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-14 12:12:47,247][__main__][INFO] - Starting Evaluation!
+[2026-02-14 12:12:47,691][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-14 12:13:18,153][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 18:31:33,008][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 18:31:33,009][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 18:31:43,537][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 18:31:43,547][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 18:31:45,337][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 18:31:45,385][__main__][INFO] - Starting Evaluation!
+[2026-02-15 18:31:45,981][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 18:32:26,389][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 18:37:43,610][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 18:37:43,611][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 18:37:48,660][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 18:37:48,776][__main__][INFO] - Added <cls> token. Tokenizer length is now 128257
+[2026-02-15 18:37:48,797][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 18:40:04,270][__main__][INFO] - Resized model embeddings to match tokenizer length: 128257
+[2026-02-15 18:40:04,326][__main__][INFO] - Starting Evaluation!
+[2026-02-15 18:40:04,953][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 18:40:45,013][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 18:41:27,952][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 18:41:27,953][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 18:41:33,744][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 18:41:33,745][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 18:41:35,583][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 18:41:35,603][__main__][INFO] - Starting Evaluation!
+[2026-02-15 18:41:36,123][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 18:42:16,074][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 18:49:30,143][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 18:49:30,143][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 18:49:35,653][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 18:49:35,663][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 18:49:37,901][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 18:49:37,958][__main__][INFO] - Starting Evaluation!
+[2026-02-15 18:49:38,451][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 18:50:18,517][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 18:55:08,037][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 18:55:08,038][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 18:55:14,023][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 18:55:14,032][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 18:55:15,467][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 18:55:15,480][__main__][INFO] - Starting Evaluation!
+[2026-02-15 18:55:16,112][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 18:55:56,062][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 19:15:02,623][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 19:15:02,624][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 19:15:08,256][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 19:15:08,265][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 19:15:10,133][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 19:15:10,214][__main__][INFO] - Starting Evaluation!
+[2026-02-15 19:15:10,721][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 19:15:49,734][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 19:24:19,837][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 19:24:19,837][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 19:24:25,251][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 19:24:25,263][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 19:24:26,884][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 19:24:26,897][__main__][INFO] - Starting Evaluation!
+[2026-02-15 19:24:27,364][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 19:25:05,643][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 20:23:46,011][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 20:23:46,012][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 20:23:51,395][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 20:23:51,398][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 20:23:53,219][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 20:23:53,244][__main__][INFO] - Starting Evaluation!
+[2026-02-15 20:23:53,693][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 20:24:30,524][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 20:26:16,551][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 20:26:16,552][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 20:26:21,883][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 20:26:21,890][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 20:26:23,425][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 20:26:23,441][__main__][INFO] - Starting Evaluation!
+[2026-02-15 20:26:23,912][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 20:27:02,977][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 22:12:20,005][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 22:12:20,005][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 22:12:22,885][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 22:12:22,885][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 22:12:23,915][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 22:12:23,925][__main__][INFO] - Starting Evaluation!
+[2026-02-15 22:12:24,399][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 22:12:38,296][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 22:15:40,827][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 22:15:40,827][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 22:15:43,694][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 22:15:43,695][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 22:15:44,887][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 22:15:44,898][__main__][INFO] - Starting Evaluation!
+[2026-02-15 22:15:45,327][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 22:16:02,354][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 22:26:09,412][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 22:26:09,412][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 22:26:12,180][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 22:26:12,181][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 22:26:13,325][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 22:26:13,335][__main__][INFO] - Starting Evaluation!
+[2026-02-15 22:26:13,818][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 22:26:26,830][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...
+[2026-02-15 22:29:15,468][accelerate.utils.other][WARNING] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2026-02-15 22:29:15,468][__main__][INFO] - Loading Tokenizer...
+[2026-02-15 22:29:18,133][__main__][INFO] - Setting pad_token to eos_token: <|eot_id|>
+[2026-02-15 22:29:18,133][__main__][INFO] - Loading Model: src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained
+[2026-02-15 22:29:19,155][__main__][INFO] - Resized model embeddings to match tokenizer length: 128256
+[2026-02-15 22:29:19,164][__main__][INFO] - Starting Evaluation!
+[2026-02-15 22:29:19,590][src.context_compression.trainers.trainer][INFO] - Running tokenizer on evaluation dataset
+[2026-02-15 22:29:32,743][src.context_compression.trainers.trainer][INFO] - Instantiating predictor...

@@ -1,6 +1,6 @@
 version_2_with_negative: False
 test:
-    _target_: "context_compression.custom_datasets.llama_dataset_squad_custom.LlamaDatasetCustom"
+    _target_: src.context_compression.custom_datasets.qa_dataset.QADataset
     split: "test"
     data_config:
         prompt: "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation."
@@ -12,7 +12,8 @@ test:
         use_fp16: False
         dataset_name: "THUDM/LongBench"
         pad_to_max_length: False
-        max_length: 256
+        max_length: 2048 # this is the length of system prompt + question
+        doc_stride: 512
         max_answer_length: 128
         dataset_config_name: "qasper"
         train_file: None

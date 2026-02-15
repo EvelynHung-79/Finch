@@ -1,6 +1,6 @@
 _target_: "context_compression.predictors.qa_predictor.QAModelPredictor"
 predictor_config:
-    metric_name: "squad_v2"
+    metric_name: "longbench_qa"
     n_best_size: 20
     max_answer_length: ${custom_datasets.test.data_config.max_answer_length}
     null_score_diff_threshold: 0.0

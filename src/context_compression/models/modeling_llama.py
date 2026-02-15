@@ -1,14 +1,40 @@
 import math
 import time
-from typing import Optional, Tuple, Dict, Any
+from typing import Optional, Tuple, Dict, Any, List
 import torch
 from transformers.cache_utils import DynamicCache
-
 
 class ModifiedDynamicCache(DynamicCache):
     def __init__(self) -> None:
         super().__init__()
+        self.key_cache = []
+        self.value_cache = []
         self.cos_sin_cache = []
+        self.seen_tokens = 0
+
+    def get_seq_length(self, layer_idx: Optional[int] = 0) -> int:
+        idx = layer_idx if layer_idx is not None else 0
+        if len(self.key_cache) <= idx:
+            # print(f"[DEBUG] get_seq_length(layer={idx}) -> cache empty, returning 0")
+            return 0
+        length = self.key_cache[idx].shape[-2]
+        # print(f"[DEBUG] get_seq_length(layer={idx}) -> returning {length}")
+        return length
+
+    def get_usable_length(self, new_seq_length: int, layer_idx: Optional[int] = 0) -> int:
+        length = self.get_seq_length(layer_idx)
+        # print(f"[DEBUG] get_usable_length(new_seq={new_seq_length}, layer={layer_idx}) -> returning {length}")
+        return length
+
+    @property
+    def _seen_tokens(self):
+        # print(f"[DEBUG] _seen_tokens property accessed! Returning {self.seen_tokens}")
+        return self.seen_tokens
+    
+    @_seen_tokens.setter
+    def _seen_tokens(self, value):
+        pass
+    # ===============================================================
 
     @staticmethod
     def _rotate_half(x):
@@ -19,6 +45,9 @@ class ModifiedDynamicCache(DynamicCache):
     def _apply_key_rotary_pos_emb(
         self, key_states: torch.Tensor, cos: torch.Tensor, sin: torch.Tensor
     ) -> torch.Tensor:
+        if cos.dim() == 3 and key_states.dim() == 4:
+            cos = cos.unsqueeze(1)
+            sin = sin.unsqueeze(1)
         rotated_key_states = (key_states * cos) + (self._rotate_half(key_states) * sin)
         return rotated_key_states
 
@@ -29,28 +58,34 @@ class ModifiedDynamicCache(DynamicCache):
         sin = sin.to(torch.float32)
 
         batch_size, seq_length = important_pos_batch.shape
-        idx = torch.arange(seq_length, device=important_pos_batch.device)
-        idx = idx[None, :]
-        original_cos = cos[important_pos_batch, :]
-        shifted_cos = cos[idx, :]
-        original_sin = sin[important_pos_batch, :]
-        shifted_sin = sin[idx, :]
+
+        if cos.dim() == 2:
+            cos = cos.unsqueeze(0)
+            sin = sin.unsqueeze(0)
+
+        indices = important_pos_batch.unsqueeze(-1).expand(-1, -1, cos.size(-1))
+        original_cos = torch.gather(cos, 1, indices)
+        original_sin = torch.gather(sin, 1, indices)
+
+        shifted_cos = cos[:, :seq_length, :]
+        shifted_sin = sin[:, :seq_length, :]
+
         rerotation_cos = original_cos * shifted_cos + original_sin * shifted_sin
-        # SIGN BEGIN
+        
+        idx = torch.arange(seq_length, device=important_pos_batch.device)[None, :]
         less_than_mask = (important_pos_batch < idx)
-        rerotation_sin = torch.where(less_than_mask[:, :, None],
-                                     original_sin * shifted_cos - original_cos * shifted_sin,
-                                     - (original_sin * shifted_cos - original_cos * shifted_sin)
-                                     )
-        # END SIGN
-        # rerotation_sin = - (original_sin * shifted_cos - original_cos * shifted_sin)
+
+        rerotation_sin = torch.where(
+            less_than_mask[:, :, None],
+            original_sin * shifted_cos - original_cos * shifted_sin,
+            - (original_sin * shifted_cos - original_cos * shifted_sin)
+        )
+        
         same_pos_mask = (important_pos_batch == idx)
         rerotation_cos[same_pos_mask] = 1
         rerotation_sin[same_pos_mask] = 0
-        new_cos = rerotation_cos.to(original_dtype)
-        new_sin = rerotation_sin.to(original_dtype)
 
-        return new_cos, new_sin
+        return rerotation_cos.to(original_dtype), rerotation_sin.to(original_dtype)
 
     @staticmethod
     def gather_important_tokens(states, indices):
@@ -58,9 +93,23 @@ class ModifiedDynamicCache(DynamicCache):
                             indices.unsqueeze(1).unsqueeze(-1).expand(-1, states.size(1), -1, states.size(3)))
 
     def update_rope(self, layer_index, key_states, important_pos):
+        # if layer_index == 0:
+            # print(f"\n[DEBUG] --- update_rope() Layer 0 | Compressing to {important_pos.size(1)} tokens ---")
+        
         seq_length = key_states.shape[-2]
-        new_cos, new_sin = self._rerotate_cos_sin(self.cos_sin_cache[layer_index]["cos"][:seq_length],
-                                                  self.cos_sin_cache[layer_index]["sin"][:seq_length], important_pos)
+        
+        cos_cache = self.cos_sin_cache[layer_index]["cos"]
+        sin_cache = self.cos_sin_cache[layer_index]["sin"]
+        
+        if cos_cache.dim() == 2:
+            cos_sliced = cos_cache[:seq_length, :]
+            sin_sliced = sin_cache[:seq_length, :]
+        else:
+            cos_sliced = cos_cache[:, :seq_length, :]
+            sin_sliced = sin_cache[:, :seq_length, :]
+
+        new_cos, new_sin = self._rerotate_cos_sin(cos_sliced, sin_sliced, important_pos)
+        
         self.key_cache[layer_index] = self._apply_key_rotary_pos_emb(
             self.gather_important_tokens(self.key_cache[layer_index], important_pos),
             new_cos,
@@ -70,6 +119,7 @@ class ModifiedDynamicCache(DynamicCache):
         self.cos_sin_cache[layer_index]["cos"] = new_cos
         self.cos_sin_cache[layer_index]["sin"] = new_sin
         self.seen_tokens = important_pos.size(1)
+        
         return self.key_cache[layer_index], self.value_cache[layer_index]
 
     def update(
@@ -79,32 +129,20 @@ class ModifiedDynamicCache(DynamicCache):
         layer_idx: int,
         cache_kwargs: Optional[Dict[str, Any]] = None,
     ) -> Tuple[torch.Tensor, torch.Tensor]:
-        """
-        Updates the cache with the new `key_states` and `value_states` for the layer `layer_idx`.
+        
+        # if layer_idx == 0:
+            # print(f"\n[DEBUG] --- update() Layer 0 | Input seq len: {key_states.shape[-2]} ---")
 
-        Parameters:
-            key_states (`torch.Tensor`):
-                The new key states to cache.
-            value_states (`torch.Tensor`):
-                The new value states to cache.
-            layer_idx (`int`):
-                The index of the layer to cache the states for.
-            cache_kwargs (`Dict[str, Any]`, `optional`):
-                Additional arguments for the cache subclass. No additional arguments are used in `DynamicCache`.
-
-        Return:
-            A tuple containing the updated key and value states.
-        """
         if cache_kwargs is not None:
             sin = cache_kwargs.get("sin")
             cos = cache_kwargs.get("cos")
         else:
             sin = None
             cos = None
+            
         if layer_idx == 0:
             self.seen_tokens += key_states.shape[-2]
 
-        # Update the cache
         if len(self.key_cache) <= layer_idx:
             if sin is not None and cos is not None:
                 self.cos_sin_cache.append({"sin": sin, "cos": cos})
@@ -112,12 +150,19 @@ class ModifiedDynamicCache(DynamicCache):
             self.value_cache.append(value_states)
         else:
             if sin is not None and cos is not None:
-                self.cos_sin_cache[layer_idx] = {"sin": sin, "cos": cos}
+                old_sin = self.cos_sin_cache[layer_idx]["sin"]
+                old_cos = self.cos_sin_cache[layer_idx]["cos"]
+                self.cos_sin_cache[layer_idx] = {
+                    "sin": torch.cat([old_sin, sin], dim=-2),
+                    "cos": torch.cat([old_cos, cos], dim=-2)
+                }
             self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx], key_states], dim=-2)
             self.value_cache[layer_idx] = torch.cat([self.value_cache[layer_idx], value_states], dim=-2)
 
-        return self.key_cache[layer_idx], self.value_cache[layer_idx]
+        # if layer_idx == 0:
+            # print(f"[DEBUG] update() finished | Cache len is now: {self.key_cache[layer_idx].shape[-2]}")
 
+        return self.key_cache[layer_idx], self.value_cache[layer_idx]
 
 import transformers.cache_utils
 
@@ -146,10 +191,53 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
             self.p = 3
         else:
             self.p = 0
+    def forward(
+        self,
+        input_ids: torch.LongTensor = None,
+        attention_mask: Optional[torch.Tensor] = None,
+        position_ids: Optional[torch.LongTensor] = None,
+        past_key_values: Optional[List[torch.FloatTensor]] = None,
+        inputs_embeds: Optional[torch.FloatTensor] = None,
+        labels: Optional[torch.LongTensor] = None,
+        use_cache: Optional[bool] = None,
+        output_attentions: Optional[bool] = None,
+        output_hidden_states: Optional[bool] = None,
+        return_dict: Optional[bool] = None,
+        **kwargs
+    ):
+        # [DEBUG LOG START] 檢查進入模型的資料
+        if input_ids is not None:
+            # 檢查是否有空的 Input
+            if input_ids.numel() == 0:
+                print(f"\n[DEBUG Forward] !!! WARNING: Empty input_ids detected! Shape: {input_ids.shape}")
+            else:
+                max_id = input_ids.max().item()
+                min_id = input_ids.min().item()
+                vocab_size = self.config.vocab_size
+                
+                # 檢查是否有非法 ID (造成 Device-side assert 的主因)
+                if max_id >= vocab_size or min_id < 0:
+                    print(f"\n[DEBUG Forward] CRITICAL ERROR: Input ID out of bounds!")
+                    print(f"  - Shape: {input_ids.shape}")
+                    print(f"  - Max ID: {max_id} (Vocab: {vocab_size})")
+                    print(f"  - Min ID: {min_id}")
+        # [DEBUG LOG END]
 
-
-
-
+        # 呼叫原本父類別的 forward 繼續執行
+        return super().forward(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            position_ids=position_ids,
+            past_key_values=past_key_values,
+            inputs_embeds=inputs_embeds,
+            labels=labels,
+            use_cache=use_cache,
+            output_attentions=output_attentions,
+            output_hidden_states=output_hidden_states,
+            return_dict=return_dict,
+            **kwargs
+        )
+    
     def generate(
         self,
         accelerator,
@@ -190,10 +278,31 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                 position_ids = (current_attention_mask.long().cumsum(-1) - 1)
                 position_ids.masked_fill_(current_attention_mask == 0, 1)  # can be filled with anything >= 0
                 position_ids = position_ids[:, -current_ids.shape[1]:]
+
+                # ================= [新增區塊] 手動建構 4D Causal Mask =================
+                bsz, q_len = current_ids.shape
+                
+                # 1. 建立當前序列的 Causal Mask (右上方為負無限大，阻擋看未來的 token)
+                causal_4d = torch.full((q_len, q_len), torch.finfo(self.model.dtype).min, device=current_ids.device)
+                causal_4d.triu_(1)
+                
+                # 2. 如果有過去的 Cache，把它們補在前面 (全部為 0，代表可以完全看見)
+                if past_cache_len > 0:
+                    past_mask = torch.zeros(q_len, past_cache_len, device=current_ids.device, dtype=causal_4d.dtype)
+                    causal_4d = torch.cat([past_mask, causal_4d], dim=-1)
+                    
+                # 3. 擴充為 4D 形狀 [batch, 1, q_len, total_len]
+                causal_4d = causal_4d[None, None, :, :].expand(bsz, 1, -1, -1).clone()
+                
+                # 4. 加上原始的 Padding Mask (確保 pad token 也被遮蔽)
+                padding_4d = (1.0 - current_attention_mask[:, None, None, :]) * torch.finfo(self.model.dtype).min
+                final_attention_mask = causal_4d + padding_4d
+                # ====================================================================
+
                 with torch.no_grad():
                     output_question_aware = self.model(
                         input_ids=current_ids,
-                        attention_mask=current_attention_mask,
+                        attention_mask=final_attention_mask,  # <--- 這裡改成使用我們剛建構的 4D Mask
                         position_ids=position_ids,
                         output_attentions=True,
                         use_cache=True,
@@ -252,8 +361,8 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                             _, indices = torch.abs(u[:, 0]).sort(descending=True)
                             important_tokens[batch_idx] = indices[:k]
                     important_tokens, _ = torch.sort(important_tokens, dim=-1, descending=False)
-                    past_key_values.update_rope(layer_idx, past_key_values[layer_idx][0][:, :, :current_seq_length + past_cache_len],
-                                                            important_tokens)
+                    past_key_values.update_rope(layer_idx, past_key_values.key_cache[layer_idx][:, :, :current_seq_length + past_cache_len], important_tokens)
+                    # past_key_values.update_rope(layer_idx, past_key_values[layer_idx][0][:, :, :current_seq_length + past_cache_len], important_tokens)
 
                 past_attention_mask = torch.ones(segment_attention_mask.size(0), k, device=segment_attention_mask.device, dtype=segment_attention_mask.dtype)
             end_processing_time = time.time()
@@ -264,6 +373,11 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
             })
             start_generation_time = time.time()
             generate_kwargs['attention_mask'] = torch.cat([past_attention_mask, attention_mask], dim=-1)
+
+            keys_to_remove = ["split_index", "context_ids", "context_attention_mask", "question_ids", "question_attention_mask"]
+            for key in keys_to_remove:
+                generate_kwargs.pop(key, None)
+
             model_output = super().generate(input_ids=input_ids, use_cache=True, past_key_values=past_key_values, **generate_kwargs)
             end_generation_time = time.time()
             accelerator.log({"processing_time": end_processing_time - start_processing_time,
@@ -293,6 +407,15 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
             })
             start_generation_time = time.time()
             generate_kwargs['attention_mask'] = torch.cat([context_attention_mask, attention_mask], dim=-1)
+            
+            keys_to_remove = ["split_index", "context_ids", "context_attention_mask", "question_ids", "question_attention_mask"]
+            for key in keys_to_remove:
+                generate_kwargs.pop(key, None)
+                
+            past_length = past_key_values.get_seq_length()
+            dummy_input_ids = torch.zeros((input_ids.shape[0], past_length), dtype=input_ids.dtype, device=input_ids.device)
+            full_input_ids = torch.cat([dummy_input_ids, input_ids], dim=1)
+            
             model_output = super().generate(input_ids=input_ids, use_cache=True, past_key_values=past_key_values, **generate_kwargs) # [:, context_ids_len:, ...]
             end_generation_time = time.time()
             accelerator.log({"processing_time": end_processing_time - start_processing_time,

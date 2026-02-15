@@ -7,7 +7,7 @@ core:
 
 defaults:
   - hydra: default
-  - custom_datasets: squad_v2
+  - custom_datasets: narrative_qa_custom
   - models: qa_model
   - predictors: qa_predictor
   - tokenizers: auto_tokenizer

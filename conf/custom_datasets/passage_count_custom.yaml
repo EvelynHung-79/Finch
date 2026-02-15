@@ -1,6 +1,6 @@
 version_2_with_negative: False
 test:
-    _target_: "context_compression.custom_datasets.llama_dataset_squad_custom.LlamaDatasetCustom"
+    _target_: src.context_compression.custom_datasets.qa_dataset.QADataset
     split: "test"
     data_config:
         prompt: "You are given some paragraphs below sourced from Wikipedia. Some of them may be duplicates. Please carefully read these paragraphs and determine how many unique paragraphs there are after removing duplicates."
@@ -12,7 +12,8 @@ test:
         use_fp16: False
         dataset_name: "THUDM/LongBench"
         pad_to_max_length: False
-        max_length: 512
+        max_length: 2048 # this is the length of system prompt + question
+        doc_stride: 512
         max_answer_length: 32
         dataset_config_name: "passage_count"
         train_file: None

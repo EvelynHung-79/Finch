@@ -64,12 +64,47 @@ class LanguageModelingQAPredictor(ModelQAPredictor, ABC):
                     loss = outputs.loss
                     losses.append(
                         accelerator.gather_for_metrics(loss.repeat(self.predictor_config.batch_size)))
-                if self.predictor_config.task_type == 'CLM':
-                    input_ids_for_generation = batch["input_ids"][:, batch["labels"][0] == -100]
+                if "split_index" in batch:
+                    # 取得分割點 (假設 batch_size=1，或是 batch 內長度一致)
+                    # 注意：DataCollator 應該會把 split_index 轉成 Tensor
+                    split_idx = batch["split_index"][0].item()
+                    
+                    full_input_ids = batch["input_ids"]
+                    full_attention_mask = batch["attention_mask"]
+
+                    # 根據 Tokenizer 的 padding_side 邏輯 (Llama 預設 Left Padding)
+                    # 序列結構通常是: [PAD, PAD, Context(0), Question(1)]
+                    # split_idx 指向 Question(1) 的開頭
+                    
+                    # 切割出 Context (包含前面的 Padding)
+                    context_ids = full_input_ids[:, :split_idx]
+                    context_attention_mask = full_attention_mask[:, :split_idx]
+                    
+                    # 切割出 Question (作為 Prompt)
+                    question_ids = full_input_ids[:, split_idx:]
+                    question_attention_mask = full_attention_mask[:, split_idx:]
+                    
+                    # 更新 batch，傳入 model.generate 所需的參數
+                    batch["context_ids"] = context_ids
+                    batch["context_attention_mask"] = context_attention_mask
+                    
+                    batch["question_ids"] = question_ids
+                    batch["question_attention_mask"] = question_attention_mask
+                    
+                    # 更新 input_ids 為 Question (讓模型接續生成)
+                    batch["input_ids"] = question_ids
+                    batch["attention_mask"] = question_attention_mask
+                    
+                    # 設定 input_ids_len，讓後續程式碼知道要切掉 Prompt
+                    input_ids_len = question_ids.size(1)
+
+                elif self.predictor_config.task_type == 'CLM':
+                    # 舊的 fallback 邏輯 (如果 dataset 沒更新會跑這，但現在應該用不到)
+                    if "labels" in batch:
+                         input_ids_for_generation = batch["input_ids"][:, batch["labels"][0] == -100]
+                    else:
+                         input_ids_for_generation = batch["input_ids"]
                     input_ids_len = input_ids_for_generation.size(1)
-                    attention_mask_for_generation = torch.ones((1, input_ids_for_generation.size(1)), dtype=torch.long, device=batch["attention_mask"].device)
-                    batch["input_ids"] = input_ids_for_generation
-                    batch["attention_mask"] = attention_mask_for_generation
                 generated_ids = accelerator.unwrap_model(model).generate(
                     accelerator=accelerator,
                     **batch,
