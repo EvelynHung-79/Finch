@@ -1,5 +1,6 @@
-_target_: "context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained"
+_target_: "src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained"
 pretrained_model_name_or_path: None
+torch_dtype: bfloat16
 config:
   _target_: "transformers.AutoConfig.from_pretrained"
   pretrained_model_name_or_path: None

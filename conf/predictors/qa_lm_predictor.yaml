@@ -1,6 +1,6 @@
-_target_: "context_compression.predictors.language_modeling_predictor.LanguageModelingQAPredictor"
+_target_: src.context_compression.predictors.language_modeling_predictor.LanguageModelingQAPredictor
 predictor_config:
-    metric_name: "squad_v2"
+    metric_name: "longbench_qa"
     max_answer_length: ${custom_datasets.test.data_config.max_answer_length}
     num_beams: 1
     do_sample: False

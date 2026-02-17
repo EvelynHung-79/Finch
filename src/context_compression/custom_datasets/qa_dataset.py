@@ -15,11 +15,11 @@ class QADataset(BaseDataset, ABC):
         self.doc_stride = data_config.doc_stride
         self.max_seq_length = min(data_config.max_length, tokenizer.model_max_length)
         self.pad_on_right = tokenizer.padding_side == "right"
-        self.model = model
-        if tokenizer.cls_token is None:
-            special_tokens_dict = {'cls_token': '<cls>'}
-            tokenizer.add_special_tokens(special_tokens_dict)
-        assert tokenizer.cls_token == '<cls>'
+        # self.model = model
+        # if tokenizer.cls_token is None:
+        #     special_tokens_dict = {'cls_token': '<cls>'}
+        #     tokenizer.add_special_tokens(special_tokens_dict)
+        # assert tokenizer.cls_token == '<cls>'
         self.columns_to_remove_for_model = ["example_id", "offset_mapping"]
 
     def tokenize(self, examples):
@@ -30,8 +30,9 @@ class QADataset(BaseDataset, ABC):
         # Some of the questions have lots of whitespace on the left, which is not useful and will make the
         # truncation of the context fail (the tokenized question will take a lots of space). So we remove that
         # left whitespace
-        examples[question_column_name] = [self.tokenizer.cls_token + q.lstrip() for q in examples[question_column_name]]
-
+        # examples[question_column_name] = [self.tokenizer.cls_token + q.lstrip() for q in examples[question_column_name]]
+        examples[question_column_name] = [q.lstrip() for q in examples[question_column_name]]
+        
         # Tokenize our examples with truncation and maybe padding, but keep the overflows using a stride. This results
         # in one example possible giving several features when a context is long, each of those features having a
         # context that overlaps a bit the context of the previous feature.
@@ -113,7 +114,8 @@ class QADataset(BaseDataset, ABC):
 
                 # One example can give several spans, this is the index of the example containing this span of text.
                 sample_index = sample_mapping[i]
-                tokenized_examples["example_id"].append(examples["id"][sample_index])
+                id_col_name = self.data_config.id_column 
+                tokenized_examples["example_id"].append(examples[id_col_name][sample_index])
 
                 # Set to None the offset_mapping that are not part of the context, so it's easy to determine if a token
                 # position is part of the context or not.
@@ -121,5 +123,25 @@ class QADataset(BaseDataset, ABC):
                     (o if sequence_ids[k] == context_index else None)
                     for k, o in enumerate(tokenized_examples["offset_mapping"][i])
                 ]
+
+        split_indices = []
+        for i in range(len(tokenized_examples["input_ids"])):
+            # sequence_ids 會像是 [None, 0, 0, ..., 1, 1, 1, None]
+            # 0 代表第一句 (Context), 1 代表第二句 (Question)
+            # (如果 padding_side="right"，順序可能會反過來，但下面的邏輯通用)
+            seq_ids = tokenized_examples.sequence_ids(i)
+            
+            # 我們要找的是 "1" 開始的地方 (Question 的起點)
+            target_id = 1 
+            
+            try:
+                split_idx = seq_ids.index(target_id)
+            except ValueError:
+                # 防呆：如果找不到 1 (極端情況)，就設為長度 (代表沒有 Question)
+                split_idx = len(tokenized_examples["input_ids"][i])
+            
+            split_indices.append(split_idx)
+        
+        tokenized_examples["split_index"] = split_indices
 
         return tokenized_examples

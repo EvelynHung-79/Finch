@@ -1,6 +1,8 @@
 tokenizers
-transformers==4.37.2
+transformers>=4.40.0
 nltk
+wandb
+tqdm
 openai
 markdown-it-py
 tornado
@@ -14,10 +16,10 @@ evaluate
 peft
 deepspeed
 bitsandbytes
-llmlingua
 ujson
 dill
-vllm
 rouge_score
 fuzzywuzzy
 python-Levenshtein
+hydra-core
+hydra-colorlog

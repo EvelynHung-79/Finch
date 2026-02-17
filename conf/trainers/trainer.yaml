@@ -1,4 +1,4 @@
-_target_: "context_compression.trainers.trainer.Trainer"
+_target_: "src.context_compression.trainers.trainer.Trainer"
 mode: "train"
 training_config:
   seed: 0 # A seed for reproducible training.

@@ -5,7 +5,11 @@ from functools import partial
 from pathlib import Path
 import hydra
 from accelerate.utils import set_seed
-from huggingface_hub import create_repo, Repository
+from huggingface_hub import create_repo
+try:
+    from huggingface_hub import Repository
+except ImportError:
+    Repository = None
 from omegaconf import DictConfig
 from torch.utils.data import DataLoader
 from tqdm import tqdm
@@ -333,7 +337,7 @@ class Trainer(abc.ABC):
             ds_eval_data = ds_eval.map(
                 ds_eval_obj.tokenize,
                 batched=True,
-                num_proc=1,
+                num_proc=None,
                 remove_columns=ds_eval_obj.column_names,
                 desc="Running tokenizer on evaluation dataset"
             )
