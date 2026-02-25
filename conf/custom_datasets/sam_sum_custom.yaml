@@ -16,8 +16,8 @@ test:
         doc_stride: 256
         max_answer_length: 128
         dataset_config_name: null
-        train_file: None
-        validation_file: None
+        train_file: null
+        validation_file: null
         test_file: "data/longbench/samsum.jsonl"
         question_max_length: 600
         context_max_length: 30000

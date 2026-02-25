@@ -16,8 +16,8 @@ test:
         doc_stride: 512
         max_answer_length: 32
         dataset_config_name: null
-        train_file: None
-        validation_file: None
+        train_file: null
+        validation_file: null
         test_file: "data/longbench/hotpotqa.jsonl"
         question_max_length: 64
         context_max_length: 21000

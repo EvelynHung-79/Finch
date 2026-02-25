@@ -16,8 +16,8 @@ test:
         doc_stride: 512
         max_answer_length: 128 # length of answer
         dataset_config_name: null
-        train_file: None
-        validation_file: None
+        train_file: null
+        validation_file: null
         test_file: "data/longbench/narrativeqa.jsonl"
         question_max_length: 64 # length of question
         context_max_length: 85000 # length of context
