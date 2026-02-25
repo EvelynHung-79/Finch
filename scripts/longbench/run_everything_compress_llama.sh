@@ -2,8 +2,9 @@
 export PYTHONPATH=${PROJECT_ROOT}/src:${PYTHONPATH}
 export PROJECT_ROOT=$(pwd)
 export LOGS_ROOT=$(pwd)/logs
-CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=0
 export WANDB_MODE=disabled
+# export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 echo "Testing script execution"
 # chmod +x ./scripts/longbench/narrativeqa/eval_narrativeqa_compress_llama_zero_shot.sh
@@ -22,20 +23,32 @@ echo "Testing script execution"
 # chmod +x ./scripts/longbench/lcc/eval_lcc_compress_llama_zero_shot.sh
 # chmod +x ./scripts/longbench/repobench/eval_repobench_compress_llama_zero_shot.sh
 
+# 以下為任務
 
-sh ./scripts/longbench/narrativeqa/eval_narrativeqa_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/narrativeqa/eval_narrativeqa_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/qasper/eval_qasper_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/multifieldqa/eval_multifieldqa_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/wikimqa/eval_wikimqa_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/hotpotqa/eval_hotpotqa_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/musique/eval_musiqueqa_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/summarization/eval_longbench_summarization_llama_govreport.sh
-# sh ./scripts/longbench/summarization/eval_longbench_summarization_llama_qmsum.sh
-# sh ./scripts/longbench/summarization/eval_longbench_summarization_llama_multinews.sh
-# sh ./scripts/longbench/trec/eval_trec_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/samsum/eval_samsum_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/passage_count/eval_passage_count_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/passage_retrieval/eval_passage_retrieval_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/lcc/eval_lcc_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/repobench/eval_repobench_compress_llama_zero_shot.sh
+# Single-doc
+# sh ./scripts/longbench/eval_narrativeqa_compress_llama_zero_shot.sh
+sh ./scripts/longbench/eval_qasper_compress_llama_zero_shot.sh
+# sh ./scripts/longbench/eval_multifieldqa_compress_llama_zero_shot.sh
+
+# Multi-doc
+# sh ./scripts/longbench/eval_wikimqa_compress_llama_zero_shot.sh
+# sh ./scripts/longbench/eval_hotpotqa_compress_llama_zero_shot.sh
+# sh ./scripts/longbench/eval_musiqueqa_compress_llama_zero_shot.sh
+
+# Summarization
+# sh ./scripts/longbench/eval_longbench_summarization_llama_govreport.sh
+# sh ./scripts/longbench/eval_longbench_summarization_llama_qmsum.sh #還沒跑
+# sh ./scripts/longbench/eval_longbench_summarization_llama_multinews.sh #還沒跑
+
+# Few-Shot Learn
+# sh ./scripts/longbench/eval_trec_compress_llama_zero_shot.sh
+# sh ./scripts/longbench/eval_samsum_compress_llama_zero_shot.sh #還沒跑
+# sh ./scripts/longbench/eval_triviaqa_compress_llama_zero_shot.sh
+
+# Synthetic
+# sh ./scripts/longbench/eval_passage_count_compress_llama_zero_shot.sh
+# sh ./scripts/longbench/eval_passage_retrieval_compress_llama_zero_shot.sh
+
+# Code
+# sh ./scripts/longbench/eval_lcc_compress_llama_zero_shot.sh
+# sh ./scripts/longbench/eval_repobench_compress_llama_zero_shot.sh #還沒跑
