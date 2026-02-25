@@ -10,15 +10,15 @@ test:
         answer_column: "answers"
         id_column: "_id"
         use_fp16: False
-        dataset_name: "THUDM/LongBench"
+        dataset_name: null
         pad_to_max_length: False
         max_length: 2048 # this is the length of system prompt + question
         doc_stride: 512
         max_answer_length: 32
-        dataset_config_name: "triviaqa"
+        dataset_config_name: null
         train_file: None
         validation_file: None
-        test_file: None
+        test_file: "data/longbench/triviaqa.jsonl"
         question_max_length: 2500
         context_max_length: 27000
         use_rag: False
