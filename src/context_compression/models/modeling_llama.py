@@ -362,6 +362,8 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                 past_key_values=past_key_values, 
                 **generate_kwargs
             )
+            if isinstance(model_output, torch.Tensor):
+                model_output = model_output[:, past_length:]
             
             end_generation_time = time.time()
             accelerator.log({"processing_time": end_processing_time - start_processing_time,
@@ -410,6 +412,9 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                 past_key_values=past_key_values, 
                 **generate_kwargs
             )
+
+            if isinstance(model_output, torch.Tensor):
+                model_output = model_output[:, past_length:]
             
             end_generation_time = time.time()
             accelerator.log({"processing_time": end_processing_time - start_processing_time,

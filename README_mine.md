@@ -18,63 +18,28 @@ git push --force-with-lease
 nohup bash ./scripts/longbench/run_everything_compress_llama.sh > run.log 2>&1 &
 ```
 
-### Max_length per Task
-Single-doc
-任務: narrativeqa          | 最高 Token 數: 65287
-任務: qasper               | 最高 Token 數: 21118
-任務: multifieldqa_en      | 最高 Token 數: 14960
-
-Multi-doc
-任務: hotpotqa             | 最高 Token 數: 16341
-任務: 2wikimqa             | 最高 Token 數: 16331
-任務: musique              | 最高 Token 數: 16348
-
-Summarization
-任務: gov_report           | 最高 Token 數: 51392
-任務: qmsum                | 最高 Token 數: 30389
-任務: multi_news           | 最高 Token 數: 13935
-
-Few-Shot Learn
-任務: samsum               | 最高 Token 數: 17974
-任務: trec                 | 最高 Token 數: 11378
-任務: triviaqa             | 最高 Token 數: 23299
-
-Synthetic
-任務: passage_count        | 最高 Token 數: 28965
-任務: passage_retrieval_en | 最高 Token 數: 15144
-
-Code
-任務: lcc                  | 最高 Token 數: 30150
-任務: repobench-p          | 最高 Token 數: 39125
-
 ## Target Token Per Task
-Single-doc                  1 Warmup Chunk   2 Warmup Chunk
-任務: narrativeqa          |  5119          |  5500          |
-任務: qasper               |  1312          |  1692          |
-任務: multifieldqa_en      |  1554          |  1934          |
+- Compression Rate in LiveKVQUantP is assuming n_warmup = 1
+- target-token will be set by task
+| 任務 (Task)        | 平均長度 (N) | Compression rate in LiveKVQuantP | target_token |
+|--------------------|-------------|-----------------------------------|--------------|
+| NarrativeQA        | 18,405      | 0.2921                            | 598          |
+| Qasper             | 3,619       | 0.3749                            | 768          |
+| MultiFieldQA       | 4,559       | 0.3536                            | 724          |
+| HotpotQA           | 9,149       | 0.3126                            | 640          |
+| 2WikiMultihopQA    | 4,885       | 0.3482                            | 713          |
+| Musique            | 7,798       | 0.3197                            | 655          |
+| GovReport          | 8,169       | 0.3175                            | 650          |
+| QMSum              | 10,546      | 0.3072                            | 629          |
+| MultiNews          | 2,113       | 0.4483                            | 918          |
+| SAMSum             | 6,258       | 0.3314                            | 679          |
+| TriviaQA           | 8,015       | 0.3184                            | 652          |
+| TREC               | 5,176       | 0.3439                            | 704          |
+| Passage Retrieval  | 9,288       | 0.3120                            | 639          |
+| Passage Counting   | 11,141      | 0.3053                            | 625          |
+| RepoBench-P        | 5,622       | 0.3382                            | 693          |
+| LCC                | 1,235       | 0.5737                            | 1175         |
 
-Multi-doc
-任務: hotpotqa             |  2736          |  3116          |
-任務: 2wikimqa             |  1638          |  2018          |
-任務: musique              |  2388          |  2768          |
-
-Summarization
-任務: gov_report           |  2484          |  2864          |
-任務: qmsum                |  3096          |  3476          |
-任務: multi_news           |  924           |  1304          |
-
-Few-Shot Learn
-任務: samsum               |  1992          |  2372          |
-任務: trec                 |  2444          |  2824          |
-任務: triviaqa             |  1713          |  2093          |
-
-Synthetic
-任務: passage_count        |  2772          |  3152          |
-任務: passage_retrieval_en |  3249          |  3629          |
-
-Code
-任務: lcc                  |  1828          |  2208          |
-任務: repobench-p          |  698           |  1078          |
 
 ### Explanation to ...
 target_token：壓縮後的目標 Token 數量（預期保留長度）。這代表在經過 FINCH 壓縮機制後，模型 KV Cache 最終要保留下來的總 token 上限。例如設定為 3000，系統就會根據注意力分數（或相似度），從長文本中挑選出最重要的約 3000 個 token 來讓模型生成答案。

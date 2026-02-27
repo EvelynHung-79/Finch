@@ -27,13 +27,13 @@ echo "Testing script execution"
 
 # Single-doc
 # sh ./scripts/longbench/eval_narrativeqa_compress_llama_zero_shot.sh
-sh ./scripts/longbench/eval_qasper_compress_llama_zero_shot.sh
+# sh ./scripts/longbench/eval_qasper_compress_llama_zero_shot.sh
 # sh ./scripts/longbench/eval_multifieldqa_compress_llama_zero_shot.sh
 
 # Multi-doc
 # sh ./scripts/longbench/eval_wikimqa_compress_llama_zero_shot.sh
 # sh ./scripts/longbench/eval_hotpotqa_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/eval_musiqueqa_compress_llama_zero_shot.sh
+sh ./scripts/longbench/eval_musiqueqa_compress_llama_zero_shot.sh
 
 # Summarization
 # sh ./scripts/longbench/eval_longbench_summarization_llama_govreport.sh

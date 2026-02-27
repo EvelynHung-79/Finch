@@ -23,23 +23,23 @@ class QADataset(BaseDataset, ABC):
         self.columns_to_remove_for_model = ["example_id", "offset_mapping"]
 
     def tokenize(self, examples):
-
         question_column_name = "question" if "question" in self.column_names else self.column_names[0]
         context_column_name = "context" if "context" in self.column_names else self.column_names[1]
         answer_column_name = "answers" if "answers" in self.column_names else self.column_names[2]
-        # Some of the questions have lots of whitespace on the left, which is not useful and will make the
-        # truncation of the context fail (the tokenized question will take a lots of space). So we remove that
-        # left whitespace
-        # examples[question_column_name] = [self.tokenizer.cls_token + q.lstrip() for q in examples[question_column_name]]
-        examples[question_column_name] = [q.lstrip() for q in examples[question_column_name]]
         
-        # Tokenize our examples with truncation and maybe padding, but keep the overflows using a stride. This results
-        # in one example possible giving several features when a context is long, each of those features having a
-        # context that overlaps a bit the context of the previous feature.
+        # 1. 加上明確的 Prompt 格式，防止模型幻覺續寫論文
+        formatted_questions = [
+            f"\n\nBased on the document above, please answer the following question.\n"
+            f"Question: {q.lstrip()}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n" 
+            for q in examples[question_column_name]
+        ]
+        
+        # 2. 徹底移除 pad_on_right 的顛倒邏輯
+        # 永遠強制：第 0 序列 = Context, 第 1 序列 = Question
         tokenized_examples = self.tokenizer(
-            examples[question_column_name if self.pad_on_right else context_column_name],
-            examples[context_column_name if self.pad_on_right else question_column_name],
-            truncation="only_second" if self.pad_on_right else "only_first",
+            examples[context_column_name],
+            formatted_questions,
+            truncation="only_first",  # 如果文章太長，只截斷 Context，確保 Question 不會被切掉
             max_length=self.max_seq_length,
             stride=self.doc_stride,
             return_overflowing_tokens=True,
@@ -47,9 +47,8 @@ class QADataset(BaseDataset, ABC):
             padding="max_length" if self.pad_to_max_length else False,
         )
 
-        # Since one example might give us several features if it has a long context, we need a map from a feature to
-        # its corresponding example. This key gives us just that.
         sample_mapping = tokenized_examples.pop("overflow_to_sample_mapping")
+
         if self.split == "train":
             # The offset mappings will give us a map from token to character position in the original context. This will
             # help us compute the start_positions and end_positions.

@@ -1,6 +1,7 @@
 import abc
 import math
 import os
+import torch
 from functools import partial
 from pathlib import Path
 import hydra
@@ -349,6 +350,12 @@ class Trainer(abc.ABC):
         eval_dataloader = DataLoader(ds_eval_data.remove_columns(ds_eval_obj.columns_to_remove_for_model), batch_size=self.evaluation_config.per_device_eval_batch_size, collate_fn = ds_eval_obj.get_data_collator())
 
         model, eval_dataloader = accelerator.prepare(model, eval_dataloader)
+
+        if torch.cuda.is_available():
+            torch.cuda.synchronize() # 確保 GPU 操作同步，計算才會準
+            allocated_mem_gb = torch.cuda.memory_allocated() / (1024 ** 3)
+            logger.info(f"📊 [Memory] GPU Allocated (Model + Context): {allocated_mem_gb:.2f} GB")
+
         if not self.evaluation_config.zero_shot:
             if self.evaluation_config.resume_from_checkpoint is not None or self.evaluation_config.resume_from_checkpoint != "":
                 checkpoint_path = self.training_config.resume_from_checkpoint
