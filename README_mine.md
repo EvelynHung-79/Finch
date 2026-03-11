@@ -21,24 +21,24 @@ nohup bash ./scripts/longbench/run_everything_compress_llama.sh > run.log 2>&1 &
 ## Target Token Per Task
 - Compression Rate in LiveKVQUantP is assuming n_warmup = 1
 - target-token will be set by task
-| 任務 (Task)        | 平均長度 (N) | Compression rate in LiveKVQuantP | target_token |
-|--------------------|-------------|-----------------------------------|--------------|
-| NarrativeQA        | 18,405      | 0.2921                            | 598          |
-| Qasper             | 3,619       | 0.3749                            | 768          |
-| MultiFieldQA       | 4,559       | 0.3536                            | 724          |
-| HotpotQA           | 9,149       | 0.3126                            | 640          |
-| 2WikiMultihopQA    | 4,885       | 0.3482                            | 713          |
-| Musique            | 7,798       | 0.3197                            | 655          |
-| GovReport          | 8,169       | 0.3175                            | 650          |
-| QMSum              | 10,546      | 0.3072                            | 629          |
-| MultiNews          | 2,113       | 0.4483                            | 918          |
-| SAMSum             | 6,258       | 0.3314                            | 679          |
-| TriviaQA           | 8,015       | 0.3184                            | 652          |
-| TREC               | 5,176       | 0.3439                            | 704          |
-| Passage Retrieval  | 9,288       | 0.3120                            | 639          |
-| Passage Counting   | 11,141      | 0.3053                            | 625          |
-| RepoBench-P        | 5,622       | 0.3382                            | 693          |
-| LCC                | 1,235       | 0.5737                            | 1175         |
+| 任務 (Task)        | 平均長度 (N) | Compression rate in LiveKVQuantP  | target_token (2048)| target_token (4096)|
+|--------------------|-------------|-----------------------------------|--------------------|--------------------|
+| NarrativeQA        | 18,405      | 0.2921                            | 598                | 1197
+| Qasper             | 3,619       | 0.3749                            | 768                | 1536
+| MultiFieldQA       | 4,559       | 0.3536                            | 724                | 1449
+| HotpotQA           | 9,149       | 0.3126                            | 640                | 1281
+| 2WikiMultihopQA    | 4,885       | 0.3482                            | 713                | 1426
+| Musique            | 7,798       | 0.3197                            | 655                | 1309
+| GovReport          | 8,169       | 0.3175                            | 650                | 1301
+| QMSum              | 10,546      | 0.3072                            | 629                | 1258
+| MultiNews          | 2,113       | 0.4483                            | 918                | 1836
+| SAMSum             | 6,258       | 0.3314                            | 679                | 1358
+| TriviaQA           | 8,015       | 0.3184                            | 652                | 1304
+| TREC               | 5,176       | 0.3439                            | 704                | 1409
+| Passage Retrieval  | 9,288       | 0.3120                            | 639                | 1278
+| Passage Counting   | 11,141      | 0.3053                            | 625                | 1251
+| RepoBench-P        | 5,622       | 0.3382                            | 693                | 1385
+| LCC                | 1,235       | 0.5737                            | 1175               | 2350
 
 
 ### Explanation to ...
@@ -78,3 +78,8 @@ Max Memory Peak：FINCH 因為有切塊，Peak 可能較低；你的方法如果
 Latency：FINCH 切塊循序處理會拖慢速度（Prefill 時間長）；你的方法如果是平行處理，Latency 可能大勝 FINCH。
 
 F1 Score：比較誰的淘汰機制比較聰明。
+
+## Best records:
+Narrativeqa: 4096 (max_length)
+Qasper: 8192 (max_length)
+Multifieldqa_en: 2048 (max_length)

@@ -26,14 +26,14 @@ echo "Testing script execution"
 # 以下為任務
 
 # Single-doc
-# sh ./scripts/longbench/eval_narrativeqa_compress_llama_zero_shot.sh
+sh ./scripts/longbench/eval_narrativeqa_compress_llama_zero_shot.sh
 # sh ./scripts/longbench/eval_qasper_compress_llama_zero_shot.sh
 # sh ./scripts/longbench/eval_multifieldqa_compress_llama_zero_shot.sh
 
 # Multi-doc
 # sh ./scripts/longbench/eval_wikimqa_compress_llama_zero_shot.sh
 # sh ./scripts/longbench/eval_hotpotqa_compress_llama_zero_shot.sh
-sh ./scripts/longbench/eval_musiqueqa_compress_llama_zero_shot.sh
+# sh ./scripts/longbench/eval_musiqueqa_compress_llama_zero_shot.sh
 
 # Summarization
 # sh ./scripts/longbench/eval_longbench_summarization_llama_govreport.sh
@@ -52,3 +52,6 @@ sh ./scripts/longbench/eval_musiqueqa_compress_llama_zero_shot.sh
 # Code
 # sh ./scripts/longbench/eval_lcc_compress_llama_zero_shot.sh
 # sh ./scripts/longbench/eval_repobench_compress_llama_zero_shot.sh #還沒跑
+
+
+# nohup bash ./scripts/longbench/run_everything_compress_llama.sh > run.log 2>&1 &

@@ -27,17 +27,20 @@ class QADataset(BaseDataset, ABC):
         context_column_name = "context" if "context" in self.column_names else self.column_names[1]
         answer_column_name = "answers" if "answers" in self.column_names else self.column_names[2]
         
-        # 1. 加上明確的 Prompt 格式，防止模型幻覺續寫論文
+        # Use proper Llama 3.1 Instruct chat format with system prompt from config
+        system_prompt = getattr(self.data_config, 'prompt', '')
+        formatted_contexts = [
+            f"<|start_header_id|>system<|end_header_id|>\n\n{system_prompt}<|eot_id|>"
+            f"<|start_header_id|>user<|end_header_id|>\n\n{ctx}"
+            for ctx in examples[context_column_name]
+        ]
         formatted_questions = [
-            f"\n\nBased on the document above, please answer the following question.\n"
-            f"Question: {q.lstrip()}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n" 
+            f"\n\n{q.lstrip()}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
             for q in examples[question_column_name]
         ]
-        
-        # 2. 徹底移除 pad_on_right 的顛倒邏輯
-        # 永遠強制：第 0 序列 = Context, 第 1 序列 = Question
+
         tokenized_examples = self.tokenizer(
-            examples[context_column_name],
+            formatted_contexts,
             formatted_questions,
             truncation="only_first",  # 如果文章太長，只截斷 Context，確保 Question 不會被切掉
             max_length=self.max_seq_length,

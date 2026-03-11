@@ -106,8 +106,11 @@ class ModifiedDynamicCache(DynamicCache):
             new_sin
         )
         self.value_cache[layer_index] = self.gather_important_tokens(self.value_cache[layer_index], important_pos)
-        self.cos_sin_cache[layer_index]["cos"] = new_cos
-        self.cos_sin_cache[layer_index]["sin"] = new_sin
+        # NOTE: Do NOT update cos_sin_cache here. The cache must retain the
+        # original cos/sin values so that subsequent rerotations are computed
+        # from the original positions, not from already-rerotated values.
+        # self.cos_sin_cache[layer_index]["cos"] = new_cos
+        # self.cos_sin_cache[layer_index]["sin"] = new_sin
         self.seen_tokens = important_pos.size(1)
         
         return self.key_cache[layer_index], self.value_cache[layer_index]
@@ -137,11 +140,13 @@ class ModifiedDynamicCache(DynamicCache):
             self.value_cache.append(value_states)
         else:
             if sin is not None and cos is not None:
-                old_sin = self.cos_sin_cache[layer_idx]["sin"]
-                old_cos = self.cos_sin_cache[layer_idx]["cos"]
+                prev_cos = self.cos_sin_cache[layer_idx]["cos"]
+                prev_sin = self.cos_sin_cache[layer_idx]["sin"]
+                # Accumulate cos/sin so update_rope can index any position seen so far
+                cat_dim = 0 if prev_cos.dim() == 2 else 1
                 self.cos_sin_cache[layer_idx] = {
-                    "sin": torch.cat([old_sin, sin], dim=-2),
-                    "cos": torch.cat([old_cos, cos], dim=-2)
+                    "cos": torch.cat([prev_cos, cos], dim=cat_dim),
+                    "sin": torch.cat([prev_sin, sin], dim=cat_dim),
                 }
             self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx], key_states], dim=-2)
             self.value_cache[layer_idx] = torch.cat([self.value_cache[layer_idx], value_states], dim=-2)
@@ -286,6 +291,7 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                     )
                 current_seq_length = segment_context_ids.size(1)
                 k = int(current_seq_length // self.compression_factor) + past_cache_len
+                k = min(k, current_seq_length + past_cache_len)  # clamp: cannot select more tokens than available
                 for layer_idx, layer_attention in enumerate(output_question_aware.attentions):
                     if self.mode == "attention_score":
                         summed_attention = layer_attention.sum(dim=1)
@@ -305,7 +311,6 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                         if self.normalize:
                             normalization_factors = non_zero_counts.float() / tot_seq_len
                             context_attention = context_attention * normalization_factors[None, :, None]
-                        context_attention = summed_attention[:, current_seq_length:, :current_seq_length + past_cache_len]
                         aggregated_attention = context_attention.sum(dim=1)
                         _, important_tokens = torch.topk(aggregated_attention, k=k, dim=-1, largest=True)
                     elif self.mode == "cosine_similarity":
@@ -344,27 +349,21 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
             
             start_generation_time = time.time()
 
-            past_length = past_key_values.get_seq_length()
-            dummy_input_ids = torch.zeros((input_ids.shape[0], past_length), dtype=input_ids.dtype, device=input_ids.device)
-            full_input_ids = torch.cat([dummy_input_ids, input_ids], dim=1)
-            
-            dummy_attention_mask = torch.ones((input_ids.shape[0], past_length), dtype=attention_mask.dtype, device=attention_mask.device)
-            full_attention_mask = torch.cat([dummy_attention_mask, attention_mask], dim=1)
-            
-            keys_to_remove = ["split_index", "context_ids", "context_attention_mask", "question_ids", "question_attention_mask", "attention_mask"]
+            keys_to_remove = ["split_index", "context_ids", "context_attention_mask", "question_ids", "question_attention_mask"]
             for key in keys_to_remove:
                 generate_kwargs.pop(key, None)
 
+            generate_kwargs['attention_mask'] = torch.cat([past_attention_mask, attention_mask], dim=-1)
+            past_length = past_key_values.get_seq_length()
+            dummy_input_ids = torch.zeros((input_ids.shape[0], past_length), dtype=input_ids.dtype, device=input_ids.device)
+            full_input_ids = torch.cat([dummy_input_ids, input_ids], dim=1)
             model_output = super().generate(
-                input_ids=full_input_ids, 
-                attention_mask=full_attention_mask, 
-                use_cache=True, 
-                past_key_values=past_key_values, 
+                input_ids=full_input_ids,
+                use_cache=True,
+                past_key_values=past_key_values,
                 **generate_kwargs
             )
-            if isinstance(model_output, torch.Tensor):
-                model_output = model_output[:, past_length:]
-            
+
             end_generation_time = time.time()
             accelerator.log({"processing_time": end_processing_time - start_processing_time,
                         "generation_time": end_generation_time - start_generation_time}
@@ -377,7 +376,11 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                 context_ids = context_ids[:, :context_ids_len-input_ids.size(-1)]
                 context_attention_mask = context_attention_mask[:, :context_ids_len-input_ids.size(-1)]
             start_processing_time = time.time()
-            
+
+            # Use SDPA for the no-compression forward pass to avoid OOM with long contexts.
+            # FINCH compression uses eager (output_attentions=True), but here we just need
+            # to populate the KV cache without extracting attention weights.
+            self.config._attn_implementation = "sdpa"
             with torch.no_grad():
                 self.model(
                     input_ids=context_ids,
@@ -385,37 +388,37 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                     use_cache=True,
                     past_key_values=past_key_values
                 )
+            self.config._attn_implementation = "eager"
+
             end_processing_time = time.time()
             accelerator.log({
                 "target_token_mean": past_key_values.seen_tokens,
                 "target_token_min": past_key_values.seen_tokens,
                 "target_token_max": past_key_values.seen_tokens
             })
-            
+
             start_generation_time = time.time()
-            
+
             past_length = past_key_values.get_seq_length()
             dummy_input_ids = torch.zeros((input_ids.shape[0], past_length), dtype=input_ids.dtype, device=input_ids.device)
             full_input_ids = torch.cat([dummy_input_ids, input_ids], dim=1)
-            
             dummy_attention_mask = torch.ones((input_ids.shape[0], past_length), dtype=attention_mask.dtype, device=attention_mask.device)
             full_attention_mask = torch.cat([dummy_attention_mask, attention_mask], dim=1)
-            
+
             keys_to_remove = ["split_index", "context_ids", "context_attention_mask", "question_ids", "question_attention_mask", "attention_mask"]
             for key in keys_to_remove:
                 generate_kwargs.pop(key, None)
 
             model_output = super().generate(
-                input_ids=full_input_ids, 
-                attention_mask=full_attention_mask, 
-                use_cache=True, 
-                past_key_values=past_key_values, 
+                input_ids=full_input_ids,
+                attention_mask=full_attention_mask,
+                use_cache=True,
+                past_key_values=past_key_values,
                 **generate_kwargs
             )
-
             if isinstance(model_output, torch.Tensor):
                 model_output = model_output[:, past_length:]
-            
+
             end_generation_time = time.time()
             accelerator.log({"processing_time": end_processing_time - start_processing_time,
                         "generation_time": end_generation_time - start_generation_time}

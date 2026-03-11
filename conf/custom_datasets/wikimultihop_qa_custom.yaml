@@ -1,6 +1,6 @@
 version_2_with_negative: False
 test:
-    _target_: src.context_compression.custom_datasets.qa_dataset.QADataset
+    _target_: src.context_compression.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
         question_prompt: null
@@ -12,8 +12,7 @@ test:
         use_fp16: False
         dataset_name: null
         pad_to_max_length: False
-        max_length: 2048 # this is the length of system prompt + question
-        doc_stride: 512
+        max_length: 512 # length of system prompt + question (not full sequence)
         max_answer_length: 32
         dataset_config_name: null
         train_file: null
