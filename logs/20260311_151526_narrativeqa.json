@@ -1,0 +1,121 @@
+{
+    "configs": {
+        "task_name": "narrativeqa",
+        "target_token": 4096,
+        "split_size": 512,
+        "condition": "question",
+        "normalize": true,
+        "max_length": 512,
+        "context_max_length": 8192,
+        "num_samples_evaluated": 10,
+        "max_answer_length": 128,
+        "temperature": 1.0
+    },
+    "result": {
+        "avg_f1_score": 22.56,
+        "avg_latency": 2660.67,
+        "max_peak_memory": 18447.76
+    },
+    "details": [
+        {
+            "id": 1,
+            "sample_id": "341d214a2c377691bf20e5a30b8f7979696bd19141ad9c9f",
+            "input_token": 8192,
+            "output": "He is living with the Kent Mulvilles at their home in Wimbledon.",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "f1_score": 55.56,
+            "latency_ms": 5092.27,
+            "peak_memory_mb": 17280.78
+        },
+        {
+            "id": 2,
+            "sample_id": "26c6325283dece0b557e34cde9a5c57999ec5c68782e8194",
+            "input_token": 8192,
+            "output": "Ann does not return Mary's feelings of affection.",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "f1_score": 0.0,
+            "latency_ms": 2646.18,
+            "peak_memory_mb": 18443.19
+        },
+        {
+            "id": 3,
+            "sample_id": "5b8d6fdd30a297e508ebb484f172ca5bce8d31b340eb3506",
+            "input_token": 8019,
+            "output": "On Atlas' mountain, within a cavern by a secret fountain.",
+            "ground_truth": "The Atlas Mountains",
+            "f1_score": 20.0,
+            "latency_ms": 2708.26,
+            "peak_memory_mb": 18402.8
+        },
+        {
+            "id": 4,
+            "sample_id": "68fc4dee839213b5259d41718909195c2f5274665bc18036",
+            "input_token": 8192,
+            "output": "To persuade Socrates to escape from prison.",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "f1_score": 33.33,
+            "latency_ms": 2145.01,
+            "peak_memory_mb": 18429.71
+        },
+        {
+            "id": 5,
+            "sample_id": "36232c9c63d19d282643657b3da5b688cb14e3b44009c494",
+            "input_token": 8192,
+            "output": "There is no Baron Henry in the story, and no mention of cutting off Otto's hand.",
+            "ground_truth": "Otto was so young.",
+            "f1_score": 0.0,
+            "latency_ms": 3212.67,
+            "peak_memory_mb": 18442.45
+        },
+        {
+            "id": 6,
+            "sample_id": "0bf1995158cbf08134d5dc15475c27f38b3ab5441c422419",
+            "input_token": 8192,
+            "output": "at least six hours.",
+            "ground_truth": "Six hours.",
+            "f1_score": 66.67,
+            "latency_ms": 2160.95,
+            "peak_memory_mb": 18447.76
+        },
+        {
+            "id": 7,
+            "sample_id": "9fbcbb5460066a68460ba92626c25371e0a1ff65b3bd5e84",
+            "input_token": 8192,
+            "output": "Mia.",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "f1_score": 0.0,
+            "latency_ms": 2009.37,
+            "peak_memory_mb": 18438.51
+        },
+        {
+            "id": 8,
+            "sample_id": "f9cfda8abcc78f9e2f492d4f58ee4996430e9a8911e29726",
+            "input_token": 8192,
+            "output": "Dana Barrett.",
+            "ground_truth": "Dr. Janosz Poha",
+            "f1_score": 0.0,
+            "latency_ms": 2287.34,
+            "peak_memory_mb": 18439.14
+        },
+        {
+            "id": 9,
+            "sample_id": "58b8a46c20c05540367b90490846c4f9808db630026b28d4",
+            "input_token": 8192,
+            "output": "American.",
+            "ground_truth": "She is an American.",
+            "f1_score": 50.0,
+            "latency_ms": 2052.7,
+            "peak_memory_mb": 18438.4
+        },
+        {
+            "id": 10,
+            "sample_id": "c89fd516348b68f96538948b052cb10d5b6f21bc441f5a55",
+            "input_token": 8019,
+            "output": "The Witch of Atlas.",
+            "ground_truth": "The scribe.",
+            "f1_score": 0.0,
+            "latency_ms": 2291.98,
+            "peak_memory_mb": 18400.97
+        }
+    ]
+}

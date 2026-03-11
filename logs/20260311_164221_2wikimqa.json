@@ -1,0 +1,2021 @@
+{
+    "configs": {
+        "task_name": "2wikimqa",
+        "target_token": 1730,
+        "split_size": 512,
+        "condition": "question",
+        "normalize": true,
+        "max_length": 512,
+        "context_max_length": 4887,
+        "num_samples_evaluated": 200,
+        "max_answer_length": 32,
+        "temperature": 1.0
+    },
+    "result": {
+        "avg_f1_score": 14.83,
+        "avg_latency": 2315.11,
+        "max_peak_memory": 20171.26
+    },
+    "details": [
+        {
+            "id": 1,
+            "sample_id": "41ac2a4beb0af8f58d01863a62b90692f7c7d74b5e3a58d9",
+            "input_token": 4887,
+            "output": "Waldrada",
+            "ground_truth": "Ozalj",
+            "f1_score": 0.0,
+            "latency_ms": 6728.07,
+            "peak_memory_mb": 19712.13
+        },
+        {
+            "id": 2,
+            "sample_id": "3924e4ac5039ce3fadda49604bfcb0f5238af81774616e53",
+            "input_token": 4887,
+            "output": "Elizabeth",
+            "ground_truth": "John the Baptist",
+            "f1_score": 0.0,
+            "latency_ms": 2091.9,
+            "peak_memory_mb": 20060.76
+        },
+        {
+            "id": 3,
+            "sample_id": "2c952e3e1ca394df975103b3135b3c38e0ee16e25d860258",
+            "input_token": 4887,
+            "output": "2008 : Le Père (Éditions de l'Éditions\n2009 : Le Père (Éditions de l'Olivier",
+            "ground_truth": "Cahiers du cinéma",
+            "f1_score": 0.0,
+            "latency_ms": 3387.03,
+            "peak_memory_mb": 20022.02
+        },
+        {
+            "id": 4,
+            "sample_id": "aec83da1f2faf6ec8badfd53d632f525c9ef2090d99d1c6c",
+            "input_token": 4887,
+            "output": "No.",
+            "ground_truth": "no",
+            "f1_score": 100.0,
+            "latency_ms": 2718.79,
+            "peak_memory_mb": 20133.0
+        },
+        {
+            "id": 5,
+            "sample_id": "4b28d517ce1c1e3cfec9282ca7b212c1cb87c254781d7c86",
+            "input_token": 4887,
+            "output": "1483/1485",
+            "ground_truth": "1510",
+            "f1_score": 0.0,
+            "latency_ms": 3114.27,
+            "peak_memory_mb": 20110.74
+        },
+        {
+            "id": 6,
+            "sample_id": "81cd47ec621f2228d8bb4ec351ffd6b23d23107e5b287ffb",
+            "input_token": 4887,
+            "output": "1722",
+            "ground_truth": "Edward Watson",
+            "f1_score": 0.0,
+            "latency_ms": 2449.67,
+            "peak_memory_mb": 20051.15
+        },
+        {
+            "id": 7,
+            "sample_id": "048e82b64b5651b74d452db7151c2110a718128dfd12a774",
+            "input_token": 4887,
+            "output": "1312",
+            "ground_truth": "16 September 1360",
+            "f1_score": 0.0,
+            "latency_ms": 3138.6,
+            "peak_memory_mb": 20103.21
+        },
+        {
+            "id": 8,
+            "sample_id": "c8fd8db4d295aef41a9434299a8eeffb9af5e2bbcde4f13a",
+            "input_token": 4887,
+            "output": "Helmichis",
+            "ground_truth": "Cunimund",
+            "f1_score": 0.0,
+            "latency_ms": 2656.32,
+            "peak_memory_mb": 19990.19
+        },
+        {
+            "id": 9,
+            "sample_id": "4db5bcd1d49fce674507d9128850eb71b808b7dc4246e882",
+            "input_token": 4887,
+            "output": "1888",
+            "ground_truth": "St Patrick's College",
+            "f1_score": 0.0,
+            "latency_ms": 2350.15,
+            "peak_memory_mb": 19955.57
+        },
+        {
+            "id": 10,
+            "sample_id": "be97290f663a83ba27007dd262ca2a6072c9156f775a24ad",
+            "input_token": 4887,
+            "output": "Dana Blankstein",
+            "ground_truth": "Bob Jones University",
+            "f1_score": 0.0,
+            "latency_ms": 2169.91,
+            "peak_memory_mb": 20029.0
+        },
+        {
+            "id": 11,
+            "sample_id": "538d0eac8ec082e93d6f273237fafd1f23fb405e35bad84e",
+            "input_token": 4887,
+            "output": "The Secret Invasion",
+            "ground_truth": "The House Of The Seven Hawks",
+            "f1_score": 0.0,
+            "latency_ms": 2202.21,
+            "peak_memory_mb": 20093.19
+        },
+        {
+            "id": 12,
+            "sample_id": "37022dee1597491021c2aa7522276a600eb0dd316f12cbb6",
+            "input_token": 4887,
+            "output": "Marie of Brabant.",
+            "ground_truth": "Marie of Hohenstaufen",
+            "f1_score": 66.67,
+            "latency_ms": 2532.92,
+            "peak_memory_mb": 20057.66
+        },
+        {
+            "id": 13,
+            "sample_id": "90f7f51f0c27f041e730cf8893f79f3f40fcb0aab1820a4d",
+            "input_token": 2278,
+            "output": "Renaud I",
+            "ground_truth": "Guy II, Count of Soissons",
+            "f1_score": 0.0,
+            "latency_ms": 1852.46,
+            "peak_memory_mb": 18496.32
+        },
+        {
+            "id": 14,
+            "sample_id": "ee29eb2556135405fa19a48b0abdff0aceddef7594169c33",
+            "input_token": 4887,
+            "output": "1839",
+            "ground_truth": "26 April 1872",
+            "f1_score": 0.0,
+            "latency_ms": 2556.04,
+            "peak_memory_mb": 19908.03
+        },
+        {
+            "id": 15,
+            "sample_id": "2a398d925d3607c94ffb2d0cf9fe2fe6da6e9970ce95578a",
+            "input_token": 4887,
+            "output": "Australia.",
+            "ground_truth": "America",
+            "f1_score": 0.0,
+            "latency_ms": 2099.66,
+            "peak_memory_mb": 20031.7
+        },
+        {
+            "id": 16,
+            "sample_id": "8d3cf7916a2f8a2762de13a9520b6350e46464fbf7f63dd5",
+            "input_token": 4887,
+            "output": "Louisa Ulrika",
+            "ground_truth": "Ona Munson",
+            "f1_score": 0.0,
+            "latency_ms": 2554.62,
+            "peak_memory_mb": 20016.37
+        },
+        {
+            "id": 17,
+            "sample_id": "5844352bd3fe5898756970abec3099ec694be6ad15c498db",
+            "input_token": 2537,
+            "output": "1932",
+            "ground_truth": "The Death Of Black King",
+            "f1_score": 0.0,
+            "latency_ms": 1104.11,
+            "peak_memory_mb": 19037.36
+        },
+        {
+            "id": 18,
+            "sample_id": "4413705182b57f12dc553e0919b50fd3c3b111cb4d82d12f",
+            "input_token": 4887,
+            "output": "1990",
+            "ground_truth": "no",
+            "f1_score": 0.0,
+            "latency_ms": 2616.2,
+            "peak_memory_mb": 20057.17
+        },
+        {
+            "id": 19,
+            "sample_id": "cc32d31bbeb3e0d8787e963cf0843ae6b22f33817eb5a587",
+            "input_token": 1102,
+            "output": "No",
+            "ground_truth": "no",
+            "f1_score": 100.0,
+            "latency_ms": 391.74,
+            "peak_memory_mb": 15928.8
+        },
+        {
+            "id": 20,
+            "sample_id": "b3845fcad97309850a76e3720cd829a45d2bb12ee29a9cfb",
+            "input_token": 4887,
+            "output": "Mysore, India.",
+            "ground_truth": "Mysore",
+            "f1_score": 66.67,
+            "latency_ms": 2245.98,
+            "peak_memory_mb": 19890.68
+        },
+        {
+            "id": 21,
+            "sample_id": "236eb4a8c2ba63d96ed3b6aec9ff7b00fa5e4df1173dd01c",
+            "input_token": 3974,
+            "output": "Hamar",
+            "ground_truth": "Kristiania",
+            "f1_score": 0.0,
+            "latency_ms": 1664.16,
+            "peak_memory_mb": 19195.4
+        },
+        {
+            "id": 22,
+            "sample_id": "e026b7c57d2d759c12652fae6421931fe4f8cf8745ff9bdb",
+            "input_token": 4887,
+            "output": "November 6, 2008",
+            "ground_truth": "Lee Strasberg Theatre and Film Institute",
+            "f1_score": 0.0,
+            "latency_ms": 2251.01,
+            "peak_memory_mb": 19985.33
+        },
+        {
+            "id": 23,
+            "sample_id": "8dedfb4f00b873379cb4457d81113516b8db6c4017a1c912",
+            "input_token": 4887,
+            "output": "1972",
+            "ground_truth": "Hell Up In Harlem",
+            "f1_score": 0.0,
+            "latency_ms": 2136.01,
+            "peak_memory_mb": 20112.11
+        },
+        {
+            "id": 24,
+            "sample_id": "7c0b13a81d9d58791b71c2d8e46d2d063de3b9e89c75335f",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "Cipriano Castro",
+            "f1_score": 0.0,
+            "latency_ms": 2083.45,
+            "peak_memory_mb": 20070.0
+        },
+        {
+            "id": 25,
+            "sample_id": "655c0c4e465b47d7fd829d3a487705991f4c059cee3c9aed",
+            "input_token": 4887,
+            "output": "Fernando Ayala",
+            "ground_truth": "Monster On The Campus",
+            "f1_score": 0.0,
+            "latency_ms": 2448.41,
+            "peak_memory_mb": 20112.34
+        },
+        {
+            "id": 26,
+            "sample_id": "8720ebfc91b6860392a2b7b0ba954b0cd16ffd8c360a1f2b",
+            "input_token": 1555,
+            "output": "Altuğ Çelikbilek",
+            "ground_truth": "Altuğ Çelikbilek",
+            "f1_score": 100.0,
+            "latency_ms": 926.12,
+            "peak_memory_mb": 16052.9
+        },
+        {
+            "id": 27,
+            "sample_id": "919cc6b1e482c475dc93740aae3549bc6012d644fb29562c",
+            "input_token": 4677,
+            "output": "Jugband Blues",
+            "ground_truth": "Jugband Blues",
+            "f1_score": 100.0,
+            "latency_ms": 3115.62,
+            "peak_memory_mb": 20013.08
+        },
+        {
+            "id": 28,
+            "sample_id": "0d02726cbaab0fbd2e84b7537550154e8aa96f81abb2864b",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 2363.37,
+            "peak_memory_mb": 20024.13
+        },
+        {
+            "id": 29,
+            "sample_id": "33e3bc2dc011e79c047553153b1ab176c6a08f923af245ec",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "Leustach Rátót",
+            "f1_score": 0.0,
+            "latency_ms": 2485.74,
+            "peak_memory_mb": 20041.19
+        },
+        {
+            "id": 30,
+            "sample_id": "6275ba9fee197d2fab82671a4497b4764a461c2c7c33ac0b",
+            "input_token": 4887,
+            "output": "Ratna Malla",
+            "ground_truth": "Nepal",
+            "f1_score": 0.0,
+            "latency_ms": 2819.45,
+            "peak_memory_mb": 20041.37
+        },
+        {
+            "id": 31,
+            "sample_id": "40de6f6c353c080845a8ea644039e9ba83cd481d3745395b",
+            "input_token": 4887,
+            "output": "Arthur Acheson, 1st Earl of Gosford.",
+            "ground_truth": "Archibald Acheson, 2nd Earl of Gosford",
+            "f1_score": 66.67,
+            "latency_ms": 2690.14,
+            "peak_memory_mb": 20111.72
+        },
+        {
+            "id": 32,
+            "sample_id": "35ffcf04ff64965decfcd3d34ff37b35da2a92f0b64346cd",
+            "input_token": 4887,
+            "output": "Abdul Muttalib",
+            "ground_truth": "Jean Paul Getty",
+            "f1_score": 0.0,
+            "latency_ms": 2283.09,
+            "peak_memory_mb": 19969.07
+        },
+        {
+            "id": 33,
+            "sample_id": "47ed89f40cae521df8767b1b7077fe9c547c10fd8bf1c6b2",
+            "input_token": 4887,
+            "output": "1988",
+            "ground_truth": "Goring-on-Thames, Oxfordshire",
+            "f1_score": 0.0,
+            "latency_ms": 2092.64,
+            "peak_memory_mb": 20055.29
+        },
+        {
+            "id": 34,
+            "sample_id": "ead67129fee9b0024c9c3f53041469d74cf8a0281e39febb",
+            "input_token": 4644,
+            "output": "Yes",
+            "ground_truth": "yes",
+            "f1_score": 100.0,
+            "latency_ms": 2015.81,
+            "peak_memory_mb": 20171.09
+        },
+        {
+            "id": 35,
+            "sample_id": "0ef1c3ac6b07212a6d5a91bfab2c12f2823412f10f667616",
+            "input_token": 4887,
+            "output": "The Abduction Club",
+            "ground_truth": "Wooden Crosses",
+            "f1_score": 0.0,
+            "latency_ms": 2651.39,
+            "peak_memory_mb": 20072.6
+        },
+        {
+            "id": 36,
+            "sample_id": "8daefc2a4f66b3614a6934857c8c8f9cfdeb3ca23d16e172",
+            "input_token": 4507,
+            "output": "The Magic Aster",
+            "ground_truth": "Above Rubies",
+            "f1_score": 0.0,
+            "latency_ms": 2409.38,
+            "peak_memory_mb": 19651.31
+        },
+        {
+            "id": 37,
+            "sample_id": "bc40752faddd32264f8402321411881736ab5a4733eee758",
+            "input_token": 4887,
+            "output": "1985",
+            "ground_truth": "Blue Blood And Red",
+            "f1_score": 0.0,
+            "latency_ms": 1854.05,
+            "peak_memory_mb": 20077.16
+        },
+        {
+            "id": 38,
+            "sample_id": "6e7d2d0700c8ec6fc15dc188c42d8104b89935219254fdaf",
+            "input_token": 4273,
+            "output": "Perth, Western Australia",
+            "ground_truth": "Castlemaine, Victoria, Australia",
+            "f1_score": 33.33,
+            "latency_ms": 1855.31,
+            "peak_memory_mb": 19681.99
+        },
+        {
+            "id": 39,
+            "sample_id": "9a0ab728b48d43221f196b43d2816a4dff4142fd0054a4eb",
+            "input_token": 4887,
+            "output": "Paul de Cordon",
+            "ground_truth": "Lyudmyla Olyanovska",
+            "f1_score": 0.0,
+            "latency_ms": 2217.3,
+            "peak_memory_mb": 20047.4
+        },
+        {
+            "id": 40,
+            "sample_id": "6e7c0185fda0b6211274db748205994ee1468cfb30e2023d",
+            "input_token": 4887,
+            "output": "Mehmed",
+            "ground_truth": "Constantinople",
+            "f1_score": 0.0,
+            "latency_ms": 2134.26,
+            "peak_memory_mb": 20021.36
+        },
+        {
+            "id": 41,
+            "sample_id": "55acb15a501d22031778ff4ccb655e787668b617d911daa9",
+            "input_token": 4887,
+            "output": "870",
+            "ground_truth": "East Francia",
+            "f1_score": 0.0,
+            "latency_ms": 2048.73,
+            "peak_memory_mb": 20078.67
+        },
+        {
+            "id": 42,
+            "sample_id": "57543e0892f90733bf97dc270cdb36eb9bf8e2230940bcb9",
+            "input_token": 3764,
+            "output": "The Music of the Lord of the Rings Films.",
+            "ground_truth": "Henry Goes Arizona",
+            "f1_score": 0.0,
+            "latency_ms": 1863.64,
+            "peak_memory_mb": 19284.37
+        },
+        {
+            "id": 43,
+            "sample_id": "2d1951b62f317038d28f6ac6a2b21e9d2e7f921ea528948b",
+            "input_token": 4887,
+            "output": "2013",
+            "ground_truth": "United Kingdom",
+            "f1_score": 0.0,
+            "latency_ms": 2116.93,
+            "peak_memory_mb": 19958.29
+        },
+        {
+            "id": 44,
+            "sample_id": "b126cad8f81aed3c5cc29c20c25b1adc7d1f33e1c4e264c3",
+            "input_token": 4887,
+            "output": "1984",
+            "ground_truth": "All-American Co-Ed",
+            "f1_score": 0.0,
+            "latency_ms": 2080.61,
+            "peak_memory_mb": 20096.04
+        },
+        {
+            "id": 45,
+            "sample_id": "188123e1b35a7de33fc44a40b55ab9ff0b59d29dc30f9148",
+            "input_token": 4887,
+            "output": "1981",
+            "ground_truth": "Buenos Aires",
+            "f1_score": 0.0,
+            "latency_ms": 2093.68,
+            "peak_memory_mb": 20125.14
+        },
+        {
+            "id": 46,
+            "sample_id": "5ff6349ea0b2ecb882f535ff3cec2f9c012d3468fb7b912e",
+            "input_token": 4887,
+            "output": "1699",
+            "ground_truth": "Charlotte Amalie of Hesse-Kassel",
+            "f1_score": 0.0,
+            "latency_ms": 2041.79,
+            "peak_memory_mb": 20085.91
+        },
+        {
+            "id": 47,
+            "sample_id": "314e76591d11d30d2bd59b2f12b671e873b786656f19956d",
+            "input_token": 4887,
+            "output": "Agnes",
+            "ground_truth": "Brunswick",
+            "f1_score": 0.0,
+            "latency_ms": 2066.47,
+            "peak_memory_mb": 20071.6
+        },
+        {
+            "id": 48,
+            "sample_id": "7140432f1c424674d04ea819fa63f85aa4f154d72ab66285",
+            "input_token": 4887,
+            "output": "Annia Cornificia Faustina",
+            "ground_truth": "Vibia Sabina",
+            "f1_score": 0.0,
+            "latency_ms": 2261.09,
+            "peak_memory_mb": 20002.36
+        },
+        {
+            "id": 49,
+            "sample_id": "3292d2bcbbf8fc4816d168bcb7f81c13341198da1e88b903",
+            "input_token": 1758,
+            "output": "Bajo Otro Sol",
+            "ground_truth": "Bajo Otro Sol",
+            "f1_score": 100.0,
+            "latency_ms": 1566.46,
+            "peak_memory_mb": 17901.46
+        },
+        {
+            "id": 50,
+            "sample_id": "5421c1e591296d64636a7e99fbfe98dddfed0f83d2053380",
+            "input_token": 4755,
+            "output": "Lisa Azuelos",
+            "ground_truth": "Marie Laforêt",
+            "f1_score": 0.0,
+            "latency_ms": 2150.52,
+            "peak_memory_mb": 19903.74
+        },
+        {
+            "id": 51,
+            "sample_id": "f67db35cb225c73bb753006bd14fab03942bbe0157a74979",
+            "input_token": 4887,
+            "output": "Sophia Magdalena",
+            "ground_truth": "Sandra Nelson",
+            "f1_score": 0.0,
+            "latency_ms": 2263.3,
+            "peak_memory_mb": 20032.06
+        },
+        {
+            "id": 52,
+            "sample_id": "96500ef697df70106798988a9065594622cdeff67156cd20",
+            "input_token": 4887,
+            "output": "1705",
+            "ground_truth": "May 19, 1669",
+            "f1_score": 0.0,
+            "latency_ms": 2811.82,
+            "peak_memory_mb": 20076.49
+        },
+        {
+            "id": 53,
+            "sample_id": "5a867841d94c9f88f3bc0c333e93484486b09341db474bd6",
+            "input_token": 4887,
+            "output": "Eleanor of Aragon",
+            "ground_truth": "Palencia",
+            "f1_score": 0.0,
+            "latency_ms": 3140.12,
+            "peak_memory_mb": 20114.94
+        },
+        {
+            "id": 54,
+            "sample_id": "059802de84ebd63ee99284c9cb2b7db2d45ca66c55e68ee1",
+            "input_token": 4887,
+            "output": "1985",
+            "ground_truth": "Miley Naa Miley Hum",
+            "f1_score": 0.0,
+            "latency_ms": 2432.48,
+            "peak_memory_mb": 20101.36
+        },
+        {
+            "id": 55,
+            "sample_id": "fcc4a49fbe72f1b8ffef144e2e9d85bfc8897ba2864fd521",
+            "input_token": 4887,
+            "output": "No answer.",
+            "ground_truth": "Tom Mix In Arabia",
+            "f1_score": 0.0,
+            "latency_ms": 2365.83,
+            "peak_memory_mb": 20112.45
+        },
+        {
+            "id": 56,
+            "sample_id": "633204c891118a6f3d1ae62d7b444c2ee02ad0cbae4876cc",
+            "input_token": 4180,
+            "output": "Johnny Sheffield",
+            "ground_truth": "Seven In The Sun",
+            "f1_score": 0.0,
+            "latency_ms": 1754.05,
+            "peak_memory_mb": 19684.64
+        },
+        {
+            "id": 57,
+            "sample_id": "977f59ef09f7cc4ad6c71fc18d8b60e818e07a43cd7bee92",
+            "input_token": 4887,
+            "output": "2008",
+            "ground_truth": "Dr. Socrates",
+            "f1_score": 0.0,
+            "latency_ms": 2362.64,
+            "peak_memory_mb": 20030.9
+        },
+        {
+            "id": 58,
+            "sample_id": "5c3829f10f9daf565e9b5b52ca19f5c044550e916479da74",
+            "input_token": 4887,
+            "output": "Changeland",
+            "ground_truth": "Changeland",
+            "f1_score": 100.0,
+            "latency_ms": 2287.75,
+            "peak_memory_mb": 20074.6
+        },
+        {
+            "id": 59,
+            "sample_id": "0a64d8873482d91efc595a508218c6ce881c13c95028039e",
+            "input_token": 3279,
+            "output": "Ruel Redinger",
+            "ground_truth": "Ruel Redinger",
+            "f1_score": 100.0,
+            "latency_ms": 2169.74,
+            "peak_memory_mb": 19706.48
+        },
+        {
+            "id": 60,
+            "sample_id": "44b7f326c7b3c430968c237ee4017425d03eef586d5d6cb7",
+            "input_token": 4285,
+            "output": "Vasily Karatygin",
+            "ground_truth": "Alexandra Kolosova",
+            "f1_score": 0.0,
+            "latency_ms": 2769.12,
+            "peak_memory_mb": 19604.7
+        },
+        {
+            "id": 61,
+            "sample_id": "85d2e8c38cc3b6f464eae6d84ef2df5f41807c9f8bf3aac8",
+            "input_token": 4887,
+            "output": "Billy Milano",
+            "ground_truth": "Jessi Colter",
+            "f1_score": 0.0,
+            "latency_ms": 2628.87,
+            "peak_memory_mb": 20039.15
+        },
+        {
+            "id": 62,
+            "sample_id": "1038dcf795ffefdb5d947e54a7e2d3b04d73895e482fd324",
+            "input_token": 3577,
+            "output": "No",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 1984.35,
+            "peak_memory_mb": 19199.94
+        },
+        {
+            "id": 63,
+            "sample_id": "62616c28af945825f87a95c47c1783dc284b06ec2d447402",
+            "input_token": 3147,
+            "output": "Erich Haenisch",
+            "ground_truth": "William Pooley",
+            "f1_score": 0.0,
+            "latency_ms": 1943.38,
+            "peak_memory_mb": 19604.37
+        },
+        {
+            "id": 64,
+            "sample_id": "a3c88e70534d79b432d32c0b53d0d181c957b353f658dc95",
+            "input_token": 4887,
+            "output": "Dáithi Sproule",
+            "ground_truth": "Sweden",
+            "f1_score": 0.0,
+            "latency_ms": 2715.98,
+            "peak_memory_mb": 19920.34
+        },
+        {
+            "id": 65,
+            "sample_id": "63df7238a0005c6bffc122ca97570a95eb1d3711abaee205",
+            "input_token": 2168,
+            "output": "No",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 876.59,
+            "peak_memory_mb": 18507.58
+        },
+        {
+            "id": 66,
+            "sample_id": "c94e0220a7c5dadee3094df576df766b6d1a15b6c6e21011",
+            "input_token": 4887,
+            "output": "Melody of Death",
+            "ground_truth": "Melody Of The World",
+            "f1_score": 66.67,
+            "latency_ms": 2289.57,
+            "peak_memory_mb": 19961.91
+        },
+        {
+            "id": 67,
+            "sample_id": "cab5465c3f7663e5d72c15a32bc04c8a917dac3c03828814",
+            "input_token": 4484,
+            "output": "Seville.",
+            "ground_truth": "Madrid",
+            "f1_score": 0.0,
+            "latency_ms": 1824.64,
+            "peak_memory_mb": 19674.83
+        },
+        {
+            "id": 68,
+            "sample_id": "be0651d84c04af5de43e28cf89e78d7e87490e637167632e",
+            "input_token": 4712,
+            "output": "Oskar Roehler",
+            "ground_truth": "Gisela Elsner",
+            "f1_score": 0.0,
+            "latency_ms": 2170.73,
+            "peak_memory_mb": 20004.05
+        },
+        {
+            "id": 69,
+            "sample_id": "ef73e58876b94a997d928ee13b7ac7cdb8b8aa0bac856a92",
+            "input_token": 4887,
+            "output": "The Great Man",
+            "ground_truth": "La Belle Américaine",
+            "f1_score": 0.0,
+            "latency_ms": 2140.12,
+            "peak_memory_mb": 20096.24
+        },
+        {
+            "id": 70,
+            "sample_id": "7940c60a5ff2d81b62d118253577d1d891057ca45695e91a",
+            "input_token": 4771,
+            "output": "No",
+            "ground_truth": "Oklahoma City, Oklahoma",
+            "f1_score": 0.0,
+            "latency_ms": 1847.77,
+            "peak_memory_mb": 20077.81
+        },
+        {
+            "id": 71,
+            "sample_id": "a88430cef36a0222c3c30780328ff266b16325a7ec723a97",
+            "input_token": 4887,
+            "output": "1923",
+            "ground_truth": "Dubai",
+            "f1_score": 0.0,
+            "latency_ms": 2029.28,
+            "peak_memory_mb": 20081.16
+        },
+        {
+            "id": 72,
+            "sample_id": "0bcff697444354703dd1e8987a709b8ed2f44bf9d6b2d320",
+            "input_token": 4887,
+            "output": "1997",
+            "ground_truth": "La Trinité",
+            "f1_score": 0.0,
+            "latency_ms": 2069.5,
+            "peak_memory_mb": 20039.86
+        },
+        {
+            "id": 73,
+            "sample_id": "24e27e943be014d4549674d581cdc20fdae92fa3d9cd256c",
+            "input_token": 4887,
+            "output": "1868",
+            "ground_truth": "Prince Albert of Prussia",
+            "f1_score": 0.0,
+            "latency_ms": 2073.76,
+            "peak_memory_mb": 20111.12
+        },
+        {
+            "id": 74,
+            "sample_id": "0c43156b7d6bc17425a89dc6c6d48fc8c2c72ac9eba55a87",
+            "input_token": 945,
+            "output": "Yes.",
+            "ground_truth": "yes",
+            "f1_score": 100.0,
+            "latency_ms": 399.48,
+            "peak_memory_mb": 15883.52
+        },
+        {
+            "id": 75,
+            "sample_id": "64d6357ab735a8542112f87893a6e7c89b1b307bdb0e24c7",
+            "input_token": 4887,
+            "output": "Anne Devereux-Mills",
+            "ground_truth": "Banbury",
+            "f1_score": 0.0,
+            "latency_ms": 2777.92,
+            "peak_memory_mb": 19866.56
+        },
+        {
+            "id": 76,
+            "sample_id": "9ef1c9e836fb3844fe16369a346088af89b8da29e24aab1f",
+            "input_token": 4344,
+            "output": "Sir Paul Gore, 1st Baronet",
+            "ground_truth": "Sir Paul Gore, 1st Baronet",
+            "f1_score": 100.0,
+            "latency_ms": 2383.65,
+            "peak_memory_mb": 19669.92
+        },
+        {
+            "id": 77,
+            "sample_id": "f11ac580e22d7d0e3da7cf1c725c8def8aef4aa891baa07a",
+            "input_token": 4887,
+            "output": "Kazakhstan",
+            "ground_truth": "Fatimid caliphate",
+            "f1_score": 0.0,
+            "latency_ms": 3108.9,
+            "peak_memory_mb": 20010.33
+        },
+        {
+            "id": 78,
+            "sample_id": "884614fa7d0fe723587d2f2677d3f2143cd13ab74391bea6",
+            "input_token": 4887,
+            "output": "Eunoë",
+            "ground_truth": "Dayton, Ohio",
+            "f1_score": 0.0,
+            "latency_ms": 2603.22,
+            "peak_memory_mb": 20003.33
+        },
+        {
+            "id": 79,
+            "sample_id": "ec4ba162decfc8dd03ccbca7832f3cecf985a5542e70dec1",
+            "input_token": 4887,
+            "output": "1933",
+            "ground_truth": "Ona Munson",
+            "f1_score": 0.0,
+            "latency_ms": 2913.29,
+            "peak_memory_mb": 20055.68
+        },
+        {
+            "id": 80,
+            "sample_id": "9c5350cca5afdd1a7254dbc26b3642401551473f4b071ce6",
+            "input_token": 4887,
+            "output": "The Drover's Sweetheart.",
+            "ground_truth": "The Drover'S Sweetheart",
+            "f1_score": 100.0,
+            "latency_ms": 2740.49,
+            "peak_memory_mb": 20079.78
+        },
+        {
+            "id": 81,
+            "sample_id": "9ce10c5072e04cbd0d81d7e721fba8cf8062cc665fd32314",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "Tumkur",
+            "f1_score": 0.0,
+            "latency_ms": 2106.24,
+            "peak_memory_mb": 20092.9
+        },
+        {
+            "id": 82,
+            "sample_id": "58301315eaee3256c8f5ddefb03de59d55a75d3a37aab88a",
+            "input_token": 4887,
+            "output": "Closely",
+            "ground_truth": "Det Sande Ansigt",
+            "f1_score": 0.0,
+            "latency_ms": 2193.19,
+            "peak_memory_mb": 20102.4
+        },
+        {
+            "id": 83,
+            "sample_id": "62453a76a4867b6d09ac435581e1a327ec5b55cf231c79f9",
+            "input_token": 4887,
+            "output": "The Inbetweeners (2009)\nThe Inbetweeners (2010)\nThe Inbetweeners (2011)\nThe Inbetweeners (2012)",
+            "ground_truth": "Bomgay",
+            "f1_score": 0.0,
+            "latency_ms": 3344.11,
+            "peak_memory_mb": 20085.63
+        },
+        {
+            "id": 84,
+            "sample_id": "e5eb5e5215ff4d3f7a036fa1a20699d85cdfb68a7908f086",
+            "input_token": 4887,
+            "output": "Bulgaria",
+            "ground_truth": "Preslav",
+            "f1_score": 0.0,
+            "latency_ms": 2603.24,
+            "peak_memory_mb": 20117.26
+        },
+        {
+            "id": 85,
+            "sample_id": "1d38c4b905f131417ce218eb86f68305a10160f9757cbeca",
+            "input_token": 4887,
+            "output": "The Night of Nights",
+            "ground_truth": "Revolt Of The Praetorians",
+            "f1_score": 33.33,
+            "latency_ms": 2808.59,
+            "peak_memory_mb": 20105.99
+        },
+        {
+            "id": 86,
+            "sample_id": "c1b46a5458b15fdbfcd264b7e26e42d2cbaafb0e6dc5f48d",
+            "input_token": 4887,
+            "output": "Jacques Tourneur",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 2866.89,
+            "peak_memory_mb": 20108.0
+        },
+        {
+            "id": 87,
+            "sample_id": "98ead8987446388d37301c03d7d9f24e2f511a9e0c10bcdf",
+            "input_token": 4887,
+            "output": "Michael Jai White.",
+            "ground_truth": "poisoning",
+            "f1_score": 0.0,
+            "latency_ms": 2887.13,
+            "peak_memory_mb": 20087.13
+        },
+        {
+            "id": 88,
+            "sample_id": "d267c5682ee42c1a570524a4b129fa908997a0ecfe07f8f6",
+            "input_token": 4887,
+            "output": "1998",
+            "ground_truth": "America",
+            "f1_score": 0.0,
+            "latency_ms": 3144.03,
+            "peak_memory_mb": 20054.8
+        },
+        {
+            "id": 89,
+            "sample_id": "fac1e789f954097c329b2709c591f0b35841438b14d08784",
+            "input_token": 4887,
+            "output": "Ethiopia",
+            "ground_truth": "Kingdom of Hawaii",
+            "f1_score": 0.0,
+            "latency_ms": 2397.61,
+            "peak_memory_mb": 20032.74
+        },
+        {
+            "id": 90,
+            "sample_id": "c9e8d02824dfbdf95fe9f90c45dc13bc12f45b6969b1467b",
+            "input_token": 3813,
+            "output": "Mi novia el...",
+            "ground_truth": "X-Paroni",
+            "f1_score": 0.0,
+            "latency_ms": 1903.43,
+            "peak_memory_mb": 19284.86
+        },
+        {
+            "id": 91,
+            "sample_id": "f77d9c5f3892f245b951dfd32e935473f63a4c6b565e31a9",
+            "input_token": 4887,
+            "output": "2003",
+            "ground_truth": "Vasantha Raagam",
+            "f1_score": 0.0,
+            "latency_ms": 2541.9,
+            "peak_memory_mb": 20010.24
+        },
+        {
+            "id": 92,
+            "sample_id": "eb1478ef3d4926564e153e99fd139c87e59cfaee49caac88",
+            "input_token": 4887,
+            "output": "1731",
+            "ground_truth": "Lee Byung-chul",
+            "f1_score": 0.0,
+            "latency_ms": 2215.61,
+            "peak_memory_mb": 20039.7
+        },
+        {
+            "id": 93,
+            "sample_id": "259e029da053a54f862f2455f3b92fb5f1b810647f1c1825",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "John I, Duke of Bourbon",
+            "f1_score": 0.0,
+            "latency_ms": 2674.39,
+            "peak_memory_mb": 19963.95
+        },
+        {
+            "id": 94,
+            "sample_id": "70923ff731dcad518ecdcdc8b53e165e8515a96ecf8f23c7",
+            "input_token": 4887,
+            "output": "1918",
+            "ground_truth": "27 June 1839",
+            "f1_score": 0.0,
+            "latency_ms": 2663.18,
+            "peak_memory_mb": 20046.16
+        },
+        {
+            "id": 95,
+            "sample_id": "a14e739445167b1be10d3a125f958a244c4b378261598a57",
+            "input_token": 4887,
+            "output": "Audie Murphy",
+            "ground_truth": "Gura Humorului",
+            "f1_score": 0.0,
+            "latency_ms": 1977.53,
+            "peak_memory_mb": 20068.91
+        },
+        {
+            "id": 96,
+            "sample_id": "32092cc7b80094b9c8914c1f70000295aefc4a985747b0ed",
+            "input_token": 4887,
+            "output": "1966",
+            "ground_truth": "Françoise Hardy",
+            "f1_score": 0.0,
+            "latency_ms": 1882.22,
+            "peak_memory_mb": 20107.61
+        },
+        {
+            "id": 97,
+            "sample_id": "0c4dd15b43d1061d372c11946aa71630926e2570f333f538",
+            "input_token": 4887,
+            "output": "It appears that there are multiple individuals with the name Jean-Claude. Here are the answers to the questions:\n\n1. Who is the Canadian film producer known",
+            "ground_truth": "Charles Wheatstone",
+            "f1_score": 0.0,
+            "latency_ms": 3242.52,
+            "peak_memory_mb": 20055.9
+        },
+        {
+            "id": 98,
+            "sample_id": "ececb22cb4bba60194702771c0d4de89658a4798d7efa1a1",
+            "input_token": 2900,
+            "output": "Bedford County, Virginia",
+            "ground_truth": "Washington",
+            "f1_score": 0.0,
+            "latency_ms": 1445.85,
+            "peak_memory_mb": 19125.21
+        },
+        {
+            "id": 99,
+            "sample_id": "da746ca10a31021be62e267f4e1407178b3f4a2d340672d3",
+            "input_token": 4887,
+            "output": "Our Agent Tiger",
+            "ground_truth": "London Melody",
+            "f1_score": 0.0,
+            "latency_ms": 2843.23,
+            "peak_memory_mb": 20004.54
+        },
+        {
+            "id": 100,
+            "sample_id": "b8ffb375e75ee2976b8825d05d48c34638c7ffeb6d67baff",
+            "input_token": 4887,
+            "output": "Diego Fernández de Cevallos",
+            "ground_truth": "Flaín Muñoz",
+            "f1_score": 0.0,
+            "latency_ms": 3292.35,
+            "peak_memory_mb": 20034.45
+        },
+        {
+            "id": 101,
+            "sample_id": "259c17d6e4a5e4c74669836fec3c6de0730bf65e67e6d988",
+            "input_token": 4887,
+            "output": "Paul Sorvino",
+            "ground_truth": "Mira Sorvino",
+            "f1_score": 50.0,
+            "latency_ms": 2737.16,
+            "peak_memory_mb": 20032.63
+        },
+        {
+            "id": 102,
+            "sample_id": "8af3f07b73fabc0cc4ef4e6928818d1ff08ead9f41a5085a",
+            "input_token": 2973,
+            "output": "No",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 1218.02,
+            "peak_memory_mb": 19232.25
+        },
+        {
+            "id": 103,
+            "sample_id": "3816f7d8e90a5497a1c0e415bf25218037c690e8e4d0d016",
+            "input_token": 4887,
+            "output": "1523",
+            "ground_truth": "Norway",
+            "f1_score": 0.0,
+            "latency_ms": 2054.47,
+            "peak_memory_mb": 20033.13
+        },
+        {
+            "id": 104,
+            "sample_id": "025911ff0afd34976b0a800c198c4117f95edfcd7b64bb24",
+            "input_token": 4887,
+            "output": "2008",
+            "ground_truth": "illness",
+            "f1_score": 0.0,
+            "latency_ms": 2143.98,
+            "peak_memory_mb": 20099.82
+        },
+        {
+            "id": 105,
+            "sample_id": "cdf0b77af7d55cc9a3424613604e8dbabe7a01e4869ad502",
+            "input_token": 4887,
+            "output": "1975",
+            "ground_truth": "Harby",
+            "f1_score": 0.0,
+            "latency_ms": 2570.83,
+            "peak_memory_mb": 19966.33
+        },
+        {
+            "id": 106,
+            "sample_id": "1ff4dc6c1f7c02445945ced1b35a08544d7ba76089675883",
+            "input_token": 4887,
+            "output": "Dante Lam",
+            "ground_truth": "Hong Kong Film Award for Best Director",
+            "f1_score": 0.0,
+            "latency_ms": 2870.59,
+            "peak_memory_mb": 20085.89
+        },
+        {
+            "id": 107,
+            "sample_id": "c7347f362602f3a0be4b051c0b68219e0648afa64772bd30",
+            "input_token": 2604,
+            "output": "There is no information about the date of death of the director of film Nallavan Vazhvan.",
+            "ground_truth": "3 September 1992",
+            "f1_score": 0.0,
+            "latency_ms": 2815.37,
+            "peak_memory_mb": 19144.86
+        },
+        {
+            "id": 108,
+            "sample_id": "0cf27c68148c99571860af561ce5f64c4524fde278defc63",
+            "input_token": 4585,
+            "output": "Frederick Cleveland Morgan died in 1962, and Nathaniel McLenaghan died in 1912.",
+            "ground_truth": "Nathaniel Mclenaghan",
+            "f1_score": 28.57,
+            "latency_ms": 3915.72,
+            "peak_memory_mb": 19844.06
+        },
+        {
+            "id": 109,
+            "sample_id": "93ff7c9369b6ff2f37896b54f6e4d8ff91c125f78ae8bf9a",
+            "input_token": 4887,
+            "output": "1982",
+            "ground_truth": "Tisch",
+            "f1_score": 0.0,
+            "latency_ms": 2620.97,
+            "peak_memory_mb": 20062.49
+        },
+        {
+            "id": 110,
+            "sample_id": "550f734c7ef908fcfe6b1b7e761826340f00abaa5eb305a0",
+            "input_token": 3989,
+            "output": "Cuchillos de fuego",
+            "ground_truth": "Cuchillos De Fuego",
+            "f1_score": 100.0,
+            "latency_ms": 2166.69,
+            "peak_memory_mb": 19225.27
+        },
+        {
+            "id": 111,
+            "sample_id": "860a0ad0039969cc7f01d512df2b0ea283d8f7d0c08886e5",
+            "input_token": 4887,
+            "output": "The Ballad of Cossack",
+            "ground_truth": "Moment Of Danger",
+            "f1_score": 33.33,
+            "latency_ms": 3003.24,
+            "peak_memory_mb": 20019.8
+        },
+        {
+            "id": 112,
+            "sample_id": "3723ec96e3b1af88c73edaa0a5e87f20194d9d212a67b615",
+            "input_token": 3672,
+            "output": "Mission Rock station",
+            "ground_truth": "De As",
+            "f1_score": 0.0,
+            "latency_ms": 1540.19,
+            "peak_memory_mb": 19181.12
+        },
+        {
+            "id": 113,
+            "sample_id": "60735709da9cbdd65bab0a11d1a0991ec842fe74d1ab583b",
+            "input_token": 4887,
+            "output": "1941",
+            "ground_truth": "The Piper'S Price",
+            "f1_score": 0.0,
+            "latency_ms": 2107.27,
+            "peak_memory_mb": 20000.78
+        },
+        {
+            "id": 114,
+            "sample_id": "76a7a3db55c966560ad3e8d34037602d4d12714980898b78",
+            "input_token": 4887,
+            "output": "1997",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 2262.58,
+            "peak_memory_mb": 20120.33
+        },
+        {
+            "id": 115,
+            "sample_id": "efea9c05de081efb7ef76741d3f24da2e993d54d99677b72",
+            "input_token": 4887,
+            "output": "1797",
+            "ground_truth": "13 March 1753",
+            "f1_score": 0.0,
+            "latency_ms": 2324.7,
+            "peak_memory_mb": 20046.49
+        },
+        {
+            "id": 116,
+            "sample_id": "435fae9b23d8b22e85a57cfd8ceb8541dea5b0c551acc3a9",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "No Trees In The Street",
+            "f1_score": 40.0,
+            "latency_ms": 2145.85,
+            "peak_memory_mb": 20105.31
+        },
+        {
+            "id": 117,
+            "sample_id": "3ee59c959e64a29c8a30263816ad47b76ffab36e5b8859ee",
+            "input_token": 4707,
+            "output": "Kerala.",
+            "ground_truth": "Methala",
+            "f1_score": 0.0,
+            "latency_ms": 2336.33,
+            "peak_memory_mb": 20086.77
+        },
+        {
+            "id": 118,
+            "sample_id": "43cf26663f3b4cec7a8ea68d56909201a2d1b1ad82512190",
+            "input_token": 4887,
+            "output": "House of Dark Shadows",
+            "ground_truth": "Alkohol",
+            "f1_score": 0.0,
+            "latency_ms": 2099.61,
+            "peak_memory_mb": 20070.87
+        },
+        {
+            "id": 119,
+            "sample_id": "77a79ad1902a4732e8030d79380395b7e614d65de3cdd038",
+            "input_token": 1954,
+            "output": "Do Musafir",
+            "ground_truth": "Do Musafir",
+            "f1_score": 100.0,
+            "latency_ms": 842.16,
+            "peak_memory_mb": 18138.13
+        },
+        {
+            "id": 120,
+            "sample_id": "f0523a41000b43996413780968b611c3f4d28b87f4acc859",
+            "input_token": 1767,
+            "output": "No",
+            "ground_truth": "no",
+            "f1_score": 100.0,
+            "latency_ms": 811.11,
+            "peak_memory_mb": 17770.54
+        },
+        {
+            "id": 121,
+            "sample_id": "6a60fa19187345478a447b63d8f52a1cb5341e964cda29db",
+            "input_token": 3947,
+            "output": "1992",
+            "ground_truth": "New York",
+            "f1_score": 0.0,
+            "latency_ms": 1565.37,
+            "peak_memory_mb": 19053.65
+        },
+        {
+            "id": 122,
+            "sample_id": "78227cb74e7b2401070e50abff8069510f5e5ccec0a2479f",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "Contragolpe",
+            "f1_score": 0.0,
+            "latency_ms": 1905.79,
+            "peak_memory_mb": 20060.07
+        },
+        {
+            "id": 123,
+            "sample_id": "f7abcc33c22de53769935182a278a199e9f263a12e56673e",
+            "input_token": 4501,
+            "output": "India",
+            "ground_truth": "Mumbai",
+            "f1_score": 0.0,
+            "latency_ms": 1748.62,
+            "peak_memory_mb": 19675.26
+        },
+        {
+            "id": 124,
+            "sample_id": "24a43c1b071d8bb99f51fec368dbc438cf7aea1f549ea195",
+            "input_token": 4887,
+            "output": "1967",
+            "ground_truth": "The Comedians Of Comedy",
+            "f1_score": 0.0,
+            "latency_ms": 2136.09,
+            "peak_memory_mb": 20047.59
+        },
+        {
+            "id": 125,
+            "sample_id": "89530e21fb2f36eb499cea025efa9c80b10049f72945bfb6",
+            "input_token": 4887,
+            "output": "1987",
+            "ground_truth": "Tombstone Rashomon",
+            "f1_score": 0.0,
+            "latency_ms": 2211.89,
+            "peak_memory_mb": 20097.57
+        },
+        {
+            "id": 126,
+            "sample_id": "e8c2e5c8d393b186e21c75788f7e93efeaef12a9c44880d9",
+            "input_token": 4887,
+            "output": "K. Balachander",
+            "ground_truth": "Dhuen Ki Lakeer",
+            "f1_score": 0.0,
+            "latency_ms": 2336.97,
+            "peak_memory_mb": 20111.7
+        },
+        {
+            "id": 127,
+            "sample_id": "d7f6203bfe33e28a517ed4214f515fb80671c48edd4720a6",
+            "input_token": 4887,
+            "output": "Mike Henry",
+            "ground_truth": "Perdón, Viejita",
+            "f1_score": 0.0,
+            "latency_ms": 2078.65,
+            "peak_memory_mb": 20171.26
+        },
+        {
+            "id": 128,
+            "sample_id": "517da14d56782303ccf8ec057b86bf43169b6f2edcd6d0f1",
+            "input_token": 4048,
+            "output": "2007",
+            "ground_truth": "University of Wisconsin",
+            "f1_score": 0.0,
+            "latency_ms": 1554.77,
+            "peak_memory_mb": 19449.42
+        },
+        {
+            "id": 129,
+            "sample_id": "300ccba91f776e583d418d6d9ecc5e1bdca7bd80580cd36e",
+            "input_token": 4887,
+            "output": "Juan René Serrano",
+            "ground_truth": "Dudley Russell",
+            "f1_score": 0.0,
+            "latency_ms": 2395.9,
+            "peak_memory_mb": 19974.08
+        },
+        {
+            "id": 130,
+            "sample_id": "81c8cd41355e5f0489dad4010b5fd414b817f7a9134affc2",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "Mirjam Polkunen",
+            "f1_score": 0.0,
+            "latency_ms": 2054.14,
+            "peak_memory_mb": 20109.87
+        },
+        {
+            "id": 131,
+            "sample_id": "0c8d9e57340d06b13e75f1dd42ddb5f08c1203fb62632353",
+            "input_token": 4887,
+            "output": "1918",
+            "ground_truth": "Saint Petersburg",
+            "f1_score": 0.0,
+            "latency_ms": 2263.97,
+            "peak_memory_mb": 20047.34
+        },
+        {
+            "id": 132,
+            "sample_id": "544828db02efd1313bfc0a1bdeb8c3df5985c299254b0222",
+            "input_token": 4887,
+            "output": "Australia",
+            "ground_truth": "Eindhoven",
+            "f1_score": 0.0,
+            "latency_ms": 2879.78,
+            "peak_memory_mb": 20056.37
+        },
+        {
+            "id": 133,
+            "sample_id": "f5cf6d94b9e4e7adfc30d262396bc29e201d9e07ead1d088",
+            "input_token": 4887,
+            "output": "No answer can be provided based on the given passages.",
+            "ground_truth": "Women'S Suffrage Journal",
+            "f1_score": 0.0,
+            "latency_ms": 3237.22,
+            "peak_memory_mb": 20077.85
+        },
+        {
+            "id": 134,
+            "sample_id": "018c9c2d781ea2c9d57a31bd2e0ff30b55e77017a319484a",
+            "input_token": 4567,
+            "output": "Fairmont, West Virginia.",
+            "ground_truth": "Fairmont, West Virginia",
+            "f1_score": 100.0,
+            "latency_ms": 2133.62,
+            "peak_memory_mb": 19813.88
+        },
+        {
+            "id": 135,
+            "sample_id": "93ef40c0bfa088c2a2dd3302976a950cba3e8d97767f65ce",
+            "input_token": 3516,
+            "output": "The Market of Souls.",
+            "ground_truth": "The Market Of Souls",
+            "f1_score": 100.0,
+            "latency_ms": 1985.66,
+            "peak_memory_mb": 18895.31
+        },
+        {
+            "id": 136,
+            "sample_id": "e15605da0c5b6f02c85aff9f1f683d3f85d211c083792ecb",
+            "input_token": 4887,
+            "output": "René Clément",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 3090.03,
+            "peak_memory_mb": 20116.81
+        },
+        {
+            "id": 137,
+            "sample_id": "bf2899717e8d7d3d83d865ca5ff59e26d7f647e6025e2d52",
+            "input_token": 4887,
+            "output": "Husain Bey Gouta",
+            "ground_truth": "Morocco",
+            "f1_score": 0.0,
+            "latency_ms": 3373.02,
+            "peak_memory_mb": 20038.52
+        },
+        {
+            "id": 138,
+            "sample_id": "57db7adad0b62b8a396fd45937030d876ecd02153b8a931e",
+            "input_token": 4887,
+            "output": "The Valley of Death in Crimea",
+            "ground_truth": "Akkadian empire",
+            "f1_score": 0.0,
+            "latency_ms": 3143.52,
+            "peak_memory_mb": 20016.11
+        },
+        {
+            "id": 139,
+            "sample_id": "ce6a3aae400b3f5f028504fec37d7be8b447bd0cb1a0cff5",
+            "input_token": 4887,
+            "output": "Henry Walter Moore",
+            "ground_truth": "Tarzan The Magnificent",
+            "f1_score": 0.0,
+            "latency_ms": 2052.93,
+            "peak_memory_mb": 20075.77
+        },
+        {
+            "id": 140,
+            "sample_id": "c997d53083dff6918a3f066cc76c824e43eb4ea21de33c51",
+            "input_token": 4887,
+            "output": "The Man Is Armed",
+            "ground_truth": "Wolf Warrior",
+            "f1_score": 0.0,
+            "latency_ms": 2218.0,
+            "peak_memory_mb": 20074.77
+        },
+        {
+            "id": 141,
+            "sample_id": "184929a3ff00c41a966da9d53444da794af70ce90d624205",
+            "input_token": 4887,
+            "output": "No answer can be provided as the question is missing.",
+            "ground_truth": "Trịnh Bính",
+            "f1_score": 0.0,
+            "latency_ms": 2573.72,
+            "peak_memory_mb": 20006.78
+        },
+        {
+            "id": 142,
+            "sample_id": "56db201f810a3d01b7d14e8e9e6dd94820ecaf2f4a86b2b9",
+            "input_token": 4887,
+            "output": "Nathan Juran",
+            "ground_truth": "Gura Humorului",
+            "f1_score": 0.0,
+            "latency_ms": 2618.84,
+            "peak_memory_mb": 20027.29
+        },
+        {
+            "id": 143,
+            "sample_id": "fefa6cc344f63fdceda9662af921fdcdf645abb8fe87ea73",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "Crenshaw",
+            "f1_score": 0.0,
+            "latency_ms": 2103.11,
+            "peak_memory_mb": 20114.96
+        },
+        {
+            "id": 144,
+            "sample_id": "9b0dc01a1388db020e5c5c428a002d099f8a35544e9b6261",
+            "input_token": 4503,
+            "output": "Winter Sleepers",
+            "ground_truth": "Winter Sleepers",
+            "f1_score": 100.0,
+            "latency_ms": 1767.35,
+            "peak_memory_mb": 19676.23
+        },
+        {
+            "id": 145,
+            "sample_id": "34896de8d6a2c70e09b6dc3d113475a58899961d2aa356b3",
+            "input_token": 4887,
+            "output": "1866",
+            "ground_truth": "Adolf II of Berg",
+            "f1_score": 0.0,
+            "latency_ms": 2149.67,
+            "peak_memory_mb": 20013.59
+        },
+        {
+            "id": 146,
+            "sample_id": "0f629fbc7a6c3689ee9771af3aa81400674e673f11d47f2d",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "no",
+            "f1_score": 100.0,
+            "latency_ms": 2060.16,
+            "peak_memory_mb": 20136.14
+        },
+        {
+            "id": 147,
+            "sample_id": "13dde588b81d1de4a9984418bf3d6791de7d1b1edf21d61b",
+            "input_token": 4887,
+            "output": "Dillon Baxter",
+            "ground_truth": "Mülheim an der Ruhr",
+            "f1_score": 0.0,
+            "latency_ms": 2085.28,
+            "peak_memory_mb": 20092.75
+        },
+        {
+            "id": 148,
+            "sample_id": "cf56ec8180c3c7622a439e68704fc1ff73770f2e8ee2926e",
+            "input_token": 4083,
+            "output": "1973",
+            "ground_truth": "Una Prostituta Al Servizio Del Pubblico E In Regola Con Le Leggi Dello Stato",
+            "f1_score": 0.0,
+            "latency_ms": 1604.94,
+            "peak_memory_mb": 19750.85
+        },
+        {
+            "id": 149,
+            "sample_id": "78d3bf98f7b05622b428940d273b8c493f24a4468d1998dd",
+            "input_token": 4887,
+            "output": "1974",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 1859.72,
+            "peak_memory_mb": 20054.85
+        },
+        {
+            "id": 150,
+            "sample_id": "9b0b29e391c61c570b20fae813486bc757c1fb7d25d83049",
+            "input_token": 4887,
+            "output": "Henry Krause",
+            "ground_truth": "Mongkut",
+            "f1_score": 0.0,
+            "latency_ms": 1971.57,
+            "peak_memory_mb": 20024.57
+        },
+        {
+            "id": 151,
+            "sample_id": "bdb42f1c30e16bbcdf6f0ab7c1f76765ddaa5817ee5e674b",
+            "input_token": 4887,
+            "output": "Elizabeth Heneage",
+            "ground_truth": "Lady Frances Manners",
+            "f1_score": 0.0,
+            "latency_ms": 2126.51,
+            "peak_memory_mb": 20104.48
+        },
+        {
+            "id": 152,
+            "sample_id": "a7b5c5d84d974a849b0d042c435bbb3fe90ff50fd5d73f79",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "Cahiers du cinéma",
+            "f1_score": 0.0,
+            "latency_ms": 2251.67,
+            "peak_memory_mb": 20142.27
+        },
+        {
+            "id": 153,
+            "sample_id": "d0b11838d26195f89d1568431f88a02b4f4d8c9cdf99e04a",
+            "input_token": 4887,
+            "output": "Peter Greenaway",
+            "ground_truth": "Newport, Wales",
+            "f1_score": 0.0,
+            "latency_ms": 2139.56,
+            "peak_memory_mb": 20056.41
+        },
+        {
+            "id": 154,
+            "sample_id": "ca72ce55dc8f774617c794681dd7062eadfd14e679418cfa",
+            "input_token": 4887,
+            "output": "Virginia",
+            "ground_truth": "Gordonsville, Virginia",
+            "f1_score": 66.67,
+            "latency_ms": 1718.86,
+            "peak_memory_mb": 20038.28
+        },
+        {
+            "id": 155,
+            "sample_id": "10dc2bd4f7fb1b834c7f563ae3d7af5d269d84b3dfc0b056",
+            "input_token": 4887,
+            "output": "2017",
+            "ground_truth": "Mangalia",
+            "f1_score": 0.0,
+            "latency_ms": 2077.52,
+            "peak_memory_mb": 20086.37
+        },
+        {
+            "id": 156,
+            "sample_id": "bbaa4eb6b32bad24fc2b8639d03be8c16d1140ec8454b16a",
+            "input_token": 4887,
+            "output": "Pier-Luc Funk",
+            "ground_truth": "Félix Leclerc",
+            "f1_score": 0.0,
+            "latency_ms": 2160.52,
+            "peak_memory_mb": 20084.1
+        },
+        {
+            "id": 157,
+            "sample_id": "bc596d2ebcd25e79ca9cd689e50746e42e9a6fc579afc683",
+            "input_token": 4887,
+            "output": "1570",
+            "ground_truth": "Jacques",
+            "f1_score": 0.0,
+            "latency_ms": 2192.66,
+            "peak_memory_mb": 20044.52
+        },
+        {
+            "id": 158,
+            "sample_id": "f73db1873c311b2a38f27a52c5e05b021da0c2fe9590dac3",
+            "input_token": 4887,
+            "output": "James Armour",
+            "ground_truth": "Géza",
+            "f1_score": 0.0,
+            "latency_ms": 2125.9,
+            "peak_memory_mb": 20029.34
+        },
+        {
+            "id": 159,
+            "sample_id": "53f6acc70a61443a93c25c91ca7dc7f8780046d02e28c94a",
+            "input_token": 4887,
+            "output": "Duke Ding of Qi",
+            "ground_truth": "Yi Jiang",
+            "f1_score": 0.0,
+            "latency_ms": 2309.85,
+            "peak_memory_mb": 19995.98
+        },
+        {
+            "id": 160,
+            "sample_id": "88e4806d6c6553000e3c1ff8be5c90f5309342954ce4acae",
+            "input_token": 4887,
+            "output": "1867",
+            "ground_truth": "November 3, 1867",
+            "f1_score": 50.0,
+            "latency_ms": 2002.54,
+            "peak_memory_mb": 20137.62
+        },
+        {
+            "id": 161,
+            "sample_id": "25b5c6893c13f6e52ddd541c03f5bd6bb7b17cfeb15d9f16",
+            "input_token": 4887,
+            "output": "1790.",
+            "ground_truth": "Ivy Duke",
+            "f1_score": 0.0,
+            "latency_ms": 1945.37,
+            "peak_memory_mb": 20046.66
+        },
+        {
+            "id": 162,
+            "sample_id": "3cff7074281c58717aa65021d875cc1e6a6321f71cd77742",
+            "input_token": 4366,
+            "output": "1813",
+            "ground_truth": "1 August 1813",
+            "f1_score": 50.0,
+            "latency_ms": 1855.56,
+            "peak_memory_mb": 19684.15
+        },
+        {
+            "id": 163,
+            "sample_id": "13c4f5388b670f6c20b168e782f7478616fa3ba2edca3081",
+            "input_token": 4887,
+            "output": "Robert Hartford-Davis",
+            "ground_truth": "Season Of Strangers",
+            "f1_score": 0.0,
+            "latency_ms": 2209.82,
+            "peak_memory_mb": 20085.25
+        },
+        {
+            "id": 164,
+            "sample_id": "0c35123885c26fc474a7cd8e7c03fe75bfff4fc15845d3b9",
+            "input_token": 4887,
+            "output": "No",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 2453.38,
+            "peak_memory_mb": 20074.37
+        },
+        {
+            "id": 165,
+            "sample_id": "2a0554b724822b6c611539e39b44381f752acdecce4868ad",
+            "input_token": 4495,
+            "output": "Abdul Ali Lalu",
+            "ground_truth": "Antoine Casavant",
+            "f1_score": 0.0,
+            "latency_ms": 2455.11,
+            "peak_memory_mb": 19680.13
+        },
+        {
+            "id": 166,
+            "sample_id": "acb93469117282f2d0131e19f6210e007d681bc7a78e7b64",
+            "input_token": 4887,
+            "output": "Braj",
+            "ground_truth": "Oxford",
+            "f1_score": 0.0,
+            "latency_ms": 2169.03,
+            "peak_memory_mb": 20016.25
+        },
+        {
+            "id": 167,
+            "sample_id": "a7d0cfa55dce1e96490d1e6c0188398864724e96a44e4b79",
+            "input_token": 4592,
+            "output": "Sir Hew Dalrymple, 3rd Baronet",
+            "ground_truth": "Sir Hew Dalrymple, 2nd Baronet",
+            "f1_score": 80.0,
+            "latency_ms": 2947.04,
+            "peak_memory_mb": 20021.52
+        },
+        {
+            "id": 168,
+            "sample_id": "7a35ba110f4c26f7eb9d4dcc2e8c1baac383c777f0904976",
+            "input_token": 4343,
+            "output": "Khud-Daar",
+            "ground_truth": "Murderer In The Fog",
+            "f1_score": 0.0,
+            "latency_ms": 2631.01,
+            "peak_memory_mb": 19688.57
+        },
+        {
+            "id": 169,
+            "sample_id": "b9a9b860c0f0430853d1db2756095da274d522beed2acbeb",
+            "input_token": 4887,
+            "output": "No.",
+            "ground_truth": "Milla",
+            "f1_score": 0.0,
+            "latency_ms": 2442.55,
+            "peak_memory_mb": 20037.39
+        },
+        {
+            "id": 170,
+            "sample_id": "a49e29926d7019e6cbaf6b0610453eda22fa1ce9043f5829",
+            "input_token": 4887,
+            "output": "Catherine of Taranto",
+            "ground_truth": "Lecce",
+            "f1_score": 0.0,
+            "latency_ms": 2917.88,
+            "peak_memory_mb": 20072.06
+        },
+        {
+            "id": 171,
+            "sample_id": "29ec971fbdf0df2d0c41c497de945024db6159c0c30be307",
+            "input_token": 4887,
+            "output": "Reg Allen was nominated for an Academy Award.",
+            "ground_truth": "Prometheus Award",
+            "f1_score": 22.22,
+            "latency_ms": 2722.66,
+            "peak_memory_mb": 20041.07
+        },
+        {
+            "id": 172,
+            "sample_id": "de14d0bf7b2c73f7a21875677eed84a1ef270d2f29dc5b99",
+            "input_token": 4887,
+            "output": "German",
+            "ground_truth": "Duchy of Saxe-Gotha-Altenburg",
+            "f1_score": 0.0,
+            "latency_ms": 2303.55,
+            "peak_memory_mb": 20052.71
+        },
+        {
+            "id": 173,
+            "sample_id": "49035ecce6e78a355307dd6a1ddb11a87cab76090d655d2f",
+            "input_token": 4887,
+            "output": "1997",
+            "ground_truth": "Station For Two",
+            "f1_score": 0.0,
+            "latency_ms": 2337.34,
+            "peak_memory_mb": 20078.87
+        },
+        {
+            "id": 174,
+            "sample_id": "d04cc75917c9ef6b7a78b82491229023013ef3cea72bfba4",
+            "input_token": 4887,
+            "output": "Samuel Greig",
+            "ground_truth": "Inverkeithing",
+            "f1_score": 0.0,
+            "latency_ms": 2479.91,
+            "peak_memory_mb": 20055.68
+        },
+        {
+            "id": 175,
+            "sample_id": "8848d4bd1425f8bef31b6c279ec378bcbca14f10b702c4ea",
+            "input_token": 4887,
+            "output": "1199",
+            "ground_truth": "1234",
+            "f1_score": 0.0,
+            "latency_ms": 2842.1,
+            "peak_memory_mb": 20084.61
+        },
+        {
+            "id": 176,
+            "sample_id": "72132e87102859b583fb69a8a2a6a8b026be4fec5a1437e0",
+            "input_token": 4887,
+            "output": "1630",
+            "ground_truth": "25 July 1666",
+            "f1_score": 0.0,
+            "latency_ms": 2626.29,
+            "peak_memory_mb": 20076.45
+        },
+        {
+            "id": 177,
+            "sample_id": "0c15fb826ac59bbde9df698db9c277def2bc72fa5b7b497d",
+            "input_token": 4887,
+            "output": "The Wind's Fierce.",
+            "ground_truth": "The Wind'S Fierce",
+            "f1_score": 100.0,
+            "latency_ms": 3333.03,
+            "peak_memory_mb": 20102.31
+        },
+        {
+            "id": 178,
+            "sample_id": "cf5321576ab8cc1b8453991abac66aa5d46155d8ffa7ee17",
+            "input_token": 4887,
+            "output": "Lamman Rucker and Richard T. Jones were not mentioned in Passage 3.",
+            "ground_truth": "drowning",
+            "f1_score": 0.0,
+            "latency_ms": 3705.8,
+            "peak_memory_mb": 20029.85
+        },
+        {
+            "id": 179,
+            "sample_id": "6110cb2d4156df8d180fdd01e5f340c4731f7d1f4583fc5a",
+            "input_token": 4887,
+            "output": "Abu Dhabi",
+            "ground_truth": "Abu Dhabi",
+            "f1_score": 100.0,
+            "latency_ms": 2657.86,
+            "peak_memory_mb": 20104.65
+        },
+        {
+            "id": 180,
+            "sample_id": "b1034d8bbeeba5f9001f48311c182d2a20782462f0c2ed65",
+            "input_token": 4887,
+            "output": "Hamburg",
+            "ground_truth": "Prenzlau",
+            "f1_score": 0.0,
+            "latency_ms": 2934.41,
+            "peak_memory_mb": 20045.32
+        },
+        {
+            "id": 181,
+            "sample_id": "7218faa7d718853f8df4329a7242806cf70e63ece56f8cdb",
+            "input_token": 4887,
+            "output": "2001",
+            "ground_truth": "Poznań",
+            "f1_score": 0.0,
+            "latency_ms": 2532.42,
+            "peak_memory_mb": 20038.87
+        },
+        {
+            "id": 182,
+            "sample_id": "78436f55ae9c254da5a54558ddd196c94850ba7a2b6fa637",
+            "input_token": 4887,
+            "output": "Belfast",
+            "ground_truth": "Italy",
+            "f1_score": 0.0,
+            "latency_ms": 2004.07,
+            "peak_memory_mb": 20072.11
+        },
+        {
+            "id": 183,
+            "sample_id": "ddd046530f4979511397f82fe5391d0a646c0aa18225a98e",
+            "input_token": 4771,
+            "output": "Canada",
+            "ground_truth": "Toronto, Ontario",
+            "f1_score": 0.0,
+            "latency_ms": 1981.32,
+            "peak_memory_mb": 19973.73
+        },
+        {
+            "id": 184,
+            "sample_id": "2ce836524b90befee94e944e77ce3420878e75b5a1e14c26",
+            "input_token": 4887,
+            "output": "2001",
+            "ground_truth": "Forbidden Daughters",
+            "f1_score": 0.0,
+            "latency_ms": 2113.39,
+            "peak_memory_mb": 20040.92
+        },
+        {
+            "id": 185,
+            "sample_id": "bcd3d700ef14d9a1f6b766c5d185b43ac8f3b7feffd4732f",
+            "input_token": 4887,
+            "output": "Marianne",
+            "ground_truth": "yes",
+            "f1_score": 0.0,
+            "latency_ms": 2108.91,
+            "peak_memory_mb": 20052.52
+        },
+        {
+            "id": 186,
+            "sample_id": "24591a37ff748fb849a62e6a4f4095f7089d7ced43595d01",
+            "input_token": 4887,
+            "output": "Robert Wulnikowski",
+            "ground_truth": "Bogdan Țăruș",
+            "f1_score": 0.0,
+            "latency_ms": 2562.37,
+            "peak_memory_mb": 20100.55
+        },
+        {
+            "id": 187,
+            "sample_id": "2e86241a9d27925aa52e039067fa83e27e305301188daef7",
+            "input_token": 3065,
+            "output": "Duilio Coletti",
+            "ground_truth": "Sandflow",
+            "f1_score": 0.0,
+            "latency_ms": 1391.66,
+            "peak_memory_mb": 19720.84
+        },
+        {
+            "id": 188,
+            "sample_id": "c1d354f1d1855b21eb3c3cd204d5030080ef9e3c7e4b0195",
+            "input_token": 4887,
+            "output": "Bob Steele",
+            "ground_truth": "From Corleone To Brooklyn",
+            "f1_score": 0.0,
+            "latency_ms": 2292.74,
+            "peak_memory_mb": 20047.47
+        },
+        {
+            "id": 189,
+            "sample_id": "2c605656720054b6c9e6e0f15f99c1b4675db67e6e098cee",
+            "input_token": 1185,
+            "output": "Yes.",
+            "ground_truth": "yes",
+            "f1_score": 100.0,
+            "latency_ms": 318.3,
+            "peak_memory_mb": 15943.81
+        },
+        {
+            "id": 190,
+            "sample_id": "1edc61803f35344a5a4b6d273e6eb0f643fefcec0fa0a22a",
+            "input_token": 4887,
+            "output": "1916",
+            "ground_truth": "Vienna",
+            "f1_score": 0.0,
+            "latency_ms": 2868.07,
+            "peak_memory_mb": 19947.5
+        },
+        {
+            "id": 191,
+            "sample_id": "d65eba4a41497416d108c17f366636efb4cbda4c215c8818",
+            "input_token": 4887,
+            "output": "No.",
+            "ground_truth": "Johnny Ekström",
+            "f1_score": 0.0,
+            "latency_ms": 2180.27,
+            "peak_memory_mb": 20059.45
+        },
+        {
+            "id": 192,
+            "sample_id": "2df722c08f52cbf987c84019f7f2e5455cd29992738441cc",
+            "input_token": 1165,
+            "output": "Yes.",
+            "ground_truth": "yes",
+            "f1_score": 100.0,
+            "latency_ms": 424.59,
+            "peak_memory_mb": 15935.27
+        },
+        {
+            "id": 193,
+            "sample_id": "814dddaa4a997380fc80cc1c72d48cb20545411924a0603f",
+            "input_token": 4887,
+            "output": "English",
+            "ground_truth": "England",
+            "f1_score": 0.0,
+            "latency_ms": 2085.73,
+            "peak_memory_mb": 19860.83
+        },
+        {
+            "id": 194,
+            "sample_id": "1d554e7ae21ed7b5d142b57bcdab110cf6cea6f5256a58ee",
+            "input_token": 4887,
+            "output": "No answer can be provided based on the given passages.",
+            "ground_truth": "Parkinson",
+            "f1_score": 0.0,
+            "latency_ms": 2493.22,
+            "peak_memory_mb": 20091.17
+        },
+        {
+            "id": 195,
+            "sample_id": "d0ebddd00bfc9c5747021ae27c0ea5cdf21355bc86b83753",
+            "input_token": 4887,
+            "output": "It appears there are multiple individuals with the title of Baron Berkeley.",
+            "ground_truth": "Roger Mortimer, 1st Earl of March",
+            "f1_score": 11.76,
+            "latency_ms": 3929.86,
+            "peak_memory_mb": 20038.0
+        },
+        {
+            "id": 196,
+            "sample_id": "8f6c8de1c1518b5bdcbc4ff1cdfe035b9207971a6362574f",
+            "input_token": 4887,
+            "output": "Ali Muhammed",
+            "ground_truth": "Albertus Seba",
+            "f1_score": 0.0,
+            "latency_ms": 2925.35,
+            "peak_memory_mb": 20028.62
+        },
+        {
+            "id": 197,
+            "sample_id": "59e42b2cab6da2436fae05e25c49f6f4b4893b07bb48e3c1",
+            "input_token": 4887,
+            "output": "Maria d'Este",
+            "ground_truth": "Ferdinand I of the Two Sicilies",
+            "f1_score": 0.0,
+            "latency_ms": 2247.17,
+            "peak_memory_mb": 20037.97
+        },
+        {
+            "id": 198,
+            "sample_id": "35cbcb102aa5b4f9188011190e0f30456df5673fcddacf49",
+            "input_token": 4887,
+            "output": "Tamarack, Wisconsin",
+            "ground_truth": "Prince Of Arcadia",
+            "f1_score": 0.0,
+            "latency_ms": 2365.64,
+            "peak_memory_mb": 20092.18
+        },
+        {
+            "id": 199,
+            "sample_id": "44864cf7bbca78294d1b24c5acfa035f30849d802356aad4",
+            "input_token": 4759,
+            "output": "Australia",
+            "ground_truth": "Milan",
+            "f1_score": 0.0,
+            "latency_ms": 2453.36,
+            "peak_memory_mb": 20075.38
+        },
+        {
+            "id": 200,
+            "sample_id": "67705e148a6e0540819f466bb4fdc73ed2e5cbcd64d80930",
+            "input_token": 4887,
+            "output": "Herbert Maisch",
+            "ground_truth": "Köln",
+            "f1_score": 0.0,
+            "latency_ms": 2261.71,
+            "peak_memory_mb": 20042.34
+        }
+    ]
+}

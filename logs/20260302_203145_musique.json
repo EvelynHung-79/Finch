@@ -1,0 +1,2021 @@
+{
+    "configs": {
+        "task_name": "musique",
+        "target_token": 1309,
+        "split_size": 512,
+        "condition": "question",
+        "normalize": true,
+        "max_length": 4096,
+        "doc_stride": 1024,
+        "num_samples_evaluated": 200,
+        "max_answer_length": 32,
+        "temperature": 1.0
+    },
+    "result": {
+        "avg_f1_score": 10.5,
+        "avg_latency": 17123.5,
+        "max_peak_memory": 19295.29
+    },
+    "details": [
+        {
+            "id": 1,
+            "sample_id": "4c114f84ca41284c0845705943adc10b70a4fd3e8d0ca295",
+            "input_token": 4096,
+            "output": "The passage does not mention who plays the wife of the producer of Here Comes the Boom. However, it is mentioned that Adam Sandler bought brand new Maser",
+            "ground_truth": "Maria Bello",
+            "f1_score": 0.0,
+            "latency_ms": 18859.86,
+            "peak_memory_mb": 19200.49
+        },
+        {
+            "id": 2,
+            "sample_id": "4606a3d2fbbd29e034c815d51bd05e8d5481860ad8c1e7ef",
+            "input_token": 4096,
+            "output": "Frédéric and Irène Joliot-Curie.",
+            "ground_truth": "Manhattan Project",
+            "f1_score": 0.0,
+            "latency_ms": 12154.63,
+            "peak_memory_mb": 19179.63
+        },
+        {
+            "id": 3,
+            "sample_id": "b5e26a0b0703d3a7b6b9ae4fd8627043ee84005137f515cd",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a person named Callum McManaman. However, there is mention of an actor named Callum Blue who starred",
+            "ground_truth": "Knowsley",
+            "f1_score": 7.41,
+            "latency_ms": 16375.29,
+            "peak_memory_mb": 19147.13
+        },
+        {
+            "id": 4,
+            "sample_id": "e9a0c409564baa2cadde3aa638d789031755b0ca9b72c63b",
+            "input_token": 4096,
+            "output": "The text does not mention a person named Francisco Bojado. However, it mentions Giovanni Caboto (also known as John Cabot), an Italian navigator who",
+            "ground_truth": "Sebastian Cabot",
+            "f1_score": 8.7,
+            "latency_ms": 19972.44,
+            "peak_memory_mb": 18843.73
+        },
+        {
+            "id": 5,
+            "sample_id": "b129c8e6a0b184509c1a36a6b8b5703c924ee965727e79bc",
+            "input_token": 4096,
+            "output": "I can’t help you with that. Is there anything else I can help you with?",
+            "ground_truth": "Sherry Boucher",
+            "f1_score": 0.0,
+            "latency_ms": 19161.18,
+            "peak_memory_mb": 18760.9
+        },
+        {
+            "id": 6,
+            "sample_id": "685f8561239902c340fcf6b70d5ddc919b62aaf2b543ae3f",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a person named Peter Till or their sports team beating the winner of the 1894-95 FA Cup. The",
+            "ground_truth": "1 December 2010",
+            "f1_score": 0.0,
+            "latency_ms": 19935.12,
+            "peak_memory_mb": 18787.86
+        },
+        {
+            "id": 7,
+            "sample_id": "32b91f4d1aef1cc3c103e544e4fca9025ed7e6d677dbe380",
+            "input_token": 4096,
+            "output": "I can’t help you with that. Is there anything else I can help you with?",
+            "ground_truth": "Tatum O'Neal",
+            "f1_score": 0.0,
+            "latency_ms": 16669.18,
+            "peak_memory_mb": 18758.1
+        },
+        {
+            "id": 8,
+            "sample_id": "936ced65be306aaccf844e11a0e0ef544d44a2a7edec8f14",
+            "input_token": 4096,
+            "output": "There is no information about a plague occurring at the birthplace of La Silvia's composer. The text only mentions that Giovanni Cifolelli was an Italian",
+            "ground_truth": "22",
+            "f1_score": 0.0,
+            "latency_ms": 17856.69,
+            "peak_memory_mb": 18754.65
+        },
+        {
+            "id": 9,
+            "sample_id": "e3d8c2e853ea5a5ce78f9285d01c0b9b6ba832bd1027699d",
+            "input_token": 4096,
+            "output": "There is no mention of a person named Larry Alcala in the provided text. However, I can tell you that there is no information about a specific individual being",
+            "ground_truth": "1912",
+            "f1_score": 0.0,
+            "latency_ms": 15894.5,
+            "peak_memory_mb": 18748.17
+        },
+        {
+            "id": 10,
+            "sample_id": "fa5051512fcaa4d026335b0dc206addf60f317d85cc8998b",
+            "input_token": 4096,
+            "output": "The text does not mention an \"INSAT-4CR\" or its manufacturer. However, it mentions that Hughes Space and Communications Company (now part of Boeing",
+            "ground_truth": "ATS - 6 (Applications Technology Satellite - 6)",
+            "f1_score": 0.0,
+            "latency_ms": 16378.6,
+            "peak_memory_mb": 18771.29
+        },
+        {
+            "id": 11,
+            "sample_id": "220004b7b3836d023f1e416666c0d8d43ae75a77c1a8bdd0",
+            "input_token": 4096,
+            "output": "The text does not mention a person named Robert Khayat. However, it mentions that Robert Robinson Taylor was the first African-American student enrolled at the Massachusetts Institute",
+            "ground_truth": "James Howard Meredith",
+            "f1_score": 0.0,
+            "latency_ms": 19708.1,
+            "peak_memory_mb": 18762.82
+        },
+        {
+            "id": 12,
+            "sample_id": "7d7eb390be7dc75ca61b5eda6a9d9b36372273d1bd42646a",
+            "input_token": 4096,
+            "output": "There is no information in the provided passages about who gives out a prize named after Adam Smith, the author of Lectures on Jurisprudence. The passage",
+            "ground_truth": "University of Cambridge",
+            "f1_score": 8.0,
+            "latency_ms": 16383.56,
+            "peak_memory_mb": 18788.46
+        },
+        {
+            "id": 13,
+            "sample_id": "70a325ff2a0681bc4f6fd064f47bf88b4551447ac97dea96",
+            "input_token": 4096,
+            "output": "Frances Freeling Broderip was Tom Hood's sister.",
+            "ground_truth": "Tom Hood",
+            "f1_score": 22.22,
+            "latency_ms": 15825.12,
+            "peak_memory_mb": 18761.26
+        },
+        {
+            "id": 14,
+            "sample_id": "a148671baac67e52fbe07df27c3b4293f351a1d1b5d9a517",
+            "input_token": 4096,
+            "output": "Jennifer Connelly. She is married to Paul Bettany, who voiced JARVIS (J.A.R.V.I.S.) in the Marvel Cinematic Universe movies",
+            "ground_truth": "Jennifer Connelly",
+            "f1_score": 21.05,
+            "latency_ms": 17536.68,
+            "peak_memory_mb": 19167.0
+        },
+        {
+            "id": 15,
+            "sample_id": "26bd6d08ea272ac11bebcf5250b16ff90f92352cdac405c1",
+            "input_token": 4096,
+            "output": "There is no mention in the provided text about a \"Caledon River\" or its source. The text discusses two rivers: the Staaten River and the",
+            "ground_truth": "Thaba Putsoa",
+            "f1_score": 0.0,
+            "latency_ms": 14080.13,
+            "peak_memory_mb": 19206.78
+        },
+        {
+            "id": 16,
+            "sample_id": "1f4b2eebc578880d3f401476be8e933f743e77a865a31902",
+            "input_token": 4096,
+            "output": "There is no information about a specific bridge being associated with the composer of \"Nulla in mondo pax sincera\" (Arto Lindsay) in the provided",
+            "ground_truth": "Rialto Bridge",
+            "f1_score": 8.7,
+            "latency_ms": 17750.21,
+            "peak_memory_mb": 18836.85
+        },
+        {
+            "id": 17,
+            "sample_id": "606e28838e5641e3dab2482d21f65cf2915cacdf6d63b454",
+            "input_token": 4096,
+            "output": "The text does not mention the party that gained control of Congress in the midterm elections in 1946 or which government branch is responsible for determining the rules of the",
+            "ground_truth": "January 2015",
+            "f1_score": 0.0,
+            "latency_ms": 19774.55,
+            "peak_memory_mb": 18813.45
+        },
+        {
+            "id": 18,
+            "sample_id": "8fc8fb567703000eb6065c007e97841b11c9595b8862197b",
+            "input_token": 4096,
+            "output": "There is no mention in the provided text about a \"producer\" of Julius Caesar. However, it does mention that Edmond Malone claimed to have found an earlier",
+            "ground_truth": "Clifton College",
+            "f1_score": 0.0,
+            "latency_ms": 16599.7,
+            "peak_memory_mb": 18751.78
+        },
+        {
+            "id": 19,
+            "sample_id": "30dac2419bdedc98a7dac06e6d4c8046262c2d0197c2b7f9",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a person named \"Mehmet Hayri Tarhan\". The only mention of Suat Hayri Ürgü",
+            "ground_truth": "Malko Tarnovo Municipality",
+            "f1_score": 0.0,
+            "latency_ms": 17856.01,
+            "peak_memory_mb": 18748.42
+        },
+        {
+            "id": 20,
+            "sample_id": "936a34800c73e9d077b058fda4576fc45f8cb03bfae99c04",
+            "input_token": 4096,
+            "output": "The film \"Heartbeat in the Brain\" was produced and directed by Amanda Feilding.",
+            "ground_truth": "Natalie Albino",
+            "f1_score": 0.0,
+            "latency_ms": 17062.06,
+            "peak_memory_mb": 18743.45
+        },
+        {
+            "id": 21,
+            "sample_id": "e956e4868d588132bd2de1926dc446d0975c2d7a45090cad",
+            "input_token": 4096,
+            "output": "The University of Melbourne.",
+            "ground_truth": "University of Toronto",
+            "f1_score": 66.67,
+            "latency_ms": 14995.51,
+            "peak_memory_mb": 19137.93
+        },
+        {
+            "id": 22,
+            "sample_id": "8f9aa7e502ca3fcd999cb05b87a6aa78ef4c4af96cbe3199",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a game called \"Labyrinth\" or its release date. The text does mention Blast Corps and The Long Week-",
+            "ground_truth": "1986",
+            "f1_score": 0.0,
+            "latency_ms": 19578.79,
+            "peak_memory_mb": 18767.41
+        },
+        {
+            "id": 23,
+            "sample_id": "865a174ebe32ad81f573feb122198c1f16e6f2fd6c3fdda5",
+            "input_token": 4096,
+            "output": "The FDA (Food and Drug Administration)",
+            "ground_truth": "Food Safety Modernization Act (FSMA)",
+            "f1_score": 20.0,
+            "latency_ms": 13196.69,
+            "peak_memory_mb": 18806.8
+        },
+        {
+            "id": 24,
+            "sample_id": "177dde027032c5c71bf88fd4676536c0bef7d79d43c32659",
+            "input_token": 4096,
+            "output": "The text does not mention Zeferino Martins as the president of an independent country. However, it mentions him as a footballer who plays for Ad. D",
+            "ground_truth": "Francisco Guterres",
+            "f1_score": 0.0,
+            "latency_ms": 17517.73,
+            "peak_memory_mb": 19284.56
+        },
+        {
+            "id": 25,
+            "sample_id": "78b24e393c76b4fcd88852e310548721c5eea12bb8848aca",
+            "input_token": 4096,
+            "output": "There is no information about a British general being named after the birth city of someone's mother-in-law. The text does mention that General Edward Pakenham died",
+            "ground_truth": "General Edward Pakenham",
+            "f1_score": 23.08,
+            "latency_ms": 20120.91,
+            "peak_memory_mb": 18799.55
+        },
+        {
+            "id": 26,
+            "sample_id": "096c9e28af3c91a52463c424203181b2a9c114c3b782dbf5",
+            "input_token": 4096,
+            "output": "There is no information about a person named Sean Hampton in the provided text. The text only provides demographic data for various census-designated places (CDPs) in",
+            "ground_truth": "in Northern Florida",
+            "f1_score": 7.69,
+            "latency_ms": 16343.67,
+            "peak_memory_mb": 19150.03
+        },
+        {
+            "id": 27,
+            "sample_id": "ecfec467704be2a08675527e8f1733d9fbb51309454145ef",
+            "input_token": 4096,
+            "output": "The World Taekwondo Federation (WTF) executive board.",
+            "ground_truth": "Thomas Bach",
+            "f1_score": 0.0,
+            "latency_ms": 14615.41,
+            "peak_memory_mb": 18774.85
+        },
+        {
+            "id": 28,
+            "sample_id": "9724776e8c8210a47eae48302b73a9e2603c238d417a63f2",
+            "input_token": 4096,
+            "output": "The text does not mention a film called \"Grievous Bodily Harm\". However, it does discuss the novel and short story collection \"The Things They",
+            "ground_truth": "1964",
+            "f1_score": 0.0,
+            "latency_ms": 17593.66,
+            "peak_memory_mb": 19021.47
+        },
+        {
+            "id": 29,
+            "sample_id": "2df2586b40a9e5928817855c3b3a44c45b0809376372f38d",
+            "input_token": 4096,
+            "output": "The text does not mention \"Satyo Husodo\" as one of the presidents. However, it mentions that Indonesian President Susilo Bambang Yudh",
+            "ground_truth": "Francisco Guterres",
+            "f1_score": 0.0,
+            "latency_ms": 17413.5,
+            "peak_memory_mb": 18850.04
+        },
+        {
+            "id": 30,
+            "sample_id": "f4f04befbe7bb6e1ca4055ffd495356951166e116a15b3de",
+            "input_token": 4096,
+            "output": "Prince Philip of Greece and Denmark (now known as Prince Philip, Duke of Edinburgh)",
+            "ground_truth": "Philip Mountbatten",
+            "f1_score": 12.5,
+            "latency_ms": 13927.42,
+            "peak_memory_mb": 18763.26
+        },
+        {
+            "id": 31,
+            "sample_id": "94e583be9e34ba8c8cec05546807a1516b652c80be180e9b",
+            "input_token": 4096,
+            "output": "There is no mention of a \"Taifa of Francisco Giner de los Ríos\" in the provided text. However, there are mentions of various ta",
+            "ground_truth": "1065",
+            "f1_score": 0.0,
+            "latency_ms": 12819.29,
+            "peak_memory_mb": 18768.35
+        },
+        {
+            "id": 32,
+            "sample_id": "334f6b3c862e350efb163f95dd0e7f59e2928309909f66e7",
+            "input_token": 4096,
+            "output": "The text does not mention M. King Hubbert or his employer making any announcement in April 2010. However, Shell announced that they were planning to sell",
+            "ground_truth": "trying to find a potential buyer for all of its operations in Finland",
+            "f1_score": 10.81,
+            "latency_ms": 17048.9,
+            "peak_memory_mb": 18780.38
+        },
+        {
+            "id": 33,
+            "sample_id": "8cad76dd1dfee0d4847e99f55e46c401a1087fde2aee2cc8",
+            "input_token": 4096,
+            "output": "Abraham married Keturah (also known as Hagar in some traditions) after the death of his first wife, Sarah.",
+            "ground_truth": "Keturah",
+            "f1_score": 11.11,
+            "latency_ms": 17647.33,
+            "peak_memory_mb": 18767.17
+        },
+        {
+            "id": 34,
+            "sample_id": "a9233be5f19b456544331e69848af8bbf56256ce9ed0da78",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a person named John Phan or his location. However, it does mention that S-Fone was founded in Ho",
+            "ground_truth": "South Central Coast",
+            "f1_score": 0.0,
+            "latency_ms": 17412.14,
+            "peak_memory_mb": 18769.51
+        },
+        {
+            "id": 35,
+            "sample_id": "102eaee0943270c43f63b7d45a0088f6a8515e51a126d925",
+            "input_token": 4096,
+            "output": "There is no mention of a \"Closer\" performer in the provided text. However, it does mention that MercyMe's song \"I Can Only Imagine\"",
+            "ground_truth": "Michael Bublé",
+            "f1_score": 0.0,
+            "latency_ms": 14906.52,
+            "peak_memory_mb": 18756.92
+        },
+        {
+            "id": 36,
+            "sample_id": "de9c2fbc33bc6136a3a0598a7a1ad678882b4a8613f3900b",
+            "input_token": 4096,
+            "output": "BEC Recordings.",
+            "ground_truth": "Fair Trade Services",
+            "f1_score": 0.0,
+            "latency_ms": 11483.43,
+            "peak_memory_mb": 18746.19
+        },
+        {
+            "id": 37,
+            "sample_id": "74528b7f4e2b5d4c1667751615829ad5e7dfd81f9eb55e0c",
+            "input_token": 4096,
+            "output": "King Gustav Vasa.",
+            "ground_truth": "Svante Stensson Sture",
+            "f1_score": 0.0,
+            "latency_ms": 16374.29,
+            "peak_memory_mb": 18745.06
+        },
+        {
+            "id": 38,
+            "sample_id": "5c835b4c358e5f2e8c577dbc38c4857599539968e593a322",
+            "input_token": 4096,
+            "output": "The text does not mention a specific record label founded by Gil Moore (not Gilmore), but it mentions that he was an inductee to the Mississ",
+            "ground_truth": "TML Entertainment",
+            "f1_score": 0.0,
+            "latency_ms": 12986.62,
+            "peak_memory_mb": 18750.6
+        },
+        {
+            "id": 39,
+            "sample_id": "7e5b1ed484b4c095dbb201b8edc746f9f6e6202d1809a2f2",
+            "input_token": 4096,
+            "output": "The text does not mention who the president of East Timor or Indonesia was at any point in time. However, it mentions Xanana Gusmão as",
+            "ground_truth": "Francisco Guterres",
+            "f1_score": 0.0,
+            "latency_ms": 17260.57,
+            "peak_memory_mb": 18827.87
+        },
+        {
+            "id": 40,
+            "sample_id": "70444bcfcd30c497b730b5b408990ea2c672ec03caa5235f",
+            "input_token": 4096,
+            "output": "The text does not mention a person named Flora or her painter. However, it is mentioned that Florence's population was reduced from 1338 to 135",
+            "ground_truth": "22",
+            "f1_score": 0.0,
+            "latency_ms": 19825.32,
+            "peak_memory_mb": 18755.01
+        },
+        {
+            "id": 41,
+            "sample_id": "e62b87ef31160a755763a2c665a516dbcbcf1f116050019b",
+            "input_token": 4096,
+            "output": "The text does not mention the name of the county that shares a border with the county where Valley New School is located. However, it mentions that Valley New School",
+            "ground_truth": "Green Bay",
+            "f1_score": 0.0,
+            "latency_ms": 17037.43,
+            "peak_memory_mb": 18770.96
+        },
+        {
+            "id": 42,
+            "sample_id": "442e302cee202c213a085d6aa1caf87e3aebf6b954c690b0",
+            "input_token": 4096,
+            "output": "There is no information about a company called \"Dell\" or its ranking in any city. The text only talks about Hagerty Insurance Agency and its history,",
+            "ground_truth": "Fort Davis",
+            "f1_score": 0.0,
+            "latency_ms": 19923.59,
+            "peak_memory_mb": 18767.29
+        },
+        {
+            "id": 43,
+            "sample_id": "0f4da7d5be33010bcfb9197d3d910cc40bb8abc0ecc3bd32",
+            "input_token": 4096,
+            "output": "The passage does not mention Marty McFly's daughter being a character in Back to the Future 2. However, it is mentioned that Jennifer Parker (Marty",
+            "ground_truth": "Claudia Wells",
+            "f1_score": 0.0,
+            "latency_ms": 17235.56,
+            "peak_memory_mb": 18783.02
+        },
+        {
+            "id": 44,
+            "sample_id": "17b78fd666e796626d85eb44cacd4bd767b9b6fd2f35c86a",
+            "input_token": 4096,
+            "output": "There is no mention of the phrase \"by the skin of your teeth\" in the provided text. The phrase actually originates from a biblical passage (Job 19",
+            "ground_truth": "Genesis 3:15",
+            "f1_score": 0.0,
+            "latency_ms": 17539.18,
+            "peak_memory_mb": 18779.85
+        },
+        {
+            "id": 45,
+            "sample_id": "97d4194eb1fc6ee16c04f46d93fd5df5fd2ff5c60056799f",
+            "input_token": 4096,
+            "output": "I can’t provide information about a person named J.P. Hayes or their place of birth. Is there anything else I can help you with?",
+            "ground_truth": "Green Bay",
+            "f1_score": 0.0,
+            "latency_ms": 18962.63,
+            "peak_memory_mb": 18788.71
+        },
+        {
+            "id": 46,
+            "sample_id": "338a13d60af61b3eeb099758086e6b1522a9adcd8f6cb207",
+            "input_token": 4096,
+            "output": "There is no information about the number of plagues that occurred at Titian's deathplace. The text only mentions that he died in 1576.",
+            "ground_truth": "22",
+            "f1_score": 0.0,
+            "latency_ms": 17661.79,
+            "peak_memory_mb": 18765.52
+        },
+        {
+            "id": 47,
+            "sample_id": "73b7efc9538e65dda454b5be9d9b84a35decf082cd4091be",
+            "input_token": 4096,
+            "output": "The Orange River.",
+            "ground_truth": "Thaba Putsoa",
+            "f1_score": 0.0,
+            "latency_ms": 18242.59,
+            "peak_memory_mb": 18758.13
+        },
+        {
+            "id": 48,
+            "sample_id": "6cbb382cf679c0cf091fbf0d3c6d9638bffbc8ea039ca8b2",
+            "input_token": 4096,
+            "output": "The text does not mention why Common Sense is an important work. It only mentions that Thomas Paine's acquaintance Mary Wollstonecraft wrote A Vindication",
+            "ground_truth": "crystallized the rebellious demand for independence from Great Britain",
+            "f1_score": 0.0,
+            "latency_ms": 19700.35,
+            "peak_memory_mb": 18762.97
+        },
+        {
+            "id": 49,
+            "sample_id": "96dfe963511d7bdd2daeda35b9fab72c44dcca15fbb91fba",
+            "input_token": 4096,
+            "output": "Anne Arundel County, Maryland.",
+            "ground_truth": "Pearl River County",
+            "f1_score": 28.57,
+            "latency_ms": 15287.18,
+            "peak_memory_mb": 19143.89
+        },
+        {
+            "id": 50,
+            "sample_id": "f6ab8327fd10a883614cd3f571224c82f1cb7073de8a1143",
+            "input_token": 4096,
+            "output": "Heureux Anniversaire (also known as Happy Anniversary), a 1962 French short film directed by Pierre Étaix.",
+            "ground_truth": "The African Queen",
+            "f1_score": 0.0,
+            "latency_ms": 18285.15,
+            "peak_memory_mb": 18780.92
+        },
+        {
+            "id": 51,
+            "sample_id": "61193402df0b1548ecd9c722ee89b4354d336ded37b4cf49",
+            "input_token": 4096,
+            "output": "The African Queen.",
+            "ground_truth": "The African Queen",
+            "f1_score": 100.0,
+            "latency_ms": 15932.43,
+            "peak_memory_mb": 18750.98
+        },
+        {
+            "id": 52,
+            "sample_id": "074cbee8a17dcc448865addb33f8269d21c814d1c0b73e84",
+            "input_token": 4096,
+            "output": "The answer cannot be determined from the provided text. However, it does mention that Lionel Messi holds the record for most goals scored in a single Premier League season with",
+            "ground_truth": "Egypt national football team",
+            "f1_score": 0.0,
+            "latency_ms": 17826.39,
+            "peak_memory_mb": 19234.66
+        },
+        {
+            "id": 53,
+            "sample_id": "0da7802e47b081fc2cc573f1d9559abcdd232d4733081512",
+            "input_token": 4096,
+            "output": "The province of Gonbad-e Qabus County is located in Golestan Province, Iran.",
+            "ground_truth": "in the north-east of the country south of the Caspian Sea",
+            "f1_score": 21.05,
+            "latency_ms": 9985.7,
+            "peak_memory_mb": 19141.7
+        },
+        {
+            "id": 54,
+            "sample_id": "ce2f0aec72fade99a1be4add19d9e6364caf398a4586c902",
+            "input_token": 4096,
+            "output": "The song \"Turn Me On\" was written by John D. Loudermilk.",
+            "ground_truth": "John D. Loudermilk",
+            "f1_score": 46.15,
+            "latency_ms": 18876.01,
+            "peak_memory_mb": 18792.39
+        },
+        {
+            "id": 55,
+            "sample_id": "0b0b3547496ed078cb19ec901a35f071b7b3cf138fdf2e60",
+            "input_token": 4096,
+            "output": "The Western Australian Academy of Performing Arts.",
+            "ground_truth": "National Institute of Dramatic Art",
+            "f1_score": 18.18,
+            "latency_ms": 15608.61,
+            "peak_memory_mb": 18758.9
+        },
+        {
+            "id": 56,
+            "sample_id": "0942aa56c94ac545c00849686583273efd664347084e9682",
+            "input_token": 4096,
+            "output": "The passage does not mention anything about a \"proposed embassy destination\". However, it mentions that Khalid ibn al-Walid led the Muslim forces during",
+            "ground_truth": "Abu Ubaidah",
+            "f1_score": 0.0,
+            "latency_ms": 16245.9,
+            "peak_memory_mb": 18745.12
+        },
+        {
+            "id": 57,
+            "sample_id": "16db4ccc32ee8b04e3daee094ef5e8cfb985a4f0c2c999d5",
+            "input_token": 4096,
+            "output": "There is no mention of a person named George Mills in the provided text. However, there are mentions of Clipper Mills and Lenoir Cotton Mill.\n\nIf",
+            "ground_truth": "River Thames",
+            "f1_score": 0.0,
+            "latency_ms": 16527.53,
+            "peak_memory_mb": 18746.57
+        },
+        {
+            "id": 58,
+            "sample_id": "8267f95a2928cb63203d20da0079d98138d4f58281fc4e9e",
+            "input_token": 4096,
+            "output": "The text does not mention a midterm election in 1946. However, it mentions that the 2014 United States Senate elections were held on November 4",
+            "ground_truth": "January 2015",
+            "f1_score": 0.0,
+            "latency_ms": 17753.55,
+            "peak_memory_mb": 19217.8
+        },
+        {
+            "id": 59,
+            "sample_id": "9f271f822294cc528b1f20904bb7694884af4084e086d20f",
+            "input_token": 4096,
+            "output": "There is no information about an artist named \"Nothing Suits Me Like a Suit\" or their involvement with the movie \"Batman Under the Red Hood\". The text",
+            "ground_truth": "Nightwing / Dick Grayson",
+            "f1_score": 8.7,
+            "latency_ms": 17781.98,
+            "peak_memory_mb": 18784.3
+        },
+        {
+            "id": 60,
+            "sample_id": "92a5f365ee7514ded1c6f5dac8470281083060c3e6ec7594",
+            "input_token": 4096,
+            "output": "The text does not mention the country where the writer of \"The Book Thief\" is a citizen. However, Markus Zusak, the author of \"The Book",
+            "ground_truth": "1989",
+            "f1_score": 0.0,
+            "latency_ms": 19699.35,
+            "peak_memory_mb": 18778.47
+        },
+        {
+            "id": 61,
+            "sample_id": "a4d8d097bd76b3030a954d9943fd96cdbb51393ce75c43a5",
+            "input_token": 4096,
+            "output": "There is no information about Miller Electric or its headquarters location in the provided text. The text discusses Baranya County and Krasnovishersky District but does",
+            "ground_truth": "Green Bay",
+            "f1_score": 0.0,
+            "latency_ms": 12990.67,
+            "peak_memory_mb": 18778.67
+        },
+        {
+            "id": 62,
+            "sample_id": "8e2a26fbfbcf2d28b9873a39bac21802372e822d41cdaa2b",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a song called \"Nothin' My Love Can't Fix\" or its performers. The text does mention Elton",
+            "ground_truth": "Matthew Lawrence",
+            "f1_score": 0.0,
+            "latency_ms": 15495.09,
+            "peak_memory_mb": 18745.31
+        },
+        {
+            "id": 63,
+            "sample_id": "0140a933eed826f1c48d9a9c5c4717965cf982f1d749be6a",
+            "input_token": 4096,
+            "output": "There is no mention in the provided text about a person named Melissa or Joey. The theme song for Dad's Army was sung by Bud Flanagan.",
+            "ground_truth": "Matthew Lawrence",
+            "f1_score": 0.0,
+            "latency_ms": 19735.49,
+            "peak_memory_mb": 18744.6
+        },
+        {
+            "id": 64,
+            "sample_id": "64bae1eefc192258c2e5d8ecab71b8a02fc5a3d104c0fc21",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about when the team that Arthur James was a part of (Small Heath Alliance) beat Aston Villa. The text only mentions",
+            "ground_truth": "1 December 2010",
+            "f1_score": 0.0,
+            "latency_ms": 19173.1,
+            "peak_memory_mb": 18813.35
+        },
+        {
+            "id": 65,
+            "sample_id": "e935f6dea75d4f17c5f98b7e255950372a22ab83f9632876",
+            "input_token": 4096,
+            "output": "Richard Stallman.",
+            "ground_truth": "Richard Stallman",
+            "f1_score": 100.0,
+            "latency_ms": 18477.19,
+            "peak_memory_mb": 18757.15
+        },
+        {
+            "id": 66,
+            "sample_id": "fe052f64d5c1f66bd84e1f2dc6df342b1ea10d2763c22a90",
+            "input_token": 4096,
+            "output": "The god of the underworld in ancient Egyptian mythology is Osiris. He is a part of the Egyptian pantheon.",
+            "ground_truth": "ancient Egyptian religion",
+            "f1_score": 22.22,
+            "latency_ms": 16134.16,
+            "peak_memory_mb": 18756.11
+        },
+        {
+            "id": 67,
+            "sample_id": "02bd004f6306542bfdf5e166da61b306b5cf5f2faf50f796",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a person being born on the 4th of July. However, it does mention that Thomas Jefferson and John Adams",
+            "ground_truth": "Plymouth Notch",
+            "f1_score": 0.0,
+            "latency_ms": 17421.31,
+            "peak_memory_mb": 18745.44
+        },
+        {
+            "id": 68,
+            "sample_id": "e42937544d09a6051fc8507e1d3f89fe49b68d1300a44aa7",
+            "input_token": 4096,
+            "output": "Claudia Wells played Jennifer Parker (Marty McFly's girlfriend) in Back to the Future.",
+            "ground_truth": "Claudia Wells",
+            "f1_score": 28.57,
+            "latency_ms": 14764.26,
+            "peak_memory_mb": 19148.65
+        },
+        {
+            "id": 69,
+            "sample_id": "05f1867336770bf201cf9a88de60e2b9bdd893efe98d9593",
+            "input_token": 4096,
+            "output": "Sire Records.",
+            "ground_truth": "Kanine Records",
+            "f1_score": 50.0,
+            "latency_ms": 5492.33,
+            "peak_memory_mb": 18773.32
+        },
+        {
+            "id": 70,
+            "sample_id": "ebaefb7e8412f8323769c1e4ee596d5135b609ae76514273",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about who employed Ernst Mach. The text only mentions that he was a physicist and philosopher.",
+            "ground_truth": "Charles University",
+            "f1_score": 0.0,
+            "latency_ms": 16959.66,
+            "peak_memory_mb": 18768.99
+        },
+        {
+            "id": 71,
+            "sample_id": "e5d8a267444a8532a875af8cfb8b07e6f6d02d6e85148540",
+            "input_token": 4096,
+            "output": "The text does not mention a retriever breed specifically related to the Patuxent River. However, it does discuss the Chesapeake Bay Retriever, which",
+            "ground_truth": "average lifespan at 9.4 years",
+            "f1_score": 0.0,
+            "latency_ms": 17444.91,
+            "peak_memory_mb": 18824.93
+        },
+        {
+            "id": 72,
+            "sample_id": "648de9dea3ad81e8ac733acd312913385129ab16dd091834",
+            "input_token": 4096,
+            "output": "The text does not mention a specific person as the president of an independent country. However, it mentions East Timor (also known as Timor-Leste)",
+            "ground_truth": "Francisco Guterres",
+            "f1_score": 0.0,
+            "latency_ms": 17636.76,
+            "peak_memory_mb": 18815.9
+        },
+        {
+            "id": 73,
+            "sample_id": "3fb64043e4ebb85b0e1d08ca7112c56185d90becb1f4ad11",
+            "input_token": 4096,
+            "output": "Georgetown.",
+            "ground_truth": "Aden",
+            "f1_score": 0.0,
+            "latency_ms": 16325.59,
+            "peak_memory_mb": 19135.38
+        },
+        {
+            "id": 74,
+            "sample_id": "c341a480cb5616540b22eb1018953ba04aa96dac5e286674",
+            "input_token": 4096,
+            "output": "National Football League (NFL)",
+            "ground_truth": "sports league",
+            "f1_score": 40.0,
+            "latency_ms": 14934.93,
+            "peak_memory_mb": 18775.95
+        },
+        {
+            "id": 75,
+            "sample_id": "f6564f948dc28ef7be445d610eb42c1a6a6042d47e62e7a6",
+            "input_token": 4096,
+            "output": "There is no mention of a \"Battle of Brechin\" in the provided text. However, there is information about the War in Defence of the Constitution (179",
+            "ground_truth": "Scottish clan",
+            "f1_score": 0.0,
+            "latency_ms": 16593.6,
+            "peak_memory_mb": 18765.1
+        },
+        {
+            "id": 76,
+            "sample_id": "7ac9fed94844e0922433d13032d684b7336219240499d6c1",
+            "input_token": 4096,
+            "output": "The Billiken. The Sazerac Company, which produces and markets Blanton's bourbon whiskey, has its headquarters in New Orleans, Louisiana, but I couldn",
+            "ground_truth": "fleur - de-lis",
+            "f1_score": 0.0,
+            "latency_ms": 18691.54,
+            "peak_memory_mb": 18776.41
+        },
+        {
+            "id": 77,
+            "sample_id": "0675535ed1dda2d20a6a2d41fb4e8d2a6cacd6c6d953cafd",
+            "input_token": 4096,
+            "output": "Greek mythology.",
+            "ground_truth": "Greek mythology",
+            "f1_score": 100.0,
+            "latency_ms": 13713.25,
+            "peak_memory_mb": 18755.15
+        },
+        {
+            "id": 78,
+            "sample_id": "f182c6355042dd18a7d42f9275c46f1ee0c985e5ae5c6001",
+            "input_token": 4096,
+            "output": "There is no mention of a \"Borough House Plantation\" in the provided text. However, it does mention The College of Charleston, which was founded in",
+            "ground_truth": "College of Charles Towne",
+            "f1_score": 15.38,
+            "latency_ms": 18320.35,
+            "peak_memory_mb": 18759.23
+        },
+        {
+            "id": 79,
+            "sample_id": "7a9091fd0314d17f4fb7683cc0a078b04501e3fbc1f64b42",
+            "input_token": 4096,
+            "output": "There is no information about \"Never Gonna Fall in Love Again\" or its performer in the provided text. The song mentioned in the passage 6 is actually",
+            "ground_truth": "Cabarrus County",
+            "f1_score": 0.0,
+            "latency_ms": 19888.82,
+            "peak_memory_mb": 18819.69
+        },
+        {
+            "id": 80,
+            "sample_id": "c44fa02fb87c848c0ab4d0a254787e29540715ef86fff95a",
+            "input_token": 4096,
+            "output": "There is no information about the birthplace of the author of \"What We Talk About When We Talk About Love\" in the provided text. The text only mentions",
+            "ground_truth": "Clatskanie",
+            "f1_score": 0.0,
+            "latency_ms": 16950.39,
+            "peak_memory_mb": 18776.21
+        },
+        {
+            "id": 81,
+            "sample_id": "e1be2d43c39ecba4174621ae6f571ae04eac92cfd209b786",
+            "input_token": 4096,
+            "output": "Moseley measured the wavelengths of the innermost photon transitions (K and L lines) produced by the elements from aluminium (Z = 13) to gold",
+            "ground_truth": "Manhattan Project",
+            "f1_score": 0.0,
+            "latency_ms": 15365.69,
+            "peak_memory_mb": 18765.01
+        },
+        {
+            "id": 82,
+            "sample_id": "59f0697aa3d51324795d9f102b93756a0f7bc68f5ebf4922",
+            "input_token": 4096,
+            "output": "There is no mention of \"The Bourne Deception\" in the provided text. However, there are mentions of various adaptations and references to Much Ado About",
+            "ground_truth": "the novel of the same name by Robert Ludlum",
+            "f1_score": 6.67,
+            "latency_ms": 17520.57,
+            "peak_memory_mb": 19177.44
+        },
+        {
+            "id": 83,
+            "sample_id": "b4a033f133679fb6a0a2351544933c5537546d947ad50c8f",
+            "input_token": 4096,
+            "output": "The text does not mention a specific individual with the largest net worth in 2017. It talks about Windows 98 and its features.",
+            "ground_truth": "ease of use and enhanced support for Plug and Play",
+            "f1_score": 6.67,
+            "latency_ms": 17056.87,
+            "peak_memory_mb": 19228.83
+        },
+        {
+            "id": 84,
+            "sample_id": "aa614fdaaaefd5d4baa2796deb3b5f0067e79500b88427e5",
+            "input_token": 4096,
+            "output": "The text does not mention a specific member of a music group called \"Good Little Girls\". However, it mentions Elvis Presley (played by Peter Dobson)",
+            "ground_truth": "Aaron Benward",
+            "f1_score": 0.0,
+            "latency_ms": 19250.99,
+            "peak_memory_mb": 18799.39
+        },
+        {
+            "id": 85,
+            "sample_id": "8bfb0eda3aaa2bad57532c81e874d3a974843ffd3ef0778c",
+            "input_token": 4096,
+            "output": "The text does not mention a person named \"Bajazet\" or their birthplace. However, it is possible that you are referring to Bayezid",
+            "ground_truth": "22",
+            "f1_score": 0.0,
+            "latency_ms": 19628.12,
+            "peak_memory_mb": 18776.52
+        },
+        {
+            "id": 86,
+            "sample_id": "0efe9b8bd5ade04ff3030e3d944b21b0ac4aa9527e17bde6",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a company called \"Starship Command\" or its publication date. The text does mention Acornsoft and their products",
+            "ground_truth": "1986",
+            "f1_score": 0.0,
+            "latency_ms": 15622.85,
+            "peak_memory_mb": 18745.39
+        },
+        {
+            "id": 87,
+            "sample_id": "027361f7300c0643dc5b5eb887d180e4917f12f6c1418ccb",
+            "input_token": 4096,
+            "output": "There is no mention of a person named Peter Andreas Heiberg in the provided text. However, there is a reference to an astronomer named Peter Andreas Hansen",
+            "ground_truth": "Johanne Luise Heiberg",
+            "f1_score": 7.69,
+            "latency_ms": 17515.46,
+            "peak_memory_mb": 19169.01
+        },
+        {
+            "id": 88,
+            "sample_id": "011cb0e253041c568db1d0b01a34fa26ff951bbbdebbd887",
+            "input_token": 4096,
+            "output": "There is no mention of a character from A League of Their Own being played by an actress who also played Thelma in the movie Thelma and Louise",
+            "ground_truth": "Dottie Hinson",
+            "f1_score": 0.0,
+            "latency_ms": 17874.35,
+            "peak_memory_mb": 19290.86
+        },
+        {
+            "id": 89,
+            "sample_id": "79669636487de3810792f2a9a1b4a7c253da580013d1d2fb",
+            "input_token": 4096,
+            "output": "NES (Nintendo Entertainment System)",
+            "ground_truth": "NES",
+            "f1_score": 85.71,
+            "latency_ms": 15141.73,
+            "peak_memory_mb": 18850.03
+        },
+        {
+            "id": 90,
+            "sample_id": "bb809fb19df4d4c9b91facb813364d3590aeee692296fcfd",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about an individual named Alan O'Neil being a member of any sports team. The text does mention Aston Villa winning the",
+            "ground_truth": "1 December 2010",
+            "f1_score": 0.0,
+            "latency_ms": 20085.89,
+            "peak_memory_mb": 18815.19
+        },
+        {
+            "id": 91,
+            "sample_id": "db14f1320cc3442cb2416f65c437cd0ee74449baf687602b",
+            "input_token": 4096,
+            "output": "The text does not mention anything about the spouse of Will Arnett (the voice actor for Batman). It only mentions his co-stars and other characters in the movie",
+            "ground_truth": "Amy Poehler",
+            "f1_score": 0.0,
+            "latency_ms": 17174.89,
+            "peak_memory_mb": 18777.94
+        },
+        {
+            "id": 92,
+            "sample_id": "037dbe8ccac208d33dfbd28d6fdc319f88b1c2c2bd4ba060",
+            "input_token": 4096,
+            "output": "The text does not provide information about the specific reduction in population due to the Black Death in the region where Bâton à feu originated. However, it mentions",
+            "ground_truth": "30% to 65%",
+            "f1_score": 7.41,
+            "latency_ms": 16802.69,
+            "peak_memory_mb": 18769.22
+        },
+        {
+            "id": 93,
+            "sample_id": "0da908a928c375084638f1e0ab10c329679eaacae7e4ffe0",
+            "input_token": 4096,
+            "output": "I can’t help you with that. Is there anything else I can help you with?",
+            "ground_truth": "August 3, 1769",
+            "f1_score": 0.0,
+            "latency_ms": 17954.93,
+            "peak_memory_mb": 18788.21
+        },
+        {
+            "id": 94,
+            "sample_id": "f9a50652b4e5d7000c42ae27b2477a54d2a88cfceec0ec3b",
+            "input_token": 4096,
+            "output": "There is no information about a specific castle being associated with the band Broken Social Scene or their solo project \"Spirit If...\". The text only mentions that Kevin Drew",
+            "ground_truth": "Casa Loma",
+            "f1_score": 0.0,
+            "latency_ms": 17734.6,
+            "peak_memory_mb": 18818.72
+        },
+        {
+            "id": 95,
+            "sample_id": "a4c716e09434218a16bdfed465322e369606bd38f23d815a",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a person writing a book about growing up in the same nationality as the author of \"The Wild Women of Chast",
+            "ground_truth": "Min Zhou",
+            "f1_score": 0.0,
+            "latency_ms": 19737.17,
+            "peak_memory_mb": 18818.75
+        },
+        {
+            "id": 96,
+            "sample_id": "b2aec8a779fa030aae7a64520ebfdf3461750764aa79eb93",
+            "input_token": 4096,
+            "output": "The text does not mention anything about a movie called \"A Dog's Purpose\" or its cast. The passage discusses police dogs and their use by law enforcement agencies",
+            "ground_truth": "Meg Ryan",
+            "f1_score": 0.0,
+            "latency_ms": 19863.58,
+            "peak_memory_mb": 18758.52
+        },
+        {
+            "id": 97,
+            "sample_id": "efa92baf3840922c7dc00ba73ad729345a2b12035fa39071",
+            "input_token": 4096,
+            "output": "The text does not mention Pierre-Hugues Boisvenu or his political affiliation. It appears to be about the Congress of the New Right (KNP",
+            "ground_truth": "Andrew Scheer",
+            "f1_score": 0.0,
+            "latency_ms": 19815.09,
+            "peak_memory_mb": 18777.03
+        },
+        {
+            "id": 98,
+            "sample_id": "5188d3c87c6fead7f796c62c3f1bd13ea8576bab724ea06d",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about when or if the country of Chile changes its clocks for Daylight Saving Time (DST). The passage mentions that G",
+            "ground_truth": "24:00",
+            "f1_score": 0.0,
+            "latency_ms": 17532.57,
+            "peak_memory_mb": 18826.73
+        },
+        {
+            "id": 99,
+            "sample_id": "046a6c5856736e4dc6f532658038afabde83e9c71507832f",
+            "input_token": 4096,
+            "output": "The text does not mention when or if Amsterdam elected a black mayor. It only mentions Lodewijk Asscher's role as Acting Mayor in 2010 and",
+            "ground_truth": "1970s",
+            "f1_score": 0.0,
+            "latency_ms": 19601.67,
+            "peak_memory_mb": 18760.46
+        },
+        {
+            "id": 100,
+            "sample_id": "296a82255560704f3fd8c8ea411827192d0eceddbf38ce4c",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a person named Ken Faulkner or his team beating the 1894-95 FA Cup winner. The text",
+            "ground_truth": "1 December 2010",
+            "f1_score": 0.0,
+            "latency_ms": 17639.67,
+            "peak_memory_mb": 18786.49
+        },
+        {
+            "id": 101,
+            "sample_id": "38da792d05c3f8c7220c951b8d66f7400debb80114932a80",
+            "input_token": 4096,
+            "output": "2005.",
+            "ground_truth": "2005",
+            "f1_score": 100.0,
+            "latency_ms": 13098.84,
+            "peak_memory_mb": 18765.65
+        },
+        {
+            "id": 102,
+            "sample_id": "458b3f8687920863190957c08123f885c60989f59bf40681",
+            "input_token": 4096,
+            "output": "The mascot of Oregon State University (OSU), which owns Goss Stadium at Coleman Field, is Benny Beaver.",
+            "ground_truth": "Benny Beaver",
+            "f1_score": 22.22,
+            "latency_ms": 14657.8,
+            "peak_memory_mb": 18753.56
+        },
+        {
+            "id": 103,
+            "sample_id": "5a79dda7bfdfb77d539fe80abea20ca003c2fe0496b89c02",
+            "input_token": 4096,
+            "output": "The text does not mention who the spouse of Paul Bettany (the actor who plays Vision) is. It only mentions his role as J.A.R.V.I",
+            "ground_truth": "Jennifer Connelly",
+            "f1_score": 0.0,
+            "latency_ms": 16233.74,
+            "peak_memory_mb": 18755.53
+        },
+        {
+            "id": 104,
+            "sample_id": "0b0d46b9b937c43da535ef8109b75a460051e57f97a3f7a2",
+            "input_token": 4096,
+            "output": "Rhett Butler (played by Clark Gable) was Scarlett O'Hara's husband.",
+            "ground_truth": "Laurence Olivier",
+            "f1_score": 0.0,
+            "latency_ms": 16419.32,
+            "peak_memory_mb": 18751.59
+        },
+        {
+            "id": 105,
+            "sample_id": "34145b6ab1de0faafa932494ca91bdfdf740ba41ecb21879",
+            "input_token": 4096,
+            "output": "There is no information in any of the passages provided about a specific individual finding the sacred writings that became the Book of Mormon. However, Alma the Younger's",
+            "ground_truth": "Lucy Mack Smith",
+            "f1_score": 0.0,
+            "latency_ms": 18339.17,
+            "peak_memory_mb": 18757.93
+        },
+        {
+            "id": 106,
+            "sample_id": "ea32ca3702e3eedd278c8c77153712c07dbb5dd7025d8c3d",
+            "input_token": 4096,
+            "output": "The text does not mention a person named Merrill Elam. It talks about Jacek Majchrowski being the President of Kraków.",
+            "ground_truth": "Lance Bottoms",
+            "f1_score": 0.0,
+            "latency_ms": 17484.45,
+            "peak_memory_mb": 19160.18
+        },
+        {
+            "id": 107,
+            "sample_id": "3fe817c10d1006cd821b07586f51302a3263884e83211ba8",
+            "input_token": 4096,
+            "output": "The passage does not mention \"She Did It\" or its performer. However, it mentions Sant Martí d'Empúries and Empúries which is",
+            "ground_truth": "Cabarrus County",
+            "f1_score": 0.0,
+            "latency_ms": 19819.57,
+            "peak_memory_mb": 18780.7
+        },
+        {
+            "id": 108,
+            "sample_id": "1335c327548140bd1173eba9b1270d67dd4f7aafce0560a4",
+            "input_token": 4096,
+            "output": "ATS-6.",
+            "ground_truth": "ATS - 6 (Applications Technology Satellite - 6)",
+            "f1_score": 100.0,
+            "latency_ms": 17361.02,
+            "peak_memory_mb": 18815.63
+        },
+        {
+            "id": 109,
+            "sample_id": "517b237e011625d9c5ea0be465bdc9dcd38ef548cfd1a74e",
+            "input_token": 4096,
+            "output": "The Paterson River.",
+            "ground_truth": "Hunter River",
+            "f1_score": 50.0,
+            "latency_ms": 7559.99,
+            "peak_memory_mb": 18771.2
+        },
+        {
+            "id": 110,
+            "sample_id": "d1dd79fae1af699056a39a08906166201387b89c3f596266",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about the population of the state where Storm of the Century was filmed. The passage only mentions that it aired on ABC (",
+            "ground_truth": "1,335,907",
+            "f1_score": 0.0,
+            "latency_ms": 20190.56,
+            "peak_memory_mb": 18847.4
+        },
+        {
+            "id": 111,
+            "sample_id": "3b133029d40cc58823d90a6f9176ea531c8c30fb88c31736",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a radio station called \"KRSU\" or its location. However, there is information about a radio station called",
+            "ground_truth": "Green Bay",
+            "f1_score": 0.0,
+            "latency_ms": 17859.15,
+            "peak_memory_mb": 19275.2
+        },
+        {
+            "id": 112,
+            "sample_id": "163a438b614948528acdb5901ad522af7911b4e43c7a656a",
+            "input_token": 4096,
+            "output": "The text does not mention \"Kiwil\" or any information about their birth country participating in a Commission of Truth and Friendship. However, it does discuss East",
+            "ground_truth": "Francisco Guterres",
+            "f1_score": 0.0,
+            "latency_ms": 17530.56,
+            "peak_memory_mb": 18834.04
+        },
+        {
+            "id": 113,
+            "sample_id": "7f312e928558afc3dff5d7cc445ea322ace2d93b1762ff98",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a 1921 film called \"Money\" or its stars. The text does mention Eddie Money, an American rock",
+            "ground_truth": "Anthony Ainley",
+            "f1_score": 0.0,
+            "latency_ms": 17455.13,
+            "peak_memory_mb": 19188.7
+        },
+        {
+            "id": 114,
+            "sample_id": "a8db3b0b50151b8616d23b55f0f359f2ef9ba8fff740c3f2",
+            "input_token": 4096,
+            "output": "There is no mention in the provided text about a company named \"Ten High\" or its manufacturer. However, it does talk about Boiron, which is a",
+            "ground_truth": "fleur - de-lis",
+            "f1_score": 0.0,
+            "latency_ms": 19616.59,
+            "peak_memory_mb": 18783.61
+        },
+        {
+            "id": 115,
+            "sample_id": "c858bf26a171d617a8decbb3a67e082b577a5a1166ca15b2",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a \"Mara Region\" or its relation to any specific country's body of water. The term \"Mara",
+            "ground_truth": "Tanzania",
+            "f1_score": 0.0,
+            "latency_ms": 15511.15,
+            "peak_memory_mb": 18751.45
+        },
+        {
+            "id": 116,
+            "sample_id": "afc0480fd5bd6216e2a3d23c5e65a198b98e9730c5a26471",
+            "input_token": 4096,
+            "output": "The text does not mention \"The One That Got Away\" or a notable pop artist starting their career on adult contemporary radio. However, it is mentioned that St",
+            "ground_truth": "Michael Bublé",
+            "f1_score": 0.0,
+            "latency_ms": 19637.01,
+            "peak_memory_mb": 18779.99
+        },
+        {
+            "id": 117,
+            "sample_id": "d1ff18285ee3c6148bb4f8466a3d65d965432b694aba3ac7",
+            "input_token": 4096,
+            "output": "The text does not mention a specific federal leader for the Conservative Party of Canada that Ken Epp belonged to. However, it mentions that he was a member of",
+            "ground_truth": "Andrew Scheer",
+            "f1_score": 0.0,
+            "latency_ms": 19583.63,
+            "peak_memory_mb": 18767.33
+        },
+        {
+            "id": 118,
+            "sample_id": "19e28bddd1e5817780ebfba2ff23817578fb6e01289caa3a",
+            "input_token": 4096,
+            "output": "Cape Verde.",
+            "ground_truth": "central Atlantic Ocean",
+            "f1_score": 0.0,
+            "latency_ms": 16753.1,
+            "peak_memory_mb": 18757.57
+        },
+        {
+            "id": 119,
+            "sample_id": "ab8516f170dcda1b95db028a8c4f8ee112c157548f800484",
+            "input_token": 4096,
+            "output": "There is no mention of the actor who played Batman in the Justice League movie playing a role in Dazed and Confused. However, it's worth noting that",
+            "ground_truth": "Fred O'Bannion",
+            "f1_score": 0.0,
+            "latency_ms": 17437.7,
+            "peak_memory_mb": 18812.18
+        },
+        {
+            "id": 120,
+            "sample_id": "8daaf871ac6117a987a5461e5a0cfc553ef30e1f47800200",
+            "input_token": 4096,
+            "output": "There is no mention of \"Batman Under the Red Hood\" in the provided text. The text only talks about the TV show \"How I Met Your Mother\".",
+            "ground_truth": "Nightwing / Dick Grayson",
+            "f1_score": 8.33,
+            "latency_ms": 19399.42,
+            "peak_memory_mb": 18790.59
+        },
+        {
+            "id": 121,
+            "sample_id": "a6005b1ac2dec9c661b1dec2b0d4e27939a56dff3d049992",
+            "input_token": 4096,
+            "output": "There is no information about Audrey Hepburn winning a Tony Award. The text mentions that Ezio Pinza won a Tony Award for Best Actor in 1950",
+            "ground_truth": "for Best Performance by a Leading Actress in a Play in Ondine",
+            "f1_score": 18.18,
+            "latency_ms": 13782.18,
+            "peak_memory_mb": 18819.29
+        },
+        {
+            "id": 122,
+            "sample_id": "3770e097bb92f794adf6bd2a09ec1f40441a5d76820f71f7",
+            "input_token": 4096,
+            "output": "Pristina.",
+            "ground_truth": "Pristina",
+            "f1_score": 100.0,
+            "latency_ms": 15052.46,
+            "peak_memory_mb": 18858.68
+        },
+        {
+            "id": 123,
+            "sample_id": "88d9867cb4a10c547384a02cb1758981b8989081fd1bba53",
+            "input_token": 4096,
+            "output": "The text does not mention the Kraai River. It mentions the Orange River and its tributaries, but not the Kraai River.",
+            "ground_truth": "Thaba Putsoa",
+            "f1_score": 0.0,
+            "latency_ms": 13099.5,
+            "peak_memory_mb": 18774.21
+        },
+        {
+            "id": 124,
+            "sample_id": "22129e25d4587923fcde7881c2d6d6ea393fe1a5615db2bd",
+            "input_token": 4096,
+            "output": "There is no information about a character named \"Chance\" or his voice actor from Homeward Bound in the provided text. The text only talks about the characters and",
+            "ground_truth": "Claudia Wells",
+            "f1_score": 0.0,
+            "latency_ms": 19947.4,
+            "peak_memory_mb": 18761.12
+        },
+        {
+            "id": 125,
+            "sample_id": "fefac36b35cb4347cc12c1f4b449f55f907eb074ff9bd548",
+            "input_token": 4096,
+            "output": "There is no information about a character named \"Trochophore\" from SpongeBob SquarePants. However, I can tell you that trochophores",
+            "ground_truth": "Mr. Lawrence",
+            "f1_score": 0.0,
+            "latency_ms": 20004.21,
+            "peak_memory_mb": 18814.06
+        },
+        {
+            "id": 126,
+            "sample_id": "7b7acfdf920adc600a78d5e07adbb139447a4f4c05cdeb97",
+            "input_token": 4096,
+            "output": "280-279 BC.",
+            "ground_truth": "323–272 BC",
+            "f1_score": 50.0,
+            "latency_ms": 14614.22,
+            "peak_memory_mb": 18770.91
+        },
+        {
+            "id": 127,
+            "sample_id": "51cd91435004d29ca0defa249c04567792bba4ae689bcaff",
+            "input_token": 4096,
+            "output": "The text does not mention MV Miralda or its owner. It talks about a gripe site royaldutchshellplc.com and a reality TV show",
+            "ground_truth": "trying to find a potential buyer for all of its operations in Finland",
+            "f1_score": 6.45,
+            "latency_ms": 19830.06,
+            "peak_memory_mb": 18769.3
+        },
+        {
+            "id": 128,
+            "sample_id": "73c99907f8558b45cbd409c4453f2b005668503f8dd77cb1",
+            "input_token": 4096,
+            "output": "There is no mention of a \"Battle at Choo Hoey's birthplace\" in the provided text. The two battles mentioned are:\n\n1. The Battle",
+            "ground_truth": "15 February 1942",
+            "f1_score": 0.0,
+            "latency_ms": 17616.19,
+            "peak_memory_mb": 18750.29
+        },
+        {
+            "id": 129,
+            "sample_id": "80eb4cdc289c327a7ce40633b12e1a144052165599d2521a",
+            "input_token": 4096,
+            "output": "The text does not mention a specific person as the President of an independent country. However, it mentions Xanana Gusmão, who is referred to as",
+            "ground_truth": "Francisco Guterres",
+            "f1_score": 0.0,
+            "latency_ms": 17998.27,
+            "peak_memory_mb": 19295.29
+        },
+        {
+            "id": 130,
+            "sample_id": "0531724f1691e4d2a1e819d1e68c14edb61a1036ee25a862",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a performer named \"Give Up the Ghost\" or their version of the song \"The Story\". However, there are",
+            "ground_truth": "Phil Hanseroth",
+            "f1_score": 0.0,
+            "latency_ms": 18965.17,
+            "peak_memory_mb": 18786.87
+        },
+        {
+            "id": 131,
+            "sample_id": "d93d09390c108e43314b165e4eb32b63bee4bd289164c233",
+            "input_token": 4096,
+            "output": "There is no mention of a person named Siddhi Savetsila being born anywhere. However, I can tell you that the movie \"The Beach\" (200",
+            "ground_truth": "Ko Phi Phi Leh",
+            "f1_score": 0.0,
+            "latency_ms": 19721.24,
+            "peak_memory_mb": 18761.0
+        },
+        {
+            "id": 132,
+            "sample_id": "2b182c3ce4bb7bb2c28fc1f86d7a76591488e7d2aef1bb35",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about an author named \"MacGruder\" or a book called \"Growing Up\". The text mentions Randall Munroe as",
+            "ground_truth": "Min Zhou",
+            "f1_score": 0.0,
+            "latency_ms": 17233.47,
+            "peak_memory_mb": 18788.34
+        },
+        {
+            "id": 133,
+            "sample_id": "6d57f1e891250f9822eaef55f6f86661ba65ea90141fdb3f",
+            "input_token": 4096,
+            "output": "Kentucky. The first Snappy Tomato Pizza was opened in Fort Mitchell, Kentucky, and its headquarters are located in Burlington, Kentucky.",
+            "ground_truth": "Kenton County",
+            "f1_score": 9.09,
+            "latency_ms": 17289.69,
+            "peak_memory_mb": 19132.98
+        },
+        {
+            "id": 134,
+            "sample_id": "d38330e71e4ccaf9dacb5743005ac48880a86ad157c0e89d",
+            "input_token": 4096,
+            "output": "There is no information about an actor winning the Oscar for Best Actor in 2006. The text mentions that Tom Courtenay won a Silver Bear for Best",
+            "ground_truth": "nominated for an Academy Award for Best Supporting Actor",
+            "f1_score": 25.81,
+            "latency_ms": 19581.58,
+            "peak_memory_mb": 18775.29
+        },
+        {
+            "id": 135,
+            "sample_id": "ce71ae05a05aa362e3dbea2e924d208ae29dd534690e3018",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about James Cottriall's birthdate. However, it does mention that his first child Lily Joy was born on",
+            "ground_truth": "1 January 1986",
+            "f1_score": 0.0,
+            "latency_ms": 19313.41,
+            "peak_memory_mb": 18752.06
+        },
+        {
+            "id": 136,
+            "sample_id": "df9f245c11ea8e93377a4587fc28c07c08b6f43bb7cd5cd4",
+            "input_token": 4096,
+            "output": "A&M Records (Canada) and Koch Entertainment (Europe).",
+            "ground_truth": "Attic Records",
+            "f1_score": 22.22,
+            "latency_ms": 8201.24,
+            "peak_memory_mb": 18747.76
+        },
+        {
+            "id": 137,
+            "sample_id": "6ce26ac59b2882dc391635da186779e5b8ed5a0b0354da10",
+            "input_token": 4096,
+            "output": "This question cannot be answered based on the provided text. The text does not mention anything about a \"majority party\" or the House of Representatives gaining control of",
+            "ground_truth": "January 2015",
+            "f1_score": 0.0,
+            "latency_ms": 19252.43,
+            "peak_memory_mb": 18770.86
+        },
+        {
+            "id": 138,
+            "sample_id": "c48373896fd9da5b8e7f7565c18ffa921992f00d45147aeb",
+            "input_token": 4096,
+            "output": "There is no mention of a \"Kentucky Tavern\" or its manufacturer in the provided text. The text only discusses the Pentagon building and its history.",
+            "ground_truth": "fleur - de-lis",
+            "f1_score": 0.0,
+            "latency_ms": 19569.05,
+            "peak_memory_mb": 18758.9
+        },
+        {
+            "id": 139,
+            "sample_id": "6e64c9c62d8e1170c6341cde12aa2fe75a35762012ab8d30",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about Zhu Qinan's birthplace. The text only mentions that he began shooting training at Wenzhou Sports School in",
+            "ground_truth": "Yongjia County",
+            "f1_score": 0.0,
+            "latency_ms": 17180.38,
+            "peak_memory_mb": 18748.13
+        },
+        {
+            "id": 140,
+            "sample_id": "554fd0d8696f182e7802bf42d669102e4227ba40f8a6bd4f",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about who sings \"Home Alone Tonight with the Rain is a Good Thing\". The text does mention that Daniel Stern played Mar",
+            "ground_truth": "Karen Fairchild",
+            "f1_score": 0.0,
+            "latency_ms": 18989.85,
+            "peak_memory_mb": 18745.33
+        },
+        {
+            "id": 141,
+            "sample_id": "1ce9a8820397755fa8fd2d5add9bdb9edea86671fa14468c",
+            "input_token": 4096,
+            "output": "Casa Loma.",
+            "ground_truth": "Casa Loma",
+            "f1_score": 100.0,
+            "latency_ms": 18338.51,
+            "peak_memory_mb": 18765.07
+        },
+        {
+            "id": 142,
+            "sample_id": "9ad33ca0b5a3f7c880fc6f40db3d7de9c369111c302c9dfd",
+            "input_token": 4096,
+            "output": "Lucy Kellaway.",
+            "ground_truth": "Lana Wood",
+            "f1_score": 0.0,
+            "latency_ms": 16666.51,
+            "peak_memory_mb": 18781.06
+        },
+        {
+            "id": 143,
+            "sample_id": "236a7ebf10d9e19269a51d46f62df7d301f6a475aed06dd8",
+            "input_token": 4096,
+            "output": "Rome.",
+            "ground_truth": "La Goulette",
+            "f1_score": 100.0,
+            "latency_ms": 14419.98,
+            "peak_memory_mb": 18748.34
+        },
+        {
+            "id": 144,
+            "sample_id": "16de423a865eb739d3ec248429096218820feb176cb1b5af",
+            "input_token": 4096,
+            "output": "There is no mention of a person named Erich Zakowski or his birthplace in the provided text. The text discusses the Russian Far East and its demographics,",
+            "ground_truth": "names were replaced by new Russian names",
+            "f1_score": 6.67,
+            "latency_ms": 19989.69,
+            "peak_memory_mb": 18770.97
+        },
+        {
+            "id": 145,
+            "sample_id": "37fb18d72ff590a69ba9588553a36989161f9b48c72dfe29",
+            "input_token": 4096,
+            "output": "Hughesville.",
+            "ground_truth": "Charles County",
+            "f1_score": 0.0,
+            "latency_ms": 9664.95,
+            "peak_memory_mb": 18746.77
+        },
+        {
+            "id": 146,
+            "sample_id": "034a82714302b4b4a869310daace9e08bb18dc7fc3a81206",
+            "input_token": 4096,
+            "output": "The passage does not mention when the party controlling the House of Representatives took control of either chamber. However, it states in Passage 1 that \"Each House may",
+            "ground_truth": "January 2015",
+            "f1_score": 0.0,
+            "latency_ms": 15869.38,
+            "peak_memory_mb": 18807.28
+        },
+        {
+            "id": 147,
+            "sample_id": "e21823470386531b4456eec33d0709c7eb82b63bc394f6fa",
+            "input_token": 4096,
+            "output": "The treble. They won La Liga, Copa del Rey and Champions League titles in the 2008-09 season.",
+            "ground_truth": "continental treble",
+            "f1_score": 11.76,
+            "latency_ms": 19516.54,
+            "peak_memory_mb": 18809.66
+        },
+        {
+            "id": 148,
+            "sample_id": "f11250d4b392a30f6d22566d5167dee1464544f525c2975c",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a movie called \"Grown Ups\" or its cast. However, it does mention that Rob Schneider played the lead",
+            "ground_truth": "Joyce Van Patten",
+            "f1_score": 0.0,
+            "latency_ms": 17245.22,
+            "peak_memory_mb": 18777.17
+        },
+        {
+            "id": 149,
+            "sample_id": "9aea23787e6ee6df485a6b02ad5e2c185b44b9611ce8b921",
+            "input_token": 4096,
+            "output": "There is no information about a character named \"Don't Be Cruel\" in the provided text. The text only mentions characters from the TV show \"The Wire",
+            "ground_truth": "a Western District uniformed officer",
+            "f1_score": 0.0,
+            "latency_ms": 19907.95,
+            "peak_memory_mb": 18747.86
+        },
+        {
+            "id": 150,
+            "sample_id": "ede452592bbb410b3678e75fc6aaaeeda204fffc69034041",
+            "input_token": 4096,
+            "output": "There is no mention of \"Burroughs Corporation\" in the provided text. The text discusses Australia Day and its history, but does not include any information about",
+            "ground_truth": "1986",
+            "f1_score": 0.0,
+            "latency_ms": 18340.4,
+            "peak_memory_mb": 18756.73
+        },
+        {
+            "id": 151,
+            "sample_id": "6c52099d688bcf9f3be62de4417112635370c9d72b748084",
+            "input_token": 4096,
+            "output": "The passage does not mention when Montenegro attended the Olympics as an independent team. However, it is known that Montenegro made its Olympic debut in 2008",
+            "ground_truth": "2016",
+            "f1_score": 0.0,
+            "latency_ms": 20107.54,
+            "peak_memory_mb": 18827.29
+        },
+        {
+            "id": 152,
+            "sample_id": "a621901602313fe0bb3278547bfd2dc7a7eeb93905d04b78",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a person named Menucha Rochel Slonim or her family. The text appears to be a collection of bi",
+            "ground_truth": "Menachem Mendel Schneersohn",
+            "f1_score": 0.0,
+            "latency_ms": 17137.38,
+            "peak_memory_mb": 18753.14
+        },
+        {
+            "id": 153,
+            "sample_id": "efa29c58c4ed7403a39deb68f6f52c1fdcc617e0fbdd9a5c",
+            "input_token": 4096,
+            "output": "The text does not mention who started their career on adult contemporary radio along with the performer of \"All That Echoes\". The song \"All That Echoes\"",
+            "ground_truth": "Michael Bublé",
+            "f1_score": 0.0,
+            "latency_ms": 19950.83,
+            "peak_memory_mb": 18762.79
+        },
+        {
+            "id": 154,
+            "sample_id": "abfa7716b861cb828af918cd5b406139e40afec4dfe84446",
+            "input_token": 4096,
+            "output": "The National Security Agency (NSA)",
+            "ground_truth": "ADM Michael S. Rogers",
+            "f1_score": 0.0,
+            "latency_ms": 14938.43,
+            "peak_memory_mb": 18764.63
+        },
+        {
+            "id": 155,
+            "sample_id": "6b6d8f1f4a1c7ecab4f8c3f8205f8bfc531627d12c21a3c4",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about Terry Twell or his association with any sports teams. The text only discusses Michael Waltrip Racing (MWR)",
+            "ground_truth": "1 December 2010",
+            "f1_score": 0.0,
+            "latency_ms": 17872.74,
+            "peak_memory_mb": 18807.42
+        },
+        {
+            "id": 156,
+            "sample_id": "2e723619f6cb5b2fe9cffb3e419841f96bbfd79a13f07f18",
+            "input_token": 4096,
+            "output": "There is no mention of an \"artist\" or a painting called \"Head I\" in the provided text. The text discusses Francis Bacon (the philosopher) and",
+            "ground_truth": "Nicholas Bacon",
+            "f1_score": 9.09,
+            "latency_ms": 17154.55,
+            "peak_memory_mb": 18744.52
+        },
+        {
+            "id": 157,
+            "sample_id": "704dd451c50a536eb50a9d580b8a57aa8203bd76d1862ef6",
+            "input_token": 4096,
+            "output": "The Orange River.",
+            "ground_truth": "Thaba Putsoa",
+            "f1_score": 0.0,
+            "latency_ms": 15059.19,
+            "peak_memory_mb": 18764.27
+        },
+        {
+            "id": 158,
+            "sample_id": "d51c30bc9bcc9c9daace1edac5bc07ded7df39ad346f4c04",
+            "input_token": 4096,
+            "output": "There is no mention of the \"BBC Footballer of the Year\" in the provided text. However, it does mention that Lance Alworth set an AFL record",
+            "ground_truth": "Egypt national football team",
+            "f1_score": 0.0,
+            "latency_ms": 19640.03,
+            "peak_memory_mb": 18744.13
+        },
+        {
+            "id": 159,
+            "sample_id": "f1ae33d3867ac32d4bf685be6b8eadd99847853869184186",
+            "input_token": 4096,
+            "output": "The text does not mention a person named Gaspard Manesse acting in the film \"Sous les pieds des femmes\". However, it mentions that he",
+            "ground_truth": "La Goulette",
+            "f1_score": 0.0,
+            "latency_ms": 19900.74,
+            "peak_memory_mb": 18756.52
+        },
+        {
+            "id": 160,
+            "sample_id": "7478cc3ae7b060de1b7b2a1c61c1354a0b6a822b61349cad",
+            "input_token": 4096,
+            "output": "The text doesn't mention anything about a \"London Broil\" or its origin. It appears to be discussing historical events related to the French and Indian War (",
+            "ground_truth": "2 million",
+            "f1_score": 0.0,
+            "latency_ms": 17522.78,
+            "peak_memory_mb": 19197.18
+        },
+        {
+            "id": 161,
+            "sample_id": "afd66c76fbcbd6fd65cfccf021882c773e57478071afaa65",
+            "input_token": 4096,
+            "output": "LaTanya Richardson.",
+            "ground_truth": "Jennifer Connelly",
+            "f1_score": 0.0,
+            "latency_ms": 18367.13,
+            "peak_memory_mb": 18796.23
+        },
+        {
+            "id": 162,
+            "sample_id": "b15f31c4855a276dae1e56de0784c6eab14eb4621012cc10",
+            "input_token": 4096,
+            "output": "The text does not explicitly mention which county borders the one where Redan High School is located. However, it mentions that Redan High School is located in De",
+            "ground_truth": "Presque Isle County",
+            "f1_score": 6.9,
+            "latency_ms": 19246.15,
+            "peak_memory_mb": 18779.59
+        },
+        {
+            "id": 163,
+            "sample_id": "3601e9951ec350c2c121a537f60a7347d545f015663316d5",
+            "input_token": 4096,
+            "output": "There is no mention of a rapper named Aspiro or their song \"Song Cry\" in the provided text. The text discusses various cover versions and performances of",
+            "ground_truth": "three different relationships he had in the past",
+            "f1_score": 6.45,
+            "latency_ms": 19578.34,
+            "peak_memory_mb": 18772.41
+        },
+        {
+            "id": 164,
+            "sample_id": "9747157702dd161d08b47a241d23256b0055cd503ee4dadf",
+            "input_token": 4096,
+            "output": "There is no mention of a station called \"KTRP\" in the provided text. However, I can tell you about WNDE (1260 AM)",
+            "ground_truth": "Canyon County",
+            "f1_score": 0.0,
+            "latency_ms": 16190.61,
+            "peak_memory_mb": 19015.73
+        },
+        {
+            "id": 165,
+            "sample_id": "e349bd0727c841c1b6a985bbf6c1b043efcad758e078e1df",
+            "input_token": 4096,
+            "output": "The text does not mention a movie called \"A League of Their Own\" or any information about an actress playing Thelma in a movie called \"Thel",
+            "ground_truth": "Bill Pullman",
+            "f1_score": 0.0,
+            "latency_ms": 19832.02,
+            "peak_memory_mb": 18812.7
+        },
+        {
+            "id": 166,
+            "sample_id": "04c783fe592055e55b17ada8341007b7125bf0a326f9c58b",
+            "input_token": 4096,
+            "output": "There is no mention of a person named \"Atika Suri\" in the provided text. The text discusses the Hokkien language and its dialects,",
+            "ground_truth": "Dutch East Indies",
+            "f1_score": 0.0,
+            "latency_ms": 16334.89,
+            "peak_memory_mb": 18751.53
+        },
+        {
+            "id": 167,
+            "sample_id": "8a986323dbd4e14655caf5775eb54c222bc8081f890cadb6",
+            "input_token": 4096,
+            "output": "There is no mention of \"Lago District\" in the provided text. However, I can tell you that Tuymazinsky District and Chaunsky District",
+            "ground_truth": "Cabo Delgado Province",
+            "f1_score": 0.0,
+            "latency_ms": 14010.59,
+            "peak_memory_mb": 18746.91
+        },
+        {
+            "id": 168,
+            "sample_id": "ac92ae6728bdfb340f9270a188da65795eec3273550ca498",
+            "input_token": 4096,
+            "output": "The Association for Computing Machinery (ACM) publishes Communications.",
+            "ground_truth": "Association for Computing Machinery",
+            "f1_score": 72.73,
+            "latency_ms": 15028.02,
+            "peak_memory_mb": 18778.62
+        },
+        {
+            "id": 169,
+            "sample_id": "ebd4b995b91cadca20e7b463a7eeb03130f2aa06a4ac30a8",
+            "input_token": 4096,
+            "output": "The text does not mention which county shares a border with Cedar Springs. It only mentions that Cedar Springs is an unincorporated community in west Falls County,",
+            "ground_truth": "Bell County",
+            "f1_score": 7.69,
+            "latency_ms": 16389.46,
+            "peak_memory_mb": 19133.16
+        },
+        {
+            "id": 170,
+            "sample_id": "a39f4cbf6b6f7cb942cd2ce0e1234cae29855f2eaffc1be9",
+            "input_token": 4096,
+            "output": "There is no mention of \"Ciudad Deportiva\" in the provided text. The text does not contain any information about a place called \"Ciudad De",
+            "ground_truth": "Tamaulipas",
+            "f1_score": 0.0,
+            "latency_ms": 17262.8,
+            "peak_memory_mb": 18761.61
+        },
+        {
+            "id": 171,
+            "sample_id": "bfcfaa4a93f27ba34411adfc4a326e54fa373314b0ba15ab",
+            "input_token": 4096,
+            "output": "The text does not mention a person named Ulises Solís. However, it mentions John Cabot (also known as Giovanni Caboto), an Italian navigator and",
+            "ground_truth": "Sebastian Cabot",
+            "f1_score": 8.7,
+            "latency_ms": 17763.1,
+            "peak_memory_mb": 18814.39
+        },
+        {
+            "id": 172,
+            "sample_id": "fd437e73a2d708b551e27a13db723a6aa13ca01f70d63cd1",
+            "input_token": 4096,
+            "output": "Colin Firth played the role of King George VI.",
+            "ground_truth": "Colin Firth",
+            "f1_score": 40.0,
+            "latency_ms": 17358.08,
+            "peak_memory_mb": 18747.16
+        },
+        {
+            "id": 173,
+            "sample_id": "fe8275738f337cc423752bea9b254da45cecdf2559f38352",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a character named Stan or an animated series called \"Insecurity\". The text only talks about Buzz Lightyear and his",
+            "ground_truth": "Denver",
+            "f1_score": 0.0,
+            "latency_ms": 17603.68,
+            "peak_memory_mb": 18824.21
+        },
+        {
+            "id": 174,
+            "sample_id": "c6fe007044674795d280bb474e2adc9dc8bacd8853a9cef5",
+            "input_token": 4096,
+            "output": "Thailand.",
+            "ground_truth": "Ko Phi Phi Leh",
+            "f1_score": 0.0,
+            "latency_ms": 13618.89,
+            "peak_memory_mb": 18764.79
+        },
+        {
+            "id": 175,
+            "sample_id": "ccbb33282bd009f7844ad8305fadb84e7ede51932fc6a36d",
+            "input_token": 4096,
+            "output": "There is no mention of the \"Federation Cup\" in the provided text. The text discusses the roles and responsibilities of party leaders and whips in the United",
+            "ground_truth": "International Tennis Federation",
+            "f1_score": 8.0,
+            "latency_ms": 14756.68,
+            "peak_memory_mb": 18749.77
+        },
+        {
+            "id": 176,
+            "sample_id": "b6f4cf7f8c262ad66ad3a336c1b5f0dc86e9c8c308b86180",
+            "input_token": 4096,
+            "output": "The text does not mention a specific person as the president of an independent country. However, it mentions East Timor (also known as Timor-Leste)",
+            "ground_truth": "Francisco Guterres",
+            "f1_score": 0.0,
+            "latency_ms": 17883.08,
+            "peak_memory_mb": 19059.19
+        },
+        {
+            "id": 177,
+            "sample_id": "cb9b4679117faad98b982edb6bb06b9a24ec472f8542da17",
+            "input_token": 4096,
+            "output": "There is no mention of a \"King's Speech\" or a character playing the role of the King of England in 1950 in the provided text. The",
+            "ground_truth": "Colin Firth",
+            "f1_score": 0.0,
+            "latency_ms": 20061.77,
+            "peak_memory_mb": 18793.96
+        },
+        {
+            "id": 178,
+            "sample_id": "251bc5c07407b64179dd8add58471e71c3433c6f7efc073a",
+            "input_token": 4096,
+            "output": "The text does not mention a specific body of water near Deptford, London, where Athlete was formed. However, it can be inferred that they were likely",
+            "ground_truth": "River Thames",
+            "f1_score": 0.0,
+            "latency_ms": 19732.68,
+            "peak_memory_mb": 18756.88
+        },
+        {
+            "id": 179,
+            "sample_id": "9cf11c3026ea59b7e28ae4488918a9822f86c5efc4db5883",
+            "input_token": 4096,
+            "output": "The play \"The Happy Journey to Trenton and Camden\" by Thornton Wilder won a Tony Award for Outstanding Revival of a Play in 1993.",
+            "ground_truth": "Pulitzer Prize for Drama",
+            "f1_score": 8.33,
+            "latency_ms": 19529.41,
+            "peak_memory_mb": 18750.52
+        },
+        {
+            "id": 180,
+            "sample_id": "72265eb89876baa2a8ab23c14ad61073f5d9f26c471e1ff9",
+            "input_token": 4096,
+            "output": "The text does not mention where James Watt (the designer of the Lap Engine) was educated. However, it is a well-known fact that James Watt studied at",
+            "ground_truth": "University of Glasgow",
+            "f1_score": 7.69,
+            "latency_ms": 17238.39,
+            "peak_memory_mb": 18757.43
+        },
+        {
+            "id": 181,
+            "sample_id": "d79a4697ef5b7302ea7cb8a81107a462d699843688a3050d",
+            "input_token": 4096,
+            "output": "Matthieu Chedid (also known as -M-)",
+            "ground_truth": "Louis Chedid",
+            "f1_score": 25.0,
+            "latency_ms": 16724.21,
+            "peak_memory_mb": 18742.61
+        },
+        {
+            "id": 182,
+            "sample_id": "a3854b7b279e499bd9263a9c581a5efb025fea9efefa00e6",
+            "input_token": 4096,
+            "output": "There is no mention of \"The Gozzi Altarpiece\" in the provided text. However, there is a mention of Giovanni Bellini's San Gi",
+            "ground_truth": "for the conclave in Rome",
+            "f1_score": 8.7,
+            "latency_ms": 17697.29,
+            "peak_memory_mb": 19275.07
+        },
+        {
+            "id": 183,
+            "sample_id": "dc7a928fdebf66b8a407ec96057d15ff1fc3a243bb3d87f1",
+            "input_token": 4096,
+            "output": "I'm not able to find any information in the provided text about an award being given for arguing that colonies are redundant. The text does mention Cecil Rhodes and his",
+            "ground_truth": "University of Cambridge",
+            "f1_score": 0.0,
+            "latency_ms": 18223.29,
+            "peak_memory_mb": 18780.56
+        },
+        {
+            "id": 184,
+            "sample_id": "1c37a1eea570e7c4746847d7c009499ef543fa2bc6df0eb3",
+            "input_token": 4096,
+            "output": "The text does not mention a specific country being invaded by Germany. However, it mentions Mátyás Szűrös as the provisional president of Hungary from October",
+            "ground_truth": "Lech Wałęsa",
+            "f1_score": 0.0,
+            "latency_ms": 17461.46,
+            "peak_memory_mb": 18760.3
+        },
+        {
+            "id": 185,
+            "sample_id": "09a0e0e18bb78cacdb1e7ec97e97e72798517afc88bed4c1",
+            "input_token": 4096,
+            "output": "The text does not mention a specific location called \"Rotterdam Centrum\" or its mouth. However, it mentions Arti et Amicitiae and Haag",
+            "ground_truth": "Het Scheur",
+            "f1_score": 0.0,
+            "latency_ms": 19851.94,
+            "peak_memory_mb": 18768.48
+        },
+        {
+            "id": 186,
+            "sample_id": "77351e24c1b3474414472073259cea34aa2b7c63234264a6",
+            "input_token": 4096,
+            "output": "Luke Bryan sings \"Home Alone Tonight\" as a duet with Karen Fairchild.",
+            "ground_truth": "Karen Fairchild",
+            "f1_score": 30.77,
+            "latency_ms": 18123.78,
+            "peak_memory_mb": 18771.03
+        },
+        {
+            "id": 187,
+            "sample_id": "40e8c816ba317d696267cad7f758b7be88c0c90eccd2d3ce",
+            "input_token": 4096,
+            "output": "Brooklyn College.",
+            "ground_truth": "City University of New York",
+            "f1_score": 0.0,
+            "latency_ms": 16070.09,
+            "peak_memory_mb": 18757.2
+        },
+        {
+            "id": 188,
+            "sample_id": "a6e0032c62ece331c56364ced53e1c4076c303e4ae287074",
+            "input_token": 4096,
+            "output": "The text does not mention the specific name of the county where WAPL is licensed to broadcast. However, it mentions that WAPL's transmitter site is",
+            "ground_truth": "Green Bay",
+            "f1_score": 0.0,
+            "latency_ms": 17677.98,
+            "peak_memory_mb": 19273.24
+        },
+        {
+            "id": 189,
+            "sample_id": "28e93095b912403dad071f2821bcf6c6bef250f5c506ccc7",
+            "input_token": 4096,
+            "output": "The text does not mention who the first black student admitted to the University of Mississippi (where Robert Khayat was educated) was. However, it is known",
+            "ground_truth": "James Howard Meredith",
+            "f1_score": 0.0,
+            "latency_ms": 18739.86,
+            "peak_memory_mb": 18780.02
+        },
+        {
+            "id": 190,
+            "sample_id": "45b3ff5fd17fddc64c647566139dadd2693cf4488c0e6ec7",
+            "input_token": 4096,
+            "output": "There is no information about The Cleveland Show or a character voiced by Mila Kunis in the provided text. The text discusses the controversy surrounding Natalie Portman's",
+            "ground_truth": "Lacey Chabert",
+            "f1_score": 0.0,
+            "latency_ms": 17519.31,
+            "peak_memory_mb": 18769.61
+        },
+        {
+            "id": 191,
+            "sample_id": "6448aa2df921d10654846a32887ee601b9456dd05da18428",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a song or album called \"Permission to Fly\". The text does mention Patty Loveless' album \"When Fallen Angels",
+            "ground_truth": "Hollywood Records",
+            "f1_score": 0.0,
+            "latency_ms": 16187.43,
+            "peak_memory_mb": 18755.8
+        },
+        {
+            "id": 192,
+            "sample_id": "0d59b836b70226e7bbd830db4030b09426a37d8543da426d",
+            "input_token": 4096,
+            "output": "Cold Crush Records.",
+            "ground_truth": "Kill Rock Stars",
+            "f1_score": 0.0,
+            "latency_ms": 6885.52,
+            "peak_memory_mb": 18763.94
+        },
+        {
+            "id": 193,
+            "sample_id": "64219602b22a98429c3bc6a9c49ae282dd39e6a1b29debe7",
+            "input_token": 4096,
+            "output": "Emilia Galotti.",
+            "ground_truth": "Emilia Galotti",
+            "f1_score": 100.0,
+            "latency_ms": 16456.5,
+            "peak_memory_mb": 18745.82
+        },
+        {
+            "id": 194,
+            "sample_id": "7e74ad75b51dd675970fecb014631c801252981eb2a657d1",
+            "input_token": 4096,
+            "output": "The text does not explicitly state when the majority party gained control of the House. However, it mentions that Republicans regained control of the U.S. House they had",
+            "ground_truth": "the 2010 election",
+            "f1_score": 0.0,
+            "latency_ms": 17024.87,
+            "peak_memory_mb": 18779.5
+        },
+        {
+            "id": 195,
+            "sample_id": "170fdcb3bc67d3485e1d9119c94ecb4accbd49d1a5b342ee",
+            "input_token": 4096,
+            "output": "There is no mention of a person named Margaret Knox or her spouse in the provided text. The text does mention John Knox (1505–1572), who",
+            "ground_truth": "1572",
+            "f1_score": 0.0,
+            "latency_ms": 17699.46,
+            "peak_memory_mb": 19138.32
+        },
+        {
+            "id": 196,
+            "sample_id": "a3ba409a8a3c8bad40a1fa415b981a8227c7d21936a06f17",
+            "input_token": 4096,
+            "output": "Moscow.",
+            "ground_truth": "Yaroslavl Oblast",
+            "f1_score": 0.0,
+            "latency_ms": 14528.4,
+            "peak_memory_mb": 18772.98
+        },
+        {
+            "id": 197,
+            "sample_id": "e34d03a801bfa0de0ee1f5ecd06dbee378a6410d5555f7fe",
+            "input_token": 4096,
+            "output": "There is no information in the provided text about a stadium called \"Al Janoub Stadium\" or its operating league. The text mentions Prince Abdul Aziz bin Mus",
+            "ground_truth": "Qatar Stars League",
+            "f1_score": 7.41,
+            "latency_ms": 17367.71,
+            "peak_memory_mb": 18749.64
+        },
+        {
+            "id": 198,
+            "sample_id": "1c5e70656ffbd6ba33bd853ce406b5efd495e16a3610ed9f",
+            "input_token": 4096,
+            "output": "The text does not mention when the Heptarchy itself was abolished. However, it mentions that Mercia, one of the kingdoms of the Heptarchy,",
+            "ground_truth": "918",
+            "f1_score": 0.0,
+            "latency_ms": 17759.24,
+            "peak_memory_mb": 19153.01
+        },
+        {
+            "id": 199,
+            "sample_id": "665c0eff8918d3eeecbdd3439e19c078253bde37c2977f2c",
+            "input_token": 4096,
+            "output": "The text does not provide information about the average salary of a working person with the same nationality (American) as Aaron Spelling. It only mentions that he was",
+            "ground_truth": "$59,039",
+            "f1_score": 0.0,
+            "latency_ms": 17867.27,
+            "peak_memory_mb": 18828.89
+        },
+        {
+            "id": 200,
+            "sample_id": "1f2d53ab7c6e9f6ae863e4bedf1091966ccc1cfb68374b35",
+            "input_token": 4096,
+            "output": "Santa Clara County.",
+            "ground_truth": "Santa Clara County",
+            "f1_score": 100.0,
+            "latency_ms": 17539.1,
+            "peak_memory_mb": 18746.54
+        }
+    ]
+}

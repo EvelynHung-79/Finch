@@ -1,7 +1,6 @@
 wandb
 multirun.yaml
 storage
-logs
 notebooks
 # ignore the _version.py file
 _version.py
