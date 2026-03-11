@@ -19,5 +19,5 @@ test:
         validation_file: null
         test_file: "data/longbench/narrativeqa.jsonl"
         question_max_length: 64 # length of question
-        context_max_length: 8192 # length of context
+        context_max_length: 18409 # avg context length for narrativeqa
         use_rag: False

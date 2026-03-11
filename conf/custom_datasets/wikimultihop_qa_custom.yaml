@@ -19,5 +19,5 @@ test:
         validation_file: null
         test_file: "data/longbench/2wikimqa.jsonl"
         question_max_length: 64
-        context_max_length: 20000
+        context_max_length: 4887 # avg context length for 2wikimqa
         use_rag: False

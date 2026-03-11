@@ -19,5 +19,5 @@ test:
         validation_file: null
         test_file: "data/longbench/musique.jsonl"
         question_max_length: 64
-        context_max_length: 21000
+        context_max_length: 11214 # avg context length for musique
         use_rag: False
