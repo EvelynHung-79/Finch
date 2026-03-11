@@ -70,10 +70,14 @@ class LanguageModelingQAPredictor(ModelQAPredictor):
                     total_input_token = batch["context_ids"].size(1)
                     # Extract input portion (non-label tokens) for CLM generation
                     if "labels" in batch:
-                        input_ids_for_generation = batch["input_ids"][:, batch["labels"][0] == -100]
+                        # Use per-example label mask (take first example's mask — all examples
+                        # in a batch share the same prompt structure since pad_to_max_length=False
+                        # and batch_size=1)
+                        mask = batch["labels"][0] == -100
+                        input_ids_for_generation = batch["input_ids"][:, mask]
                         input_ids_len = input_ids_for_generation.size(1)
                         attention_mask_for_generation = torch.ones(
-                            (1, input_ids_for_generation.size(1)),
+                            (batch["input_ids"].size(0), input_ids_for_generation.size(1)),
                             dtype=torch.long, device=batch["attention_mask"].device
                         )
                         batch["input_ids"] = input_ids_for_generation

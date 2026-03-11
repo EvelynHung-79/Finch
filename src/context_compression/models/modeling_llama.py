@@ -349,16 +349,19 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
             
             start_generation_time = time.time()
 
-            keys_to_remove = ["split_index", "context_ids", "context_attention_mask", "question_ids", "question_attention_mask"]
-            for key in keys_to_remove:
-                generate_kwargs.pop(key, None)
-
-            generate_kwargs['attention_mask'] = torch.cat([past_attention_mask, attention_mask], dim=-1)
             past_length = past_key_values.get_seq_length()
             dummy_input_ids = torch.zeros((input_ids.shape[0], past_length), dtype=input_ids.dtype, device=input_ids.device)
             full_input_ids = torch.cat([dummy_input_ids, input_ids], dim=1)
+            dummy_attention_mask = torch.ones((input_ids.shape[0], past_length), dtype=attention_mask.dtype, device=attention_mask.device)
+            full_attention_mask = torch.cat([dummy_attention_mask, attention_mask], dim=1)
+
+            keys_to_remove = ["split_index", "context_ids", "context_attention_mask", "question_ids", "question_attention_mask", "attention_mask"]
+            for key in keys_to_remove:
+                generate_kwargs.pop(key, None)
+
             model_output = super().generate(
                 input_ids=full_input_ids,
+                attention_mask=full_attention_mask,
                 use_cache=True,
                 past_key_values=past_key_values,
                 **generate_kwargs
@@ -369,7 +372,7 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                         "generation_time": end_generation_time - start_generation_time}
                         )
             return model_output
-            
+
         else:
             if self.target_token == 4096 and not self.is_full:
                 context_ids_len = context_ids.size(1)
@@ -416,8 +419,6 @@ class LlamaForCompressedCausalLM(LlamaForCausalLM):
                 past_key_values=past_key_values,
                 **generate_kwargs
             )
-            if isinstance(model_output, torch.Tensor):
-                model_output = model_output[:, past_length:]
 
             end_generation_time = time.time()
             accelerator.log({"processing_time": end_processing_time - start_processing_time,
