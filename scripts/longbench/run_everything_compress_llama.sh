@@ -4,26 +4,6 @@ export PROJECT_ROOT=$(pwd)
 export LOGS_ROOT=$(pwd)/logs
 export CUDA_VISIBLE_DEVICES=0
 export WANDB_MODE=disabled
-# export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-
-echo "Testing script execution"
-# chmod +x ./scripts/longbench/narrativeqa/eval_narrativeqa_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/qasper/eval_qasper_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/multifieldqa/eval_multifieldqa_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/wikimqa/eval_wikimqa_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/hotpotqa/eval_hotpotqa_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/musique/eval_musiqueqa_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/summarization/eval_longbench_summarization_llama_govreport.sh
-# chmod +x ./scripts/longbench/summarization/eval_longbench_summarization_llama_qmsum.sh
-# chmod +x ./scripts/longbench/summarization/eval_longbench_summarization_llama_multinews.sh
-# chmod +x ./scripts/longbench/trec/eval_trec_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/samsum/eval_samsum_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/passage_count/eval_passage_count_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/passage_retrieval/eval_passage_retrieval_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/lcc/eval_lcc_compress_llama_zero_shot.sh
-# chmod +x ./scripts/longbench/repobench/eval_repobench_compress_llama_zero_shot.sh
-
-# 以下為任務
 
 # Single-doc
 sh ./scripts/longbench/eval_narrativeqa_compress_llama_zero_shot.sh
@@ -37,12 +17,12 @@ sh ./scripts/longbench/eval_narrativeqa_compress_llama_zero_shot.sh
 
 # Summarization
 # sh ./scripts/longbench/eval_longbench_summarization_llama_govreport.sh
-# sh ./scripts/longbench/eval_longbench_summarization_llama_qmsum.sh #還沒跑
-# sh ./scripts/longbench/eval_longbench_summarization_llama_multinews.sh #還沒跑
+# sh ./scripts/longbench/eval_longbench_summarization_llama_qmsum.sh
+# sh ./scripts/longbench/eval_longbench_summarization_llama_multinews.sh
 
 # Few-Shot Learn
 # sh ./scripts/longbench/eval_trec_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/eval_samsum_compress_llama_zero_shot.sh #還沒跑
+# sh ./scripts/longbench/eval_samsum_compress_llama_zero_shot.sh
 # sh ./scripts/longbench/eval_triviaqa_compress_llama_zero_shot.sh
 
 # Synthetic
@@ -51,7 +31,4 @@ sh ./scripts/longbench/eval_narrativeqa_compress_llama_zero_shot.sh
 
 # Code
 # sh ./scripts/longbench/eval_lcc_compress_llama_zero_shot.sh
-# sh ./scripts/longbench/eval_repobench_compress_llama_zero_shot.sh #還沒跑
-
-
-# nohup bash ./scripts/longbench/run_everything_compress_llama.sh > run.log 2>&1 &
+# sh ./scripts/longbench/eval_repobench_compress_llama_zero_shot.sh
