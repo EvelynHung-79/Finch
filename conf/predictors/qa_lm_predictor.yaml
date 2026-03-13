@@ -1,4 +1,4 @@
-_target_: src.context_compression.predictors.language_modeling_predictor.LanguageModelingQAPredictor
+_target_: src.predictors.language_modeling_predictor.LanguageModelingQAPredictor
 predictor_config:
     metric_name: "longbench_qa"
     max_answer_length: ${custom_datasets.test.data_config.max_answer_length}
@@ -7,7 +7,7 @@ predictor_config:
     temperature: 1.0
     top_k: 50
     top_p: 1.0
-    repetition_penalty: 1.0
+    repetition_penalty: 1.2
     batch_size: ${trainers.training_config.per_device_val_batch_size}
     version_2_with_negative: ${custom_datasets.version_2_with_negative}
     pad_to_max_length: True

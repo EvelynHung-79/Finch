@@ -1,0 +1,2021 @@
+{
+    "configs": {
+        "task_name": "narrativeqa",
+        "target_token": 200000,
+        "split_size": 512,
+        "condition": "question",
+        "normalize": true,
+        "max_length": 512,
+        "context_max_length": 128000,
+        "num_samples_evaluated": 200,
+        "max_answer_length": 128,
+        "temperature": 1.0
+    },
+    "result": {
+        "avg_f1_score": 26.53,
+        "avg_latency": 10326.82,
+        "max_peak_memory": 40197.94
+    },
+    "details": [
+        {
+            "id": 1,
+            "sample_id": "341d214a2c377691bf20e5a30b8f7979696bd19141ad9c9f",
+            "input_token": 31341,
+            "output": "He lives with the Mulvilles at their home in Wimbledon.",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "f1_score": 50.0,
+            "latency_ms": 10649.04,
+            "peak_memory_mb": 22808.65
+        },
+        {
+            "id": 2,
+            "sample_id": "26c6325283dece0b557e34cde9a5c57999ec5c68782e8194",
+            "input_token": 31385,
+            "output": "Because she is already engrossed by one object, her heart entirely belongs to Henry.",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "f1_score": 26.09,
+            "latency_ms": 9290.21,
+            "peak_memory_mb": 27240.13
+        },
+        {
+            "id": 3,
+            "sample_id": "5b8d6fdd30a297e508ebb484f172ca5bce8d31b340eb3506",
+            "input_token": 8019,
+            "output": "On Atlas' mountain, within a cavern by a secret fountain.",
+            "ground_truth": "The Atlas Mountains",
+            "f1_score": 20.0,
+            "latency_ms": 1914.59,
+            "peak_memory_mb": 21670.92
+        },
+        {
+            "id": 4,
+            "sample_id": "68fc4dee839213b5259d41718909195c2f5274665bc18036",
+            "input_token": 9018,
+            "output": "To persuade Socrates to escape from prison.",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "f1_score": 33.33,
+            "latency_ms": 1957.38,
+            "peak_memory_mb": 18623.77
+        },
+        {
+            "id": 5,
+            "sample_id": "36232c9c63d19d282643657b3da5b688cb14e3b44009c494",
+            "input_token": 37022,
+            "output": "Baron Henry wanted to make an example out of Otto, and by maiming him rather than killing him outright, he could use the boy as a symbol of his power over the Vuelphs. By leaving Otto alive but crippled, Baron Henry hoped to break the spirit of the young baron and prevent any future resistance from the Vuelph family. Additionally, having Otto live with a disability would serve as a reminder to others in the region of the consequences of crossing Baron Henry or the Roderburgs.",
+            "ground_truth": "Otto was so young.",
+            "f1_score": 5.13,
+            "latency_ms": 22674.73,
+            "peak_memory_mb": 25446.38
+        },
+        {
+            "id": 6,
+            "sample_id": "0bf1995158cbf08134d5dc15475c27f38b3ab5441c422419",
+            "input_token": 13467,
+            "output": "At least six hours.",
+            "ground_truth": "Six hours.",
+            "f1_score": 66.67,
+            "latency_ms": 2811.49,
+            "peak_memory_mb": 23818.64
+        },
+        {
+            "id": 7,
+            "sample_id": "9fbcbb5460066a68460ba92626c25371e0a1ff65b3bd5e84",
+            "input_token": 31077,
+            "output": "Lisa.",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "f1_score": 50.0,
+            "latency_ms": 7536.05,
+            "peak_memory_mb": 24650.64
+        },
+        {
+            "id": 8,
+            "sample_id": "f9cfda8abcc78f9e2f492d4f58ee4996430e9a8911e29726",
+            "input_token": 46673,
+            "output": "Janosz Poha.",
+            "ground_truth": "Dr. Janosz Poha",
+            "f1_score": 80.0,
+            "latency_ms": 14091.69,
+            "peak_memory_mb": 30849.4
+        },
+        {
+            "id": 9,
+            "sample_id": "58b8a46c20c05540367b90490846c4f9808db630026b28d4",
+            "input_token": 31341,
+            "output": "American.",
+            "ground_truth": "She is an American.",
+            "f1_score": 50.0,
+            "latency_ms": 7652.8,
+            "peak_memory_mb": 29380.42
+        },
+        {
+            "id": 10,
+            "sample_id": "c89fd516348b68f96538948b052cb10d5b6f21bc441f5a55",
+            "input_token": 8019,
+            "output": "The lying scribe.",
+            "ground_truth": "The scribe.",
+            "f1_score": 66.67,
+            "latency_ms": 1600.02,
+            "peak_memory_mb": 21653.1
+        },
+        {
+            "id": 11,
+            "sample_id": "67933dc11fce5ce5b80acc04541f0442117aca5eccc06b6f",
+            "input_token": 36200,
+            "output": "Because he has knowledge and experience from a past war, specifically World War I. They think his ideas on tactics may have value for their raid masters.",
+            "ground_truth": "Because he fought in the first world war.",
+            "f1_score": 24.24,
+            "latency_ms": 12958.78,
+            "peak_memory_mb": 25108.52
+        },
+        {
+            "id": 12,
+            "sample_id": "b097807317fd6df3e69b46d4332b558f2d6c7f1f893770a6",
+            "input_token": 16480,
+            "output": "A uniformed crowd, people looking very well cared for and smelling strongly of carbolic, all hairless or shorn.",
+            "ground_truth": "ones that are vague",
+            "f1_score": 0.0,
+            "latency_ms": 4999.85,
+            "peak_memory_mb": 24379.0
+        },
+        {
+            "id": 13,
+            "sample_id": "24c995f1a10e348519cdc6cd24685ab64bcf6454554de945",
+            "input_token": 11267,
+            "output": "Fifty years.",
+            "ground_truth": "50 years",
+            "f1_score": 50.0,
+            "latency_ms": 2258.26,
+            "peak_memory_mb": 20359.61
+        },
+        {
+            "id": 14,
+            "sample_id": "8134d2aaf4e735e59f38656a3c804171a8d1084faef2da93",
+            "input_token": 11346,
+            "output": "Their daughter, Virginie.",
+            "ground_truth": "Their daughter, Virgine. ",
+            "f1_score": 66.67,
+            "latency_ms": 2367.03,
+            "peak_memory_mb": 19630.75
+        },
+        {
+            "id": 15,
+            "sample_id": "321a85aa34669657c041d72547da9f30764447d789bf0e2d",
+            "input_token": 11346,
+            "output": "Pierre Grassou.",
+            "ground_truth": "Grassou",
+            "f1_score": 66.67,
+            "latency_ms": 2319.13,
+            "peak_memory_mb": 19641.0
+        },
+        {
+            "id": 16,
+            "sample_id": "31a2673d857b4ae705288436804dd94343b7f7d9bfdd1298",
+            "input_token": 46673,
+            "output": "The slime gets into Dana's bathtub through a mysterious and supernatural means, but it is not explicitly stated in the script. However, based on the context of the story, it appears that the slime may be connected to Vigo, the Carpathian, who has been awakened by Janosz Poha's restoration work at the museum.\n\nAs Venkman investigates strange occurrences around town, he discovers that there are several locations where the psycho-reactive slime seems to be emanating from, including Van Horne Station, an old airshaft under Manhattan. It is possible that this slime is somehow linked to Vigo's presence or influence,",
+            "ground_truth": "The slime gets into Dana's apartment from the bathtub.",
+            "f1_score": 12.5,
+            "latency_ms": 33014.13,
+            "peak_memory_mb": 28075.25
+        },
+        {
+            "id": 17,
+            "sample_id": "7e1df407b7018ef82e2ade488c601066798bbe67a39a6da4",
+            "input_token": 23153,
+            "output": "Elder Simms.",
+            "ground_truth": "That a mule bone is very powerful and can be a weapon.",
+            "f1_score": 0.0,
+            "latency_ms": 5431.5,
+            "peak_memory_mb": 27510.14
+        },
+        {
+            "id": 18,
+            "sample_id": "7efd1cc4cce3770765ac6c7304b68cfe28c83aec18c01577",
+            "input_token": 36200,
+            "output": "Because he has knowledge and experience from a past war, specifically World War I. They think his ideas on tactics may have value for their raid masters.",
+            "ground_truth": "Anthony Rogers has previous wartime and combatant experience.",
+            "f1_score": 17.65,
+            "latency_ms": 13050.77,
+            "peak_memory_mb": 27236.96
+        },
+        {
+            "id": 19,
+            "sample_id": "677af5490eddd9e1d2ecd66ab0d1e038d1f7e7c5e985accf",
+            "input_token": 32899,
+            "output": "Her face is twisted, misshapen.",
+            "ground_truth": "Her face is blurry",
+            "f1_score": 66.67,
+            "latency_ms": 9288.11,
+            "peak_memory_mb": 28300.21
+        },
+        {
+            "id": 20,
+            "sample_id": "8a46cc12564386606f3162cd88cae3ec0f868009efce1d33",
+            "input_token": 9018,
+            "output": "Five.",
+            "ground_truth": "Two",
+            "f1_score": 0.0,
+            "latency_ms": 1693.61,
+            "peak_memory_mb": 22120.51
+        },
+        {
+            "id": 21,
+            "sample_id": "af8f267654c2ca703d2044593d63c658c8716e66306dd65a",
+            "input_token": 13467,
+            "output": "A family quarrel about money.",
+            "ground_truth": "because of the division of proceeds from selling the family business.",
+            "f1_score": 15.38,
+            "latency_ms": 2976.68,
+            "peak_memory_mb": 19818.45
+        },
+        {
+            "id": 22,
+            "sample_id": "b92c3f3f94368153267f267845b8140ccac30015795b574d",
+            "input_token": 36200,
+            "output": "2419 A.D.",
+            "ground_truth": "2419.",
+            "f1_score": 66.67,
+            "latency_ms": 9879.72,
+            "peak_memory_mb": 25874.88
+        },
+        {
+            "id": 23,
+            "sample_id": "949abce7e7abc634fc08ff28f996a235ddd6041358bee155",
+            "input_token": 59820,
+            "output": "To escape the city and find work as a harvest hand.",
+            "ground_truth": "he murdered someone",
+            "f1_score": 0.0,
+            "latency_ms": 21971.59,
+            "peak_memory_mb": 34710.85
+        },
+        {
+            "id": 24,
+            "sample_id": "e39f9c371b47fb74a202d1f30bc46e806791d0ee81b1b2d4",
+            "input_token": 9018,
+            "output": "A slave.",
+            "ground_truth": "Your parents",
+            "f1_score": 0.0,
+            "latency_ms": 1744.86,
+            "peak_memory_mb": 25905.39
+        },
+        {
+            "id": 25,
+            "sample_id": "60cacef36b194be88d2a8a4fa816324ffcb672f336197584",
+            "input_token": 31341,
+            "output": "Lady Coxon is Miss Anvoy's aunt.",
+            "ground_truth": "Lady Coxon is Ruth's aunt.",
+            "f1_score": 72.73,
+            "latency_ms": 8671.05,
+            "peak_memory_mb": 24086.9
+        },
+        {
+            "id": 26,
+            "sample_id": "d22828536f4d6bee11bd1f15f636bddd18fa8f246ef1be6c",
+            "input_token": 32899,
+            "output": "News reporter.",
+            "ground_truth": "Reiko is a reporter.",
+            "f1_score": 40.0,
+            "latency_ms": 8469.56,
+            "peak_memory_mb": 27601.84
+        },
+        {
+            "id": 27,
+            "sample_id": "585ce1f974c0a35526da31a0cdc1541728ffc2df6a73b4f3",
+            "input_token": 9018,
+            "output": "Because the laws of Athens, which he acknowledges as his parents and have nurtured him, would consider him an enemy if he escapes.",
+            "ground_truth": "Because it violates his belief in the  laws of society.",
+            "f1_score": 26.67,
+            "latency_ms": 2863.41,
+            "peak_memory_mb": 22109.45
+        },
+        {
+            "id": 28,
+            "sample_id": "880269c856197f51942d2649c32e0c37955409d7fdb3f369",
+            "input_token": 64136,
+            "output": "Drexl Spivey is shot in the groin with a.38 caliber gun by Clarence Worley.",
+            "ground_truth": "he is shot",
+            "f1_score": 25.0,
+            "latency_ms": 26318.74,
+            "peak_memory_mb": 31932.16
+        },
+        {
+            "id": 29,
+            "sample_id": "0cb4ddf1bedade882d28e7940531bbac3ec45efb1f668635",
+            "input_token": 31341,
+            "output": "She didn't open or read it. She told him to go back and destroy it, which he eventually did after Saltram's death.",
+            "ground_truth": "She declined to read it.",
+            "f1_score": 29.63,
+            "latency_ms": 10714.05,
+            "peak_memory_mb": 31846.47
+        },
+        {
+            "id": 30,
+            "sample_id": "562b8f8423dfb1c0fe308445710a9018f3d4e7508ef87e52",
+            "input_token": 32899,
+            "output": "They were twisted into an insane rictus of fear, with their mouths open and eyes wide and glassy.",
+            "ground_truth": "Twisted in fear",
+            "f1_score": 20.0,
+            "latency_ms": 10836.0,
+            "peak_memory_mb": 27612.46
+        },
+        {
+            "id": 31,
+            "sample_id": "ea7825ba7cc9beff14746f8a82ec525b3b9d536b467cdaba",
+            "input_token": 16480,
+            "output": "He accuses him of being shallow and not understanding the feelings of a great artist.",
+            "ground_truth": "Beerbohm wrote a fictional story about Soames.",
+            "f1_score": 0.0,
+            "latency_ms": 4392.45,
+            "peak_memory_mb": 23907.38
+        },
+        {
+            "id": 32,
+            "sample_id": "b8c1df9064532860efef843054433b6588ec8c89071c027f",
+            "input_token": 32899,
+            "output": "Seven.",
+            "ground_truth": "Seven days",
+            "f1_score": 66.67,
+            "latency_ms": 8393.7,
+            "peak_memory_mb": 25515.55
+        },
+        {
+            "id": 33,
+            "sample_id": "08eb5808e99ec50b74a3b2779c65c533fec812a1e70f5ed3",
+            "input_token": 31077,
+            "output": "The Knight.",
+            "ground_truth": "all but Jof and the Juggler",
+            "f1_score": 0.0,
+            "latency_ms": 7800.08,
+            "peak_memory_mb": 27380.45
+        },
+        {
+            "id": 34,
+            "sample_id": "13bff0d53a16f0e4ea96e342a517d30aab0357d624ee1ceb",
+            "input_token": 31385,
+            "output": "She spent it playing with dogs and reading sentimental novels.",
+            "ground_truth": "she was obsessed with novels.",
+            "f1_score": 40.0,
+            "latency_ms": 8836.48,
+            "peak_memory_mb": 27196.67
+        },
+        {
+            "id": 35,
+            "sample_id": "478201dd5ae2b46b44caacaa387140a11bf5437332820d41",
+            "input_token": 12012,
+            "output": "Nothing. The text does not mention a person named Anderson, but it mentions Jensen and Nordenfeld as the two main characters who interact with each other on the ship.",
+            "ground_truth": "HER BEAUTY",
+            "f1_score": 0.0,
+            "latency_ms": 4094.03,
+            "peak_memory_mb": 22619.14
+        },
+        {
+            "id": 36,
+            "sample_id": "b91ede2d2d08ea6f5f3b894c932b70e141665dd59d334dc8",
+            "input_token": 38146,
+            "output": "He feared that she had been with another man.",
+            "ground_truth": "Her husband abused her",
+            "f1_score": 0.0,
+            "latency_ms": 11296.26,
+            "peak_memory_mb": 26156.97
+        },
+        {
+            "id": 37,
+            "sample_id": "fd7551a90b78405f6b71079bb8565a2c9f60db1b7e4179c8",
+            "input_token": 59820,
+            "output": "Bill died after being shot by Benson, who had been tracking him and Abby. The exact circumstances of his death are not explicitly shown on screen but it is implied that he was killed in the river while trying to escape from Benson's gunfire.",
+            "ground_truth": "He is killed by police.",
+            "f1_score": 17.02,
+            "latency_ms": 28872.23,
+            "peak_memory_mb": 34986.52
+        },
+        {
+            "id": 38,
+            "sample_id": "627d4b1bf8c78ab08d4da01abc81be9e724d1e8bcb2d2e6b",
+            "input_token": 13467,
+            "output": "Holmes's iron constitution is showing symptoms of giving way due to constant hard work, so he has been advised by his doctor to take a complete rest if he wishes to avoid an absolute breakdown; they have come to a small cottage near Poldhu Bay for this purpose.",
+            "ground_truth": "For Holmes' health.",
+            "f1_score": 4.17,
+            "latency_ms": 5981.09,
+            "peak_memory_mb": 26988.33
+        },
+        {
+            "id": 39,
+            "sample_id": "414ea192da69d6665e5ad41f59b34c6e1a8b5a59fa0703e5",
+            "input_token": 46673,
+            "output": "Vigo the Carpathian.",
+            "ground_truth": "Vigo",
+            "f1_score": 66.67,
+            "latency_ms": 14528.79,
+            "peak_memory_mb": 28404.54
+        },
+        {
+            "id": 40,
+            "sample_id": "507378fadb4447d3f857ab09512a7bf0cae2c34083e449c6",
+            "input_token": 31385,
+            "output": "She was carefully attended to the shews of things, and her opinions were such as the generality approved of. She was taught superficial accomplishments without having any taste for them.",
+            "ground_truth": "Nature and books",
+            "f1_score": 6.45,
+            "latency_ms": 11521.86,
+            "peak_memory_mb": 29392.84
+        },
+        {
+            "id": 41,
+            "sample_id": "73705494f8a477420b27dee08ab2c02f30cad6025cd3e388",
+            "input_token": 46673,
+            "output": "Dana's apartment.",
+            "ground_truth": "museum",
+            "f1_score": 0.0,
+            "latency_ms": 14195.88,
+            "peak_memory_mb": 30910.89
+        },
+        {
+            "id": 42,
+            "sample_id": "a8a172aa00eb9de7d74042b9cd27d07cf537b2056b93cf62",
+            "input_token": 32899,
+            "output": "Professor Ikuma Heihachiro.",
+            "ground_truth": "Sadako Yamamura made the tape psionically.",
+            "f1_score": 0.0,
+            "latency_ms": 9059.41,
+            "peak_memory_mb": 29753.44
+        },
+        {
+            "id": 43,
+            "sample_id": "0efa676797a76ec31f8888ffea26cffe75b602ee3a38b7a2",
+            "input_token": 9018,
+            "output": "The Prison of Socrates.",
+            "ground_truth": "In Socrates Cell?",
+            "f1_score": 33.33,
+            "latency_ms": 1881.11,
+            "peak_memory_mb": 22115.27
+        },
+        {
+            "id": 44,
+            "sample_id": "887b45fe14ce901239d9ec0eee625ec5f02c410b1eb426b4",
+            "input_token": 32899,
+            "output": "She threw herself into Mt. Mihara, a volcano that had erupted shortly before her death.",
+            "ground_truth": "She committed suicide.",
+            "f1_score": 11.76,
+            "latency_ms": 10465.83,
+            "peak_memory_mb": 24464.81
+        },
+        {
+            "id": 45,
+            "sample_id": "62fc0808be185047c6e6ec24c916c59def5d1acd30a95861",
+            "input_token": 12012,
+            "output": "There is no mention of a character named Bennett Landsmann or a person named Seth Lazurus in the provided text. The story appears to be about Doctor Nordenfeld and his crew on the Star Queen, dealing with an outbreak of chlorophage, a deadly virus that can wipe out entire populations. If you could provide more context or clarify which characters are involved, I'll do my best to answer your question accurately.",
+            "ground_truth": "because he's a lawyer",
+            "f1_score": 0.0,
+            "latency_ms": 6847.57,
+            "peak_memory_mb": 22835.91
+        },
+        {
+            "id": 46,
+            "sample_id": "41d2d4a499eabd3034b061845ae3c279f5befd0fce60f757",
+            "input_token": 16480,
+            "output": "He never doffed his hat and cape, regardless of the season.",
+            "ground_truth": "always wore a grey waterproof cape and a soft black hat",
+            "f1_score": 31.58,
+            "latency_ms": 4310.37,
+            "peak_memory_mb": 21007.53
+        },
+        {
+            "id": 47,
+            "sample_id": "a5e44b1e2b98f80aabab5f1b8296d0fe66d53b31c1f3e332",
+            "input_token": 37022,
+            "output": "Baron Frederick of Trutz-Drachen.",
+            "ground_truth": "Baron Frederick",
+            "f1_score": 66.67,
+            "latency_ms": 10824.36,
+            "peak_memory_mb": 26498.79
+        },
+        {
+            "id": 48,
+            "sample_id": "cf6cd2d8526658bac5ee4a39bc0237021c54eec652d27d1b",
+            "input_token": 31385,
+            "output": "She was carefully attended to the shews of things, and her opinions were such as the generality approved of. She was taught superficial accomplishments without having any taste for them.",
+            "ground_truth": "She educates herself using books and the natural world.",
+            "f1_score": 11.11,
+            "latency_ms": 11515.3,
+            "peak_memory_mb": 28037.14
+        },
+        {
+            "id": 49,
+            "sample_id": "923329f49e6ae0c9f11914e9b90d01a64bc74f6c0dd663bd",
+            "input_token": 23153,
+            "output": "Baptist.",
+            "ground_truth": "The Baptist's supported Dave. ",
+            "f1_score": 0.0,
+            "latency_ms": 5355.29,
+            "peak_memory_mb": 25295.69
+        },
+        {
+            "id": 50,
+            "sample_id": "ba016e084e6954d21521889759d81e159d1977cbf2b3354a",
+            "input_token": 19075,
+            "output": "Lady Augusta Fleming.",
+            "ground_truth": "Louis Leverett",
+            "f1_score": 0.0,
+            "latency_ms": 4223.83,
+            "peak_memory_mb": 23143.43
+        },
+        {
+            "id": 51,
+            "sample_id": "787d7fce3ea3a5afc996204942227e91ad057b882c3d3633",
+            "input_token": 37022,
+            "output": "Some of the most significant themes present throughout \"Otto of the Silver Hand\" include:\n\n1. **Good vs. Evil**: The contrast between good and evil is a recurring theme, with characters like Baron Conrad representing cruelty and violence, while Otto embodies kindness, compassion, and non-violence.\n2. **Redemption and Personal Growth**: Throughout his journey, Otto faces various challenges that test his character, leading to personal growth and redemption. He learns from his experiences and becomes wiser, more compassionate, and stronger.\n3. **The Power of Forgiveness**: Despite being wronged by others, including his father's enemies, Otto chooses",
+            "ground_truth": "Be responsible,keep your word and be wise and peaceful.",
+            "f1_score": 4.08,
+            "latency_ms": 25860.66,
+            "peak_memory_mb": 26857.9
+        },
+        {
+            "id": 52,
+            "sample_id": "040a455faa539cf124460b1b37165be70269fc8b8a9a0c60",
+            "input_token": 32899,
+            "output": "She dies.",
+            "ground_truth": "Tomoko reveals that they watched a video tape with several friends a week ago and received a strange call after watching it. Tomoko is killed while Masami watches.",
+            "f1_score": 0.0,
+            "latency_ms": 8468.16,
+            "peak_memory_mb": 28476.22
+        },
+        {
+            "id": 53,
+            "sample_id": "19ec182d75e69f6f85cc7a4fa8f9ca22b124800bc8736b1d",
+            "input_token": 32899,
+            "output": "They were twisted into an insane rictus of fear, with their mouths open and eyes wide and glassy.",
+            "ground_truth": "Their faces twisted in fear.",
+            "f1_score": 27.27,
+            "latency_ms": 10826.48,
+            "peak_memory_mb": 27816.46
+        },
+        {
+            "id": 54,
+            "sample_id": "86d2cd2994feadad471854df8ce765545fe6bab1cee02259",
+            "input_token": 36200,
+            "output": "The Sinsings.",
+            "ground_truth": "The Sinsings",
+            "f1_score": 100.0,
+            "latency_ms": 9859.12,
+            "peak_memory_mb": 28619.05
+        },
+        {
+            "id": 55,
+            "sample_id": "b03244c8cc2681df1008d27c974d81415336396dff81f06d",
+            "input_token": 59820,
+            "output": "Abby and Ursula.",
+            "ground_truth": "His girlfriend Abby and her sister Linda.",
+            "f1_score": 40.0,
+            "latency_ms": 20721.33,
+            "peak_memory_mb": 34710.11
+        },
+        {
+            "id": 56,
+            "sample_id": "973ac7fc4eb400348ec30dae56ba4d177d0ade45a3529d3e",
+            "input_token": 46673,
+            "output": "They play a song on a tape recorder, specifically \"The Ghostbusters Theme Song\".",
+            "ground_truth": "Take their clothes off",
+            "f1_score": 0.0,
+            "latency_ms": 16074.35,
+            "peak_memory_mb": 34891.49
+        },
+        {
+            "id": 57,
+            "sample_id": "3ab2add236bd7cba3c5f398e53ab0b6581fa82dae827c871",
+            "input_token": 31341,
+            "output": "He is a lecturer and writer, but his writing isn't as fine or showy as his talk. He has many ideas and projects that he announces in circulars and programmes, but they often don't come to fruition. Despite this, people are drawn to him because of the \"lift\" he gives them in terms of interest and inspiration.",
+            "ground_truth": "He does not work.",
+            "f1_score": 3.39,
+            "latency_ms": 15315.98,
+            "peak_memory_mb": 29388.74
+        },
+        {
+            "id": 58,
+            "sample_id": "9420daeb72715dee209b0b33539597d033d14ca5fa6b2365",
+            "input_token": 38146,
+            "output": "Falder.",
+            "ground_truth": "Falder",
+            "f1_score": 100.0,
+            "latency_ms": 10378.32,
+            "peak_memory_mb": 28890.43
+        },
+        {
+            "id": 59,
+            "sample_id": "e726a44d5d159de71612e7733d453f36d881d6f19f484fe4",
+            "input_token": 12012,
+            "output": "There is no mention of a character named Laura in the provided text. The main female character's name is Kathy Brand, and she was kept alive on Kamerun for four years by her father before being taken to Altaira and eventually boarding the Star Queen with Doctor Nordenfeld.",
+            "ground_truth": "Laura attends Harvard Medical school.",
+            "f1_score": 4.08,
+            "latency_ms": 5384.43,
+            "peak_memory_mb": 23565.06
+        },
+        {
+            "id": 60,
+            "sample_id": "1e06ea4077ecabcd5cc72281c2a3e843f0c17dccd8af3183",
+            "input_token": 46673,
+            "output": "A check.",
+            "ground_truth": "key to the city",
+            "f1_score": 0.0,
+            "latency_ms": 13894.36,
+            "peak_memory_mb": 28202.59
+        },
+        {
+            "id": 61,
+            "sample_id": "cffc706d1ed5ecaa2b18b058e30ec11b1f8fc8a42f455048",
+            "input_token": 8019,
+            "output": "A sexless, winged creature.",
+            "ground_truth": "Hermaphroditus.",
+            "f1_score": 0.0,
+            "latency_ms": 1744.05,
+            "peak_memory_mb": 23813.63
+        },
+        {
+            "id": 62,
+            "sample_id": "deaf226b06424a0b0603f5aba885cb4420774c9df944bbf1",
+            "input_token": 11267,
+            "output": "In a cupboard in Madame de Merret's room.",
+            "ground_truth": "In a closet.",
+            "f1_score": 22.22,
+            "latency_ms": 2635.24,
+            "peak_memory_mb": 19154.03
+        },
+        {
+            "id": 63,
+            "sample_id": "acc4bde34060bc451a73e0e1e0d0bc7e1ca93695bc8112a1",
+            "input_token": 65328,
+            "output": "Jezzie.",
+            "ground_truth": "His son Gabe",
+            "f1_score": 0.0,
+            "latency_ms": 23364.07,
+            "peak_memory_mb": 32523.49
+        },
+        {
+            "id": 64,
+            "sample_id": "15ff32c8af396eaac6495b631f649886830d897c008bdc84",
+            "input_token": 23153,
+            "output": "Sanford.",
+            "ground_truth": "Eatonville",
+            "f1_score": 0.0,
+            "latency_ms": 5273.69,
+            "peak_memory_mb": 30056.61
+        },
+        {
+            "id": 65,
+            "sample_id": "077293776804b7d32e78db5ef172d5c960716006e8b446da",
+            "input_token": 13467,
+            "output": "Dr. Richards, who was sent for on a most urgent call to Tredannick Wartha in his carriage.",
+            "ground_truth": "The housekeeper",
+            "f1_score": 0.0,
+            "latency_ms": 4034.04,
+            "peak_memory_mb": 21804.25
+        },
+        {
+            "id": 66,
+            "sample_id": "f4e1da583a42af305bdf0bca385229d260cc7b93af90a426",
+            "input_token": 65328,
+            "output": "The answer is not explicitly stated in the provided text, but based on the context and events leading up to JACOB's death, it can be inferred that he was ultimately consumed by his own demons. The film suggests that JACOB's experiences with war trauma, hallucinations, and supernatural entities have taken a toll on his mental health, and that he may have been driven mad by these forces.\n\nIn particular, the scene where JEZZIE transforms into a demonic creature and attacks JACOB implies that she may have been an external manifestation of his inner turmoil or a symbol of the darkness within himself. When JACOB finally confront",
+            "ground_truth": "One of his fellow soldiers.",
+            "f1_score": 3.96,
+            "latency_ms": 48688.15,
+            "peak_memory_mb": 32841.47
+        },
+        {
+            "id": 67,
+            "sample_id": "90cd90dd2b5ecaa57b899f172cabca1baa2db41646acedd2",
+            "input_token": 12012,
+            "output": "There is no character named \"Landsmann\" in the provided text. The main characters are Nordenfeld (the ship's doctor), Jensen, Kathy Brand (a young girl who was kept alive on Kamerun and brought aboard the Star Queen).",
+            "ground_truth": "A lawyer",
+            "f1_score": 0.0,
+            "latency_ms": 5053.85,
+            "peak_memory_mb": 27464.4
+        },
+        {
+            "id": 68,
+            "sample_id": "8ac0d86e207a81bc5c11e419220042c59535dc8f50204439",
+            "input_token": 31341,
+            "output": "He wants her to use it to buy a good house.",
+            "ground_truth": "Keep it to buy a house ",
+            "f1_score": 53.33,
+            "latency_ms": 8892.29,
+            "peak_memory_mb": 24536.24
+        },
+        {
+            "id": 69,
+            "sample_id": "89fa29fe98311bcd10f72a7d965065e2527f282e89594c37",
+            "input_token": 19075,
+            "output": "To Mrs. Abraham C. Mope, at Bangor, Maine; to Miss Agnes Rich in New York; and also to Lady Augusta Fleming at Brighton.",
+            "ground_truth": "Her mother.",
+            "f1_score": 0.0,
+            "latency_ms": 6511.24,
+            "peak_memory_mb": 24300.95
+        },
+        {
+            "id": 70,
+            "sample_id": "aab61294906308c2c4f4410552bfe47885450370839736ad",
+            "input_token": 32899,
+            "output": "Seven.",
+            "ground_truth": "7 days",
+            "f1_score": 0.0,
+            "latency_ms": 8375.64,
+            "peak_memory_mb": 25893.02
+        },
+        {
+            "id": 71,
+            "sample_id": "c549a937e1ff08308e3afe359c4db27ba066adcabb4b2425",
+            "input_token": 11346,
+            "output": "Virginie Vervelle.",
+            "ground_truth": "Virginie.",
+            "f1_score": 66.67,
+            "latency_ms": 2380.86,
+            "peak_memory_mb": 22667.01
+        },
+        {
+            "id": 72,
+            "sample_id": "91c715bd83e23bb735511450936df79969d1871bd0dda0cc",
+            "input_token": 32899,
+            "output": "She makes a copy of the cursed videotape and shows it to someone else.",
+            "ground_truth": "She made a copy of the tape and gives it to her husband to study.",
+            "f1_score": 48.0,
+            "latency_ms": 10012.42,
+            "peak_memory_mb": 24786.79
+        },
+        {
+            "id": 73,
+            "sample_id": "5eaa334fa7a1d55b36d65745662a6d44a0b13c32a8a773a8",
+            "input_token": 31077,
+            "output": "A man in black, a painter.",
+            "ground_truth": "A monk.",
+            "f1_score": 0.0,
+            "latency_ms": 8364.99,
+            "peak_memory_mb": 27388.07
+        },
+        {
+            "id": 74,
+            "sample_id": "5e4a40a8b41c5d30f46458198614c34f7f789a67796d050d",
+            "input_token": 9018,
+            "output": "They enter into an implied contract that they will obey the laws and government of the city.",
+            "ground_truth": "Comply with the laws",
+            "f1_score": 11.76,
+            "latency_ms": 2443.25,
+            "peak_memory_mb": 21860.07
+        },
+        {
+            "id": 75,
+            "sample_id": "f8c64a0b7b14d8547ec79d736d74a5be64f611f65bd96988",
+            "input_token": 38146,
+            "output": "He jumps from a height.",
+            "ground_truth": "He throws himself down the stairs",
+            "f1_score": 22.22,
+            "latency_ms": 10755.32,
+            "peak_memory_mb": 25724.21
+        },
+        {
+            "id": 76,
+            "sample_id": "26c58dd3a2eb5eb56503bf26f523dd9017bc802edc1d4223",
+            "input_token": 32899,
+            "output": "Making a copy of the cursed videotape and showing it to someone else.",
+            "ground_truth": "Making a copy and showing it to someone else",
+            "f1_score": 84.21,
+            "latency_ms": 9861.52,
+            "peak_memory_mb": 28556.54
+        },
+        {
+            "id": 77,
+            "sample_id": "e4763b2d20ad1b86e79d853759b3c68636b69b8fc58c9a5e",
+            "input_token": 13467,
+            "output": "Brenda.",
+            "ground_truth": "Brenda.",
+            "f1_score": 100.0,
+            "latency_ms": 2801.49,
+            "peak_memory_mb": 23183.1
+        },
+        {
+            "id": 78,
+            "sample_id": "8341f7a6590de673c41b1847546ba9a2b7bef46906443a29",
+            "input_token": 11267,
+            "output": "They pretended to be ill, with Monsieur de Merret staying in his wife's room for 20 days.",
+            "ground_truth": "They stayed in the bedroom for a few days with the sounds of her lover trapped. ",
+            "f1_score": 33.33,
+            "latency_ms": 3283.71,
+            "peak_memory_mb": 19919.93
+        },
+        {
+            "id": 79,
+            "sample_id": "1f4e0b8679c63575a052299e5d266741fe47c6eb672ece9e",
+            "input_token": 31385,
+            "output": "She spent most of her time in solitude and nature, often walking alone or visiting a nearby wood where she would talk to angels and sing hymns. She also visited convents and churches, observing their rituals and ceremonies with a critical eye. Additionally, she would sometimes ride out into the countryside to view ruins, visit historical paintings, or attend concerts at an Irish convent near Lisbon.",
+            "ground_truth": "With her charity",
+            "f1_score": 6.15,
+            "latency_ms": 16154.49,
+            "peak_memory_mb": 24427.85
+        },
+        {
+            "id": 80,
+            "sample_id": "7570a52d69ab93c5f54eba4c45d44a3411650c1e4694760a",
+            "input_token": 64136,
+            "output": "Security guard.",
+            "ground_truth": "A security guard.",
+            "f1_score": 100.0,
+            "latency_ms": 22431.84,
+            "peak_memory_mb": 35109.84
+        },
+        {
+            "id": 81,
+            "sample_id": "d660c82758a6d8d265d8214e779593755f968c1f75acfb87",
+            "input_token": 36200,
+            "output": "radioactive gases.",
+            "ground_truth": "Radioactive gas",
+            "f1_score": 50.0,
+            "latency_ms": 9720.78,
+            "peak_memory_mb": 32993.39
+        },
+        {
+            "id": 82,
+            "sample_id": "141a3f0713e008f2b19cb78757c28d61c8f71427d4613c44",
+            "input_token": 32899,
+            "output": "Izu Pacific Land.",
+            "ground_truth": "Izu Oshima Island",
+            "f1_score": 33.33,
+            "latency_ms": 8697.84,
+            "peak_memory_mb": 28282.22
+        },
+        {
+            "id": 83,
+            "sample_id": "3b93fd7360b75c5207a3de730296a6a1a968289c27ea1d6c",
+            "input_token": 64136,
+            "output": "Alabama's suitcase.",
+            "ground_truth": "A bag that contains cocaine",
+            "f1_score": 0.0,
+            "latency_ms": 22681.4,
+            "peak_memory_mb": 35275.67
+        },
+        {
+            "id": 84,
+            "sample_id": "ef34f858c45b105916d82027347c397ca58151b0a6bd37aa",
+            "input_token": 16480,
+            "output": "A hundred.",
+            "ground_truth": "100.",
+            "f1_score": 0.0,
+            "latency_ms": 3451.45,
+            "peak_memory_mb": 28288.41
+        },
+        {
+            "id": 85,
+            "sample_id": "00e523b3da92cec012d5262c1d0c98507f6c4b67e3c8aaf4",
+            "input_token": 13467,
+            "output": "He stumbled over a watering-pot and upset its contents, deluging both their feet.",
+            "ground_truth": "Holmes accidentally kicks over a water pot",
+            "f1_score": 11.11,
+            "latency_ms": 3732.32,
+            "peak_memory_mb": 20864.79
+        },
+        {
+            "id": 86,
+            "sample_id": "b7b3b83227d5bd105ada694c356855ffe9e2a5e09dd613ab",
+            "input_token": 9018,
+            "output": "A goat.",
+            "ground_truth": "He would turn into an outlaw.",
+            "f1_score": 0.0,
+            "latency_ms": 1744.43,
+            "peak_memory_mb": 19390.5
+        },
+        {
+            "id": 87,
+            "sample_id": "effb0e0c603a8569abcfe4078c09c8c63f3c6f57e85df43c",
+            "input_token": 38146,
+            "output": "Hector Frome.",
+            "ground_truth": "Frome",
+            "f1_score": 66.67,
+            "latency_ms": 10640.24,
+            "peak_memory_mb": 25711.64
+        },
+        {
+            "id": 88,
+            "sample_id": "0db2f34454b48e055fc1f54e54f6f19c4e2bd41c2e52795f",
+            "input_token": 46673,
+            "output": "Dana Barrett.",
+            "ground_truth": "Dana",
+            "f1_score": 66.67,
+            "latency_ms": 14068.22,
+            "peak_memory_mb": 31843.8
+        },
+        {
+            "id": 89,
+            "sample_id": "add987fbf4b13d64b945bf44fb0b7cc5a9284a6a5b75d71c",
+            "input_token": 16480,
+            "output": "His failure to be recognized as a great artist.",
+            "ground_truth": "the his works are not recognized",
+            "f1_score": 30.77,
+            "latency_ms": 3948.98,
+            "peak_memory_mb": 25830.93
+        },
+        {
+            "id": 90,
+            "sample_id": "971da5c683ec66c727895dbbab133b42bd4aff3e75c8eda5",
+            "input_token": 31385,
+            "output": "Eliza.",
+            "ground_truth": "Eliza",
+            "f1_score": 100.0,
+            "latency_ms": 7911.75,
+            "peak_memory_mb": 25148.95
+        },
+        {
+            "id": 91,
+            "sample_id": "7b71f8fab58b267e1a174412725a0d0df25f260d596d9c70",
+            "input_token": 36200,
+            "output": "The Bad Bloods.",
+            "ground_truth": "The Hans",
+            "f1_score": 0.0,
+            "latency_ms": 9864.72,
+            "peak_memory_mb": 28391.67
+        },
+        {
+            "id": 92,
+            "sample_id": "ac44a02780985754f0c439cdc0fa9b0ed3a9f80e76da0304",
+            "input_token": 64136,
+            "output": "The Lyric Theater.",
+            "ground_truth": "At a Detroit theater. ",
+            "f1_score": 40.0,
+            "latency_ms": 22869.03,
+            "peak_memory_mb": 35740.36
+        },
+        {
+            "id": 93,
+            "sample_id": "e1514d530becf70246cb43e50b44a1c615cbbded416ccb15",
+            "input_token": 46673,
+            "output": "Oscar Barrett, the baby boy in the story, is Dana's son.",
+            "ground_truth": "It's her son",
+            "f1_score": 16.67,
+            "latency_ms": 15894.53,
+            "peak_memory_mb": 35498.67
+        },
+        {
+            "id": 94,
+            "sample_id": "fb2d8ee43b24c62eaa479e62d1ac1fabdbb461cc1a60099b",
+            "input_token": 9018,
+            "output": "He will be received as an enemy by his brethren, the laws in the world below.",
+            "ground_truth": "It would have a negative effect",
+            "f1_score": 0.0,
+            "latency_ms": 2453.48,
+            "peak_memory_mb": 24056.18
+        },
+        {
+            "id": 95,
+            "sample_id": "99ff684ab5baa313a2e0a02355fa055b0c4ae1137b44a153",
+            "input_token": 11267,
+            "output": "opened the closet door.",
+            "ground_truth": "Opened the closet",
+            "f1_score": 80.0,
+            "latency_ms": 2327.4,
+            "peak_memory_mb": 19304.4
+        },
+        {
+            "id": 96,
+            "sample_id": "ba3c942a713b66ab70a132aed673b0e9f46faf4727d59f6b",
+            "input_token": 12012,
+            "output": "No one. The story does not mention anyone moving to Chicago for that purpose.",
+            "ground_truth": "Seth Lazarus",
+            "f1_score": 0.0,
+            "latency_ms": 3095.25,
+            "peak_memory_mb": 19788.04
+        },
+        {
+            "id": 97,
+            "sample_id": "a1d871fbe70ac6b9dcec5a8c89c6bf0cf26230b0b4f1968b",
+            "input_token": 11346,
+            "output": "He says that Fougeres is a good fellow, steady and capable of painting portraits.",
+            "ground_truth": "A grand master.",
+            "f1_score": 0.0,
+            "latency_ms": 3019.68,
+            "peak_memory_mb": 19739.97
+        },
+        {
+            "id": 98,
+            "sample_id": "8317d375904e2fcba00401b32177f783d5f8d348a1ef503f",
+            "input_token": 11346,
+            "output": "His lack of recognition as a true artist.",
+            "ground_truth": "He doesn't feel he is a true artist.",
+            "f1_score": 28.57,
+            "latency_ms": 2545.49,
+            "peak_memory_mb": 19648.43
+        },
+        {
+            "id": 99,
+            "sample_id": "dd97ebb3408847191356780310676099e897a13ba1b1b4d0",
+            "input_token": 64136,
+            "output": "Blue Lou Boyle.",
+            "ground_truth": "A mobster named \"Blue Lou Boyle\". ",
+            "f1_score": 75.0,
+            "latency_ms": 22638.26,
+            "peak_memory_mb": 32250.12
+        },
+        {
+            "id": 100,
+            "sample_id": "fa81b8a2b6a29cc83f00088ce2bca908175658075648bad2",
+            "input_token": 38146,
+            "output": "He failed to report himself as required by his ticket-of-leave, and there was a suspicion of him obtaining employment with a forged reference.",
+            "ground_truth": "He failed to report",
+            "f1_score": 32.0,
+            "latency_ms": 13667.06,
+            "peak_memory_mb": 33466.67
+        },
+        {
+            "id": 101,
+            "sample_id": "e3828e0aa23a133903295abea7fdf8d449ce1edf2f202593",
+            "input_token": 38146,
+            "output": "Ruth Honeywill.",
+            "ground_truth": "Ruth Honeywill",
+            "f1_score": 100.0,
+            "latency_ms": 10633.92,
+            "peak_memory_mb": 29823.9
+        },
+        {
+            "id": 102,
+            "sample_id": "1842b0ff1882e545a6d41d5caf67bba5312872423fa48e74",
+            "input_token": 64136,
+            "output": "Tallahassee.",
+            "ground_truth": "Mexico.",
+            "f1_score": 0.0,
+            "latency_ms": 22839.86,
+            "peak_memory_mb": 36013.78
+        },
+        {
+            "id": 103,
+            "sample_id": "d298b30eedffe37aa3082a45a8be4cc7dfe4f2b9cba5dc96",
+            "input_token": 31385,
+            "output": "\"My child, I have not always treated you with kindness—God forgive me!\"",
+            "ground_truth": "That she marry Charles",
+            "f1_score": 0.0,
+            "latency_ms": 9397.44,
+            "peak_memory_mb": 31845.01
+        },
+        {
+            "id": 104,
+            "sample_id": "cb76250ae8598592d1baa7ca35e914646a3d5dcbf8220896",
+            "input_token": 31077,
+            "output": "Are you prepared?",
+            "ground_truth": "If Antonius has succeeded in his \"one meaningful deed.\"",
+            "f1_score": 0.0,
+            "latency_ms": 7899.65,
+            "peak_memory_mb": 27176.6
+        },
+        {
+            "id": 105,
+            "sample_id": "04f150c4bf11012af442b15c455ff708641861c80bd7e7dc",
+            "input_token": 12012,
+            "output": "No one. The story is about a different topic, the \"Doctor\" in question being Nordenfeld, not Lazarus. There's no mention of a character named Lazarus or a murder trial throughout the text provided.",
+            "ground_truth": "bennett landsmann",
+            "f1_score": 0.0,
+            "latency_ms": 4723.54,
+            "peak_memory_mb": 22571.55
+        },
+        {
+            "id": 106,
+            "sample_id": "de0f895b76472481f0f37ea6b4a386d3f6cde97ae64e0516",
+            "input_token": 31385,
+            "output": "That death is a king of terrors when he attacks the vicious man.",
+            "ground_truth": "accomplishments",
+            "f1_score": 0.0,
+            "latency_ms": 9250.69,
+            "peak_memory_mb": 24542.9
+        },
+        {
+            "id": 107,
+            "sample_id": "3cef32e4b61eee93ced7c533804485d3c49ee09560b72120",
+            "input_token": 31077,
+            "output": "A man in black, a painter.",
+            "ground_truth": "a priest",
+            "f1_score": 0.0,
+            "latency_ms": 8356.68,
+            "peak_memory_mb": 27177.95
+        },
+        {
+            "id": 108,
+            "sample_id": "cb00113ac346ae33f58e2d4729f7c2bc5ef5a6e32adc193b",
+            "input_token": 31385,
+            "output": "To escape poverty and ensure Ann's well-being.",
+            "ground_truth": "Because her mother requested it on her deathbed.",
+            "f1_score": 0.0,
+            "latency_ms": 9150.03,
+            "peak_memory_mb": 27203.06
+        },
+        {
+            "id": 109,
+            "sample_id": "28e5088749902173994fdcde40990b3f316d69bdbdaea0f8",
+            "input_token": 13467,
+            "output": "Mortimer Tregennis blames no one, but rather describes it as a \"devilish\" and inexplicable event that is not of this world. He suggests that something has come into their room which has dashed the light of reason from their minds.",
+            "ground_truth": "the devil",
+            "f1_score": 0.0,
+            "latency_ms": 5721.29,
+            "peak_memory_mb": 22964.39
+        },
+        {
+            "id": 110,
+            "sample_id": "eb73d93ce14c59f39742a50530616f774ff426eab7427f99",
+            "input_token": 65328,
+            "output": "Jacob meets Michael Newman on a deserted West Side Pier that juts into the Hudson River.",
+            "ground_truth": "He treated him in Vietnam.",
+            "f1_score": 0.0,
+            "latency_ms": 26188.43,
+            "peak_memory_mb": 32856.13
+        },
+        {
+            "id": 111,
+            "sample_id": "1cf24ba18f6900bb1f182594f614a8da725a8467d6255e08",
+            "input_token": 31341,
+            "output": "American.",
+            "ground_truth": "American",
+            "f1_score": 100.0,
+            "latency_ms": 7755.33,
+            "peak_memory_mb": 32013.11
+        },
+        {
+            "id": 112,
+            "sample_id": "d844057a13c2cc7018e8328dfe10767938b3e28689e359ff",
+            "input_token": 36200,
+            "output": "The Bad Bloods' airships.",
+            "ground_truth": "The Han gang.",
+            "f1_score": 0.0,
+            "latency_ms": 10226.25,
+            "peak_memory_mb": 28384.7
+        },
+        {
+            "id": 113,
+            "sample_id": "76ebc13c929fa3fb7b51d0c58d1d1f86214b096b53f8351b",
+            "input_token": 32899,
+            "output": "When Ryuji dies.",
+            "ground_truth": "After her husband calls her",
+            "f1_score": 0.0,
+            "latency_ms": 8728.06,
+            "peak_memory_mb": 28283.33
+        },
+        {
+            "id": 114,
+            "sample_id": "16cbcc8b763a701d2c65eb13cb180e3195868e65de706ea5",
+            "input_token": 31341,
+            "output": "Miss Anvoy.",
+            "ground_truth": "Ruth Anvoy",
+            "f1_score": 50.0,
+            "latency_ms": 7987.72,
+            "peak_memory_mb": 27446.28
+        },
+        {
+            "id": 115,
+            "sample_id": "1309d6cce29b59587533ab35e031789c33f1186e988ebc91",
+            "input_token": 23153,
+            "output": "They don't explicitly state where they go, but it is implied that they continue to play music together. The scene ends with them still on stage, arguing over a fight between themselves and their friend DAVE gets knocked out by JIM using a mule bone.",
+            "ground_truth": "They both return to Eatonville, Florida. ",
+            "f1_score": 8.33,
+            "latency_ms": 9796.87,
+            "peak_memory_mb": 25269.19
+        },
+        {
+            "id": 116,
+            "sample_id": "640cd8b132ca6e7906758f1b7401c6f0512e5350af0ecbbe",
+            "input_token": 37022,
+            "output": "The medieval Germany, specifically in a time period known as the \"dark or middle ages\". The exact location is not specified but it appears to be set in various castles and towns along rivers such as the Rhine.",
+            "ground_truth": "Germany",
+            "f1_score": 5.88,
+            "latency_ms": 15193.04,
+            "peak_memory_mb": 27462.21
+        },
+        {
+            "id": 117,
+            "sample_id": "d96a627657534494f9c586e0c1b74d6b746c29e35f12a2c4",
+            "input_token": 32899,
+            "output": "He is killed by Sadako.",
+            "ground_truth": "has a heart attack",
+            "f1_score": 0.0,
+            "latency_ms": 8937.92,
+            "peak_memory_mb": 28422.17
+        },
+        {
+            "id": 118,
+            "sample_id": "f833f7b0219b25a96177a2aa6c9b30afadcb6d3fc95235f9",
+            "input_token": 38146,
+            "output": "He worked as a clerk for very good people who knew all about his past and were kind to him, but it didn't last. He then had one small job that also didn't last due to the other clerks finding out about his record. After that, he struggled to find employment because of his reputation as an ex-convict.",
+            "ground_truth": "James How & Son ",
+            "f1_score": 0.0,
+            "latency_ms": 19057.45,
+            "peak_memory_mb": 29072.95
+        },
+        {
+            "id": 119,
+            "sample_id": "979294831f2e204dd0340f8017a76400d0e67bf7feb92629",
+            "input_token": 31341,
+            "output": "He lives with the Mulvilles at their home in Wimbledon.",
+            "ground_truth": "Lives with mulvilles ",
+            "f1_score": 50.0,
+            "latency_ms": 9020.85,
+            "peak_memory_mb": 28221.81
+        },
+        {
+            "id": 120,
+            "sample_id": "0a567230f3e2096d313699858dc654ee517ed5acbc9d96ce",
+            "input_token": 11267,
+            "output": "In a cupboard in Madame de Merret's room.",
+            "ground_truth": "In the closet",
+            "f1_score": 22.22,
+            "latency_ms": 2638.55,
+            "peak_memory_mb": 22439.12
+        },
+        {
+            "id": 121,
+            "sample_id": "42a2c14632d52bae9db7d4ba4ee0e76a033d95762dc7b88b",
+            "input_token": 11346,
+            "output": "He feels that artists laugh at his work and consider him a mediocrity.",
+            "ground_truth": "He feels as the he is still not a real artist.",
+            "f1_score": 19.05,
+            "latency_ms": 2908.81,
+            "peak_memory_mb": 19632.9
+        },
+        {
+            "id": 122,
+            "sample_id": "24b64b063d69befcdfb40fc1cfedc18591ca72fbf30b8d76",
+            "input_token": 32899,
+            "output": "A cursed videotape.",
+            "ground_truth": "A videotape which is cursed and is rumored to bear a curse that kills the viewer in seven days after watching.",
+            "f1_score": 20.0,
+            "latency_ms": 8680.22,
+            "peak_memory_mb": 24792.7
+        },
+        {
+            "id": 123,
+            "sample_id": "9b7e93c37eda3b907a9caa5eba250f8b25484613a10f8d95",
+            "input_token": 64136,
+            "output": "A call girl.",
+            "ground_truth": "Alabama was a call girl.",
+            "f1_score": 66.67,
+            "latency_ms": 22606.4,
+            "peak_memory_mb": 35277.29
+        },
+        {
+            "id": 124,
+            "sample_id": "968946b19201f80e7a25eab638238ca70ec79b905d22bf38",
+            "input_token": 65328,
+            "output": "Jezzie is a mysterious and complex character in the movie \"Jacob's Ladder\". She appears to be Jacob Singer's girlfriend, but her true nature and identity are unclear. Throughout the film, she exhibits strange behavior, such as having an unnatural tongue movement that resembles a snake's, and being able to move with impossible speed and agility.\n\nAs the story unfolds, it becomes clear that Jezzie may not be human at all, but rather some kind of supernatural entity or demon. Her actions become increasingly erratic and menacing, suggesting that she has ulterior motives for interacting with Jacob.\n\nIn one scene, Jacob sees a demonic face behind",
+            "ground_truth": "The woman he dated and lived with after the war.",
+            "f1_score": 3.77,
+            "latency_ms": 48684.32,
+            "peak_memory_mb": 39950.33
+        },
+        {
+            "id": 125,
+            "sample_id": "287326088a17e7eb46973099e2a58e3374d50280f6cb1e27",
+            "input_token": 65328,
+            "output": "Memories, attachments. They burn them all away to free the soul.",
+            "ground_truth": "Your memories and attachments.",
+            "f1_score": 28.57,
+            "latency_ms": 25610.31,
+            "peak_memory_mb": 40197.94
+        },
+        {
+            "id": 126,
+            "sample_id": "a24cee35ff6ec6914bf94c1ef8b6cd4f9730a77d4caaa8b2",
+            "input_token": 9018,
+            "output": "The implied contract between Socrates and the laws of Athens.",
+            "ground_truth": "The social contract.",
+            "f1_score": 20.0,
+            "latency_ms": 2166.22,
+            "peak_memory_mb": 26685.81
+        },
+        {
+            "id": 127,
+            "sample_id": "6400c535cd592c9e7e30d15803baa5c7f98e2c06e7ea1da6",
+            "input_token": 11346,
+            "output": "He says that Fougeres is a good fellow, steady and capable of painting portraits.",
+            "ground_truth": "he calls Grassou a grand master",
+            "f1_score": 11.11,
+            "latency_ms": 3024.22,
+            "peak_memory_mb": 19315.94
+        },
+        {
+            "id": 128,
+            "sample_id": "6207b43d3369505e941b78f47a230efea8edde3b68bf50f4",
+            "input_token": 23153,
+            "output": "Sister Taylor, Sister Thomas and Mrs. Blunt argue in favor of Jim Weston (Dave's opponent) but they also express support for Dave Carter during the trial preparations. However, it is not clear if any of them directly argue on his behalf at some point in the play.",
+            "ground_truth": "Elder Childers",
+            "f1_score": 0.0,
+            "latency_ms": 10142.1,
+            "peak_memory_mb": 22468.61
+        },
+        {
+            "id": 129,
+            "sample_id": "a4d4338ea46bcf775691966f2308ed8e1eae9d4f21581279",
+            "input_token": 23153,
+            "output": "Locking him up in the Mayor's barn until Monday when he would have a trial in the Baptist Church.",
+            "ground_truth": "Jim was banished from his town for two years.",
+            "f1_score": 0.0,
+            "latency_ms": 6995.11,
+            "peak_memory_mb": 24150.99
+        },
+        {
+            "id": 130,
+            "sample_id": "563e90502f5614d7c6767f0d1c54677e8ad7523dd9627bc6",
+            "input_token": 31385,
+            "output": "None. The text mentions that Mary's mother, Eliza, has a partiality to her brother and this causes pain for Mary, but it is not stated which child she favors in comparison to their sibling. In fact, there are only two siblings mentioned by name, Mary and her son (who later dies), so it seems unlikely that Eliza would have another child to compare them with.",
+            "ground_truth": "Eliza favors her son over her daughter.",
+            "f1_score": 14.29,
+            "latency_ms": 16566.03,
+            "peak_memory_mb": 26094.7
+        },
+        {
+            "id": 131,
+            "sample_id": "de8d64e55be4e4abc78ab3c27e7f28ebd28c7484c111b435",
+            "input_token": 37022,
+            "output": "Otto of the Silver Hand.",
+            "ground_truth": "His wise counsel and peaceful nature",
+            "f1_score": 0.0,
+            "latency_ms": 10446.02,
+            "peak_memory_mb": 28634.42
+        },
+        {
+            "id": 132,
+            "sample_id": "cb33b635d4a123fa9708b209bbfa323f19af169d0b71bb2f",
+            "input_token": 31385,
+            "output": "Her husband.",
+            "ground_truth": "Her son",
+            "f1_score": 50.0,
+            "latency_ms": 7895.09,
+            "peak_memory_mb": 28037.75
+        },
+        {
+            "id": 133,
+            "sample_id": "5fdcf93eab07256e5d12a724f77d59505203dda0a1b89a0a",
+            "input_token": 36200,
+            "output": "The Wyoming Valley.",
+            "ground_truth": "Wyoming Valley",
+            "f1_score": 100.0,
+            "latency_ms": 9760.63,
+            "peak_memory_mb": 28391.66
+        },
+        {
+            "id": 134,
+            "sample_id": "a5a146aef10058746200bd69eda1c3dc093261cc97ec32ce",
+            "input_token": 16480,
+            "output": "He thought he was a figment of Max Beerbohm's brain, and that the story about him in \"Inglish Littracher 1890-1900\" was satire rather than fact.",
+            "ground_truth": "He thought he was a fictional character.",
+            "f1_score": 27.59,
+            "latency_ms": 6181.22,
+            "peak_memory_mb": 24359.99
+        },
+        {
+            "id": 135,
+            "sample_id": "0431126a12d83a266d88603f505ac4f1014bcb3d8cc02c10",
+            "input_token": 13467,
+            "output": "A family quarrel about money.",
+            "ground_truth": "The matter of the division of the proceeds from selling the family business.",
+            "f1_score": 15.38,
+            "latency_ms": 2981.6,
+            "peak_memory_mb": 20893.49
+        },
+        {
+            "id": 136,
+            "sample_id": "5c19d56ccc3fd2563e9d5ff9a5683a6ed8ee9ff506797a01",
+            "input_token": 12012,
+            "output": "There is no character named \"Dwyer\" and there is also no mention of an \"in vitro clinic\". The story revolves around the ship's doctor, Nordenfeld, who deals with a possible outbreak of chlorophage on board.",
+            "ground_truth": "Hawaii",
+            "f1_score": 0.0,
+            "latency_ms": 4917.53,
+            "peak_memory_mb": 20098.78
+        },
+        {
+            "id": 137,
+            "sample_id": "82c3336e4f0ee4fc778e163032ecdfcd091dd8c91f50929c",
+            "input_token": 11346,
+            "output": "Pierre Grassou.",
+            "ground_truth": "Pierre Grassou.",
+            "f1_score": 100.0,
+            "latency_ms": 2330.93,
+            "peak_memory_mb": 19760.42
+        },
+        {
+            "id": 138,
+            "sample_id": "7284b797cdd8a5d15d986be4fc7ed72512fe1d164bb8c0db",
+            "input_token": 11267,
+            "output": "She was hiding someone in the cupboard.",
+            "ground_truth": "That she was having an affair. ",
+            "f1_score": 36.36,
+            "latency_ms": 2483.25,
+            "peak_memory_mb": 19625.7
+        },
+        {
+            "id": 139,
+            "sample_id": "989c68a5afa115a48dd9edac8b946a517fae775b6062b3be",
+            "input_token": 32899,
+            "output": "Shoumon bakkari, boukon ga kuru zo. (If you keep playing in the water, the monster will come for you.)",
+            "ground_truth": "Frolic in brine, goblins be thine",
+            "f1_score": 8.7,
+            "latency_ms": 11533.74,
+            "peak_memory_mb": 24783.74
+        },
+        {
+            "id": 140,
+            "sample_id": "78e1602679a5ca1b22f32e665e8c31039b1a0c16a099efe5",
+            "input_token": 11267,
+            "output": "A deserted and mysterious house.",
+            "ground_truth": "The ruins of an abandoned manor. ",
+            "f1_score": 0.0,
+            "latency_ms": 2373.57,
+            "peak_memory_mb": 22665.07
+        },
+        {
+            "id": 141,
+            "sample_id": "d41198bdebd7b9472ae77beecbe8b7e1b7a46dca92d2d8f2",
+            "input_token": 31341,
+            "output": "As a result, Miss Anvoy decided not to give up The Coxon Fund for George Gravener's benefit. Instead, she continued to consider using it for Frank Saltram, despite my reservations about his character. This decision led to further complications in their relationship and ultimately contributed to the decline of Mr. Saltram's fortunes when he began drawing from the fund without producing any new work.",
+            "ground_truth": "They broke off their engagement.",
+            "f1_score": 3.08,
+            "latency_ms": 16457.87,
+            "peak_memory_mb": 24403.12
+        },
+        {
+            "id": 142,
+            "sample_id": "3aeebc5be470ddd2eafefee76cf25d8e6b08cbd669adc9e4",
+            "input_token": 19075,
+            "output": "Miss Vane.",
+            "ground_truth": "Violet Ray.",
+            "f1_score": 0.0,
+            "latency_ms": 4211.96,
+            "peak_memory_mb": 24345.55
+        },
+        {
+            "id": 143,
+            "sample_id": "9b448b0d8f056d1ddebb9503e4560a913dc529309759b358",
+            "input_token": 59820,
+            "output": "Bill.",
+            "ground_truth": "Bill",
+            "f1_score": 100.0,
+            "latency_ms": 20015.81,
+            "peak_memory_mb": 32303.23
+        },
+        {
+            "id": 144,
+            "sample_id": "9faec974fe4711c5b929ebc90f89336aeafe4ad8c5801872",
+            "input_token": 32899,
+            "output": "Yoichi and Tomoko.",
+            "ground_truth": "Masami and Tomoko",
+            "f1_score": 66.67,
+            "latency_ms": 8820.44,
+            "peak_memory_mb": 31602.96
+        },
+        {
+            "id": 145,
+            "sample_id": "33a9901ae9f88659b67c4f203e1a37b1c346d54c42b5b507",
+            "input_token": 36200,
+            "output": "The First World War.",
+            "ground_truth": "World War 1, or The Great War",
+            "f1_score": 44.44,
+            "latency_ms": 9859.66,
+            "peak_memory_mb": 28604.44
+        },
+        {
+            "id": 146,
+            "sample_id": "327947f2fade3b7bda5cfa6d24919d42d2afe66dc15d98d4",
+            "input_token": 11346,
+            "output": "He discovers that his own paintings are hanging in the gallery as masterpieces by famous artists.",
+            "ground_truth": "A number of his own forgeries.",
+            "f1_score": 20.0,
+            "latency_ms": 3028.71,
+            "peak_memory_mb": 23134.66
+        },
+        {
+            "id": 147,
+            "sample_id": "c0442bb0d481a92b102c0a19f1b9ffeb338f9094d0fdea97",
+            "input_token": 65328,
+            "output": "The funeral of Paul, a fellow soldier and friend.",
+            "ground_truth": "Paul's death.",
+            "f1_score": 0.0,
+            "latency_ms": 24757.57,
+            "peak_memory_mb": 32540.25
+        },
+        {
+            "id": 148,
+            "sample_id": "b3234117bf4b7f313d5f79d32cb3a7ad90abf474d9baa814",
+            "input_token": 9018,
+            "output": "A father and child.",
+            "ground_truth": "Citizens are bound to laws the same as children are bound to parents.",
+            "f1_score": 0.0,
+            "latency_ms": 1835.24,
+            "peak_memory_mb": 26680.76
+        },
+        {
+            "id": 149,
+            "sample_id": "2f4afd346731e656a9ea321b5a004ffc71da657b2cf2bb5f",
+            "input_token": 8019,
+            "output": "The coffin.",
+            "ground_truth": "A coffin.",
+            "f1_score": 100.0,
+            "latency_ms": 1517.57,
+            "peak_memory_mb": 18521.31
+        },
+        {
+            "id": 150,
+            "sample_id": "d99cd0d28d5737d137c97f32cd4f4938884b389d7a382687",
+            "input_token": 36200,
+            "output": "1927.",
+            "ground_truth": "2419",
+            "f1_score": 0.0,
+            "latency_ms": 9607.41,
+            "peak_memory_mb": 25106.21
+        },
+        {
+            "id": 151,
+            "sample_id": "e944eedcb7ca073f4325399091571bdfc54a9492d964fe25",
+            "input_token": 37022,
+            "output": "Otto meets old Ursela, who is overjoyed to see him and hugs him tightly. He also explores the strange new surroundings of Drachenhausen Castle, including a chapel where he sees stone statues of deceased Vuelphs and climbs up into the loft under the high peaked roof, where he finds an ancient oaken chest containing worm-eaten books that belonged to some old chaplain of the castle in days gone by. Later, while exploring the courtyard, he discovers the door of Melchior's tower standing open and decides to investigate further.",
+            "ground_truth": "The nephew of Baron Frederick storms the castle and kidnaps Otto",
+            "f1_score": 8.99,
+            "latency_ms": 23998.85,
+            "peak_memory_mb": 29261.34
+        },
+        {
+            "id": 152,
+            "sample_id": "07dc816717f2e2e35ef0d53c75e5c1985eb54cb342416357",
+            "input_token": 64136,
+            "output": "Before the shoot-out, Lee Donowitz grabs a coffee pot and flings hot coffee into Elliot's face. Elliot screams and falls to his knees. Nicholson shoots Lee twice in response. Boris lets loose with his Uzi, hitting Nicholson red with bullets. Dimes yells for Cody (Nicholson) as he sees him get hit. Marvin fires his shotgun from behind the sofa, hitting Nicholson again. The room erupts into chaos as everyone starts shooting at each other.",
+            "ground_truth": "Elliot accidentally reveals himself as an informant.",
+            "f1_score": 5.26,
+            "latency_ms": 41232.62,
+            "peak_memory_mb": 35924.37
+        },
+        {
+            "id": 153,
+            "sample_id": "e7d4896765966f6a5c728acac7feaacf20b9424a57be29ba",
+            "input_token": 23153,
+            "output": "Eatonville.",
+            "ground_truth": "Story did not mention",
+            "f1_score": 0.0,
+            "latency_ms": 5382.18,
+            "peak_memory_mb": 29937.64
+        },
+        {
+            "id": 154,
+            "sample_id": "b379cad63ae59ca3d948327329ba6481b0205675a4669a26",
+            "input_token": 11267,
+            "output": "Madame de Merret.",
+            "ground_truth": "Madame de Merret",
+            "f1_score": 100.0,
+            "latency_ms": 2381.25,
+            "peak_memory_mb": 21281.2
+        },
+        {
+            "id": 155,
+            "sample_id": "b4fc3cd3603720687018d2b4ec677a948aa3555ed8b218f9",
+            "input_token": 31341,
+            "output": "George Gravener was urging Miss Anvoy's father, Mr. Anvoy, to apply for The Coxon Fund on behalf of his daughter Ruth.",
+            "ground_truth": "Keep the money.",
+            "f1_score": 0.0,
+            "latency_ms": 11055.88,
+            "peak_memory_mb": 24402.05
+        },
+        {
+            "id": 156,
+            "sample_id": "1c4fffbc6acfb659de69246ce9d1e1a47a7e0df4f07c467e",
+            "input_token": 16480,
+            "output": "By being projected into a reading-room of the British Museum on June 3, 1997.",
+            "ground_truth": "By selling his soul to the devil.",
+            "f1_score": 11.11,
+            "latency_ms": 4693.73,
+            "peak_memory_mb": 23693.97
+        },
+        {
+            "id": 157,
+            "sample_id": "616db78bbe044951aa6dd2cf7694fa9cb2679093fa94bb25",
+            "input_token": 8019,
+            "output": "Apis.",
+            "ground_truth": "Apis",
+            "f1_score": 100.0,
+            "latency_ms": 1477.08,
+            "peak_memory_mb": 19582.8
+        },
+        {
+            "id": 158,
+            "sample_id": "497f82e4a0a991e4a4dbf9c120e4b0e1b8c0aec1d0eecd15",
+            "input_token": 13467,
+            "output": "Two. Mortimer Tregennis and the doctor, Dr. Richards.",
+            "ground_truth": "2",
+            "f1_score": 0.0,
+            "latency_ms": 3487.82,
+            "peak_memory_mb": 19679.6
+        },
+        {
+            "id": 159,
+            "sample_id": "43867169c16323f8898535ee903c8541238c249da965d6f8",
+            "input_token": 64136,
+            "output": "Alabama Whitman.",
+            "ground_truth": "Alabama Whitman",
+            "f1_score": 100.0,
+            "latency_ms": 22703.35,
+            "peak_memory_mb": 32551.21
+        },
+        {
+            "id": 160,
+            "sample_id": "38169ee3afb1356b30f468b13f180aa30364be96506f31ba",
+            "input_token": 59820,
+            "output": "No one. Bill kills Chuck with a spoke from his bicycle wheel, not a screwdriver.",
+            "ground_truth": "Bill",
+            "f1_score": 14.29,
+            "latency_ms": 23354.62,
+            "peak_memory_mb": 38639.7
+        },
+        {
+            "id": 161,
+            "sample_id": "6feac558ee5f3ecb14b0b926193cc88a083acf356292b42d",
+            "input_token": 11346,
+            "output": "The Vervelle family.",
+            "ground_truth": "The greats",
+            "f1_score": 0.0,
+            "latency_ms": 2382.42,
+            "peak_memory_mb": 26463.51
+        },
+        {
+            "id": 162,
+            "sample_id": "70b284b8df3a6b792b62c91b56a951f6ec946b73a14e8250",
+            "input_token": 46673,
+            "output": "\"Cumbaya\"",
+            "ground_truth": "Auld Lang Syne",
+            "f1_score": 0.0,
+            "latency_ms": 14084.55,
+            "peak_memory_mb": 28077.09
+        },
+        {
+            "id": 163,
+            "sample_id": "cd10cf90d7eb19a9f362b7075c408e6c24e66663e051ee57",
+            "input_token": 11346,
+            "output": "artists laugh at his work.",
+            "ground_truth": "That artists laugh at and ridicule his work.",
+            "f1_score": 76.92,
+            "latency_ms": 2397.79,
+            "peak_memory_mb": 24606.62
+        },
+        {
+            "id": 164,
+            "sample_id": "7098b345b24738b291638f32aa4638357c96f0298ae4a1a0",
+            "input_token": 31385,
+            "output": "No one. The novel ends with the statement that \"Her delicate state of health did not promise long life\" and she is shown to be hastening towards death, suggesting a peaceful end without marriage or romantic entanglements.",
+            "ground_truth": "Charles",
+            "f1_score": 0.0,
+            "latency_ms": 12664.82,
+            "peak_memory_mb": 24427.55
+        },
+        {
+            "id": 165,
+            "sample_id": "0f21dd0fa76866f8616c3241e94707bb5096f62eac7b22d7",
+            "input_token": 11267,
+            "output": "A deserted and mysterious house.",
+            "ground_truth": "Abandon manor",
+            "f1_score": 0.0,
+            "latency_ms": 2382.54,
+            "peak_memory_mb": 22461.97
+        },
+        {
+            "id": 166,
+            "sample_id": "8afafdee3d1ecc8c8c3ed128add65835b825bc8958b760a2",
+            "input_token": 46673,
+            "output": "\"Cumbaya\"",
+            "ground_truth": "Auld Lang Saye",
+            "f1_score": 0.0,
+            "latency_ms": 14095.38,
+            "peak_memory_mb": 28064.8
+        },
+        {
+            "id": 167,
+            "sample_id": "ec7663a53f4cf9f8b08db6e01c53149998f86870fa5e2bf2",
+            "input_token": 11267,
+            "output": "Vendome, on the banks of the Loir.",
+            "ground_truth": "Near the town Vendome",
+            "f1_score": 25.0,
+            "latency_ms": 2700.39,
+            "peak_memory_mb": 24588.73
+        },
+        {
+            "id": 168,
+            "sample_id": "bf3efe2d554a3bc0403a12e8b7789b4a1fd36857536a302c",
+            "input_token": 23153,
+            "output": "Over a woman, Daisy Taylor.",
+            "ground_truth": "For Daisy's affection. ",
+            "f1_score": 0.0,
+            "latency_ms": 5640.11,
+            "peak_memory_mb": 22453.77
+        },
+        {
+            "id": 169,
+            "sample_id": "21584219f298228a2f511fdf76d201926a3f3a1878562e90",
+            "input_token": 65328,
+            "output": "Michael.",
+            "ground_truth": "The US Army chemical weapons division.",
+            "f1_score": 0.0,
+            "latency_ms": 22984.34,
+            "peak_memory_mb": 34189.02
+        },
+        {
+            "id": 170,
+            "sample_id": "54f2f879348f7aee93be9a778ebe8a61a072c924be745986",
+            "input_token": 37022,
+            "output": "She swooned a death-swoon when she thought her husband, Conrad, was dead after being wounded.",
+            "ground_truth": "Because she saw her husband's battle wounds",
+            "f1_score": 19.05,
+            "latency_ms": 12392.48,
+            "peak_memory_mb": 33359.44
+        },
+        {
+            "id": 171,
+            "sample_id": "0269d09695c64f23e4e0555aad0e972d86289e6ad01e92dd",
+            "input_token": 8019,
+            "output": "Strange dreams written upon their brain.",
+            "ground_truth": "Strange dreams.",
+            "f1_score": 50.0,
+            "latency_ms": 1708.94,
+            "peak_memory_mb": 22468.11
+        },
+        {
+            "id": 172,
+            "sample_id": "1a3461af057c1e598b8c78ce5227e30baa7d706e6dcebf9e",
+            "input_token": 11346,
+            "output": "Ville d'Avray, a country-house in the rue Boucherat (in Paris), and another house at Ville d'Avray itself.",
+            "ground_truth": "In a mansion in Ville-d'Avray. ",
+            "f1_score": 21.05,
+            "latency_ms": 3722.26,
+            "peak_memory_mb": 19177.32
+        },
+        {
+            "id": 173,
+            "sample_id": "379ccfa193f4938199579c116c1faa1fa5a90c370c02c280",
+            "input_token": 37022,
+            "output": "Baron Henry attacks Castle Drachenhausen to fulfill an oath he swore, which was that the red cock should crow on Drachenhausen. He also seeks revenge for his uncle's death at the hands of Otto's father, Baron Conrad.",
+            "ground_truth": "Baron Conrad killed his uncle, Baron Frederick.",
+            "f1_score": 19.51,
+            "latency_ms": 15725.42,
+            "peak_memory_mb": 25786.45
+        },
+        {
+            "id": 174,
+            "sample_id": "fbeb825de92309788269da33aa6bd189c7b1d46b997746f4",
+            "input_token": 59820,
+            "output": "Bill died after being shot by Benson, who had been tracking him and Abby. The exact circumstances of his death are not explicitly shown on screen but it is implied that he was killed in the river while trying to escape from Benson's gunfire.",
+            "ground_truth": "he was killed by the police",
+            "f1_score": 17.02,
+            "latency_ms": 28910.02,
+            "peak_memory_mb": 34851.34
+        },
+        {
+            "id": 175,
+            "sample_id": "a4ec8d17e607318bd203d7bf1dd2b9230d7d97641cf1d9c2",
+            "input_token": 23153,
+            "output": "Elder Simms.",
+            "ground_truth": "Elder Simms",
+            "f1_score": 100.0,
+            "latency_ms": 5456.52,
+            "peak_memory_mb": 29299.79
+        },
+        {
+            "id": 176,
+            "sample_id": "2647b0dec2c7dcf97dede643e97d1e4235093b77165c692d",
+            "input_token": 16480,
+            "output": "They stared at him and followed him around, seeming afraid of him.",
+            "ground_truth": "It caused a stir.",
+            "f1_score": 0.0,
+            "latency_ms": 4251.97,
+            "peak_memory_mb": 22525.56
+        },
+        {
+            "id": 177,
+            "sample_id": "32e116c58a3c59fc170aa5f4e1dde414c8f3881872889826",
+            "input_token": 59820,
+            "output": "Abby.",
+            "ground_truth": "Abby",
+            "f1_score": 100.0,
+            "latency_ms": 20280.65,
+            "peak_memory_mb": 31948.22
+        },
+        {
+            "id": 178,
+            "sample_id": "45662812b248370fa585a5422dfbf7866258845c93e7819f",
+            "input_token": 46673,
+            "output": "Governor of this state.",
+            "ground_truth": "Governor",
+            "f1_score": 40.0,
+            "latency_ms": 14376.04,
+            "peak_memory_mb": 34890.06
+        },
+        {
+            "id": 179,
+            "sample_id": "9ccdedc1bdfe2f5c9c2783c15663113648879dff0f68e94c",
+            "input_token": 16480,
+            "output": "It uses a mix of modern English and archaic spellings, but with an added layer of \"phonetic\" misspellings.",
+            "ground_truth": "The English lanuage has evolved.",
+            "f1_score": 10.0,
+            "latency_ms": 5201.28,
+            "peak_memory_mb": 25832.02
+        },
+        {
+            "id": 180,
+            "sample_id": "dc14ba3e85c6c3400f0d61e663b1948b8893b106c37403e5",
+            "input_token": 65328,
+            "output": "The Ladder. It's a powerful mind-altering substance, capable of inducing intense fear and aggression in those who take it. In the film, Michael explains to Jacob that he was part of a secret chemical warfare unit during the Vietnam War, where they synthesized this dark side of human psychology into a potent formula. The goal was to create a drug that would increase aggressive tendencies in soldiers, making them more effective on the battlefield.\n\nHowever, when used by American soldiers, including Jacob's platoon, the effects were catastrophic. Instead of fighting against their enemies, the soldiers turned on each other, engaging in brutal fratricide. This event",
+            "ground_truth": "It makes people crazy and homicidal",
+            "f1_score": 4.0,
+            "latency_ms": 48809.09,
+            "peak_memory_mb": 33268.2
+        },
+        {
+            "id": 181,
+            "sample_id": "48745b35fb74c5b08e6ee08d609f6acc4d2968e0140e0a6c",
+            "input_token": 31385,
+            "output": "No one. They are alone in the Irish convent, with a nun who has entered into conversation with Ann.",
+            "ground_truth": "The duo meet Henry on their travels to Lisbon.",
+            "f1_score": 0.0,
+            "latency_ms": 10072.22,
+            "peak_memory_mb": 32091.04
+        },
+        {
+            "id": 182,
+            "sample_id": "e76cb4d216f09e3bab6d769ae770429fe10498e6a2ca9aad",
+            "input_token": 64136,
+            "output": "The bathroom.",
+            "ground_truth": "In the hotel.",
+            "f1_score": 0.0,
+            "latency_ms": 22502.21,
+            "peak_memory_mb": 35074.39
+        },
+        {
+            "id": 183,
+            "sample_id": "f12f81dc7e8c1770eabc4532db20617e6697be92f1df70f6",
+            "input_token": 65328,
+            "output": "The lawyer, Donald Geary, discovered that Jacob's records showed he was never actually deployed to Vietnam. Instead, it appears that Jacob and his unit were involved in a simulated or \"war game\" exercise in Thailand, rather than actual combat in Da Nang as they had believed. This revelation suggests that the army may have been hiding something from them, which could be connected to the strange experiences and memories that Jacob has been having throughout the film.",
+            "ground_truth": "They were never deployed and were discharged for psychological reasons.",
+            "f1_score": 12.2,
+            "latency_ms": 41306.53,
+            "peak_memory_mb": 39951.76
+        },
+        {
+            "id": 184,
+            "sample_id": "cfed47773fbf92534a78d3d5ab856bdaac7cab28c348ab3f",
+            "input_token": 11267,
+            "output": "Leave a crack at the bottom.",
+            "ground_truth": "Break a piece of the door that she may look on her lover one last time",
+            "f1_score": 0.0,
+            "latency_ms": 2438.0,
+            "peak_memory_mb": 27264.57
+        },
+        {
+            "id": 185,
+            "sample_id": "599409eeecf634d84a56ff6b47703f235f0f655a318e44b0",
+            "input_token": 8019,
+            "output": "On Atlas' mountain, within a cavern by a secret fountain.",
+            "ground_truth": "Witch lives in cave on Atlas Mountains",
+            "f1_score": 26.67,
+            "latency_ms": 1978.41,
+            "peak_memory_mb": 18838.35
+        },
+        {
+            "id": 186,
+            "sample_id": "86ee167f1c1b90775808f5d595a56d8c0fe1b2ff3cc46197",
+            "input_token": 37022,
+            "output": "St. Michaelsburg monastery on the hill.",
+            "ground_truth": "The monastery where he grew up.",
+            "f1_score": 20.0,
+            "latency_ms": 10746.07,
+            "peak_memory_mb": 25310.76
+        },
+        {
+            "id": 187,
+            "sample_id": "a4f3fcfc5fd3a7c726e59cebfa848065b74902ab3517fdff",
+            "input_token": 9018,
+            "output": "A goat.",
+            "ground_truth": "An outlaw",
+            "f1_score": 0.0,
+            "latency_ms": 1748.62,
+            "peak_memory_mb": 22696.41
+        },
+        {
+            "id": 188,
+            "sample_id": "fdf07620fd1004f6da364b2f495439949740b9ea217ba467",
+            "input_token": 19075,
+            "output": "The women.",
+            "ground_truth": "The beauty of the women",
+            "f1_score": 50.0,
+            "latency_ms": 4153.47,
+            "peak_memory_mb": 21161.29
+        },
+        {
+            "id": 189,
+            "sample_id": "034d2735a442e6790227916fa064860a57daf365d3d30f2c",
+            "input_token": 8019,
+            "output": "The naked beauty of their souls.",
+            "ground_truth": "The fears and desires of mankind.",
+            "f1_score": 20.0,
+            "latency_ms": 1701.72,
+            "peak_memory_mb": 19932.08
+        },
+        {
+            "id": 190,
+            "sample_id": "df6c6350671baab25c635bfa495eea90c69a7d201b5fe460",
+            "input_token": 59820,
+            "output": "The mill.",
+            "ground_truth": "Bill worked in a steel mill.",
+            "f1_score": 33.33,
+            "latency_ms": 20237.53,
+            "peak_memory_mb": 30752.71
+        },
+        {
+            "id": 191,
+            "sample_id": "a8c929d6037b84d914b05d984865cbd3651b578544f0e3bf",
+            "input_token": 19075,
+            "output": "The German gentleman.",
+            "ground_truth": "the German professor",
+            "f1_score": 50.0,
+            "latency_ms": 4244.62,
+            "peak_memory_mb": 28301.57
+        },
+        {
+            "id": 192,
+            "sample_id": "f3f4f8f810afa5e12cd332360f52d4f4fe63919cb3fe7b26",
+            "input_token": 38146,
+            "output": "Nine pounds.",
+            "ground_truth": "Ninety pounds",
+            "f1_score": 50.0,
+            "latency_ms": 10397.4,
+            "peak_memory_mb": 27130.22
+        },
+        {
+            "id": 193,
+            "sample_id": "cfc986e72c167c2a8f3bff0498f2f2234bfa038cc8ca9f7f",
+            "input_token": 13467,
+            "output": "He stumbled over a watering-pot and upset its contents, deluging both their feet.",
+            "ground_truth": "Sherlock had wet the floor by overturning a water-filled pot.",
+            "f1_score": 0.0,
+            "latency_ms": 3742.65,
+            "peak_memory_mb": 23912.02
+        },
+        {
+            "id": 194,
+            "sample_id": "d41b617b77c8dddd9d04661856245994ab1c78e88b111632",
+            "input_token": 32899,
+            "output": "He is killed by Sadako.",
+            "ground_truth": "He watches the video and dies of Cardiac arrest.",
+            "f1_score": 15.38,
+            "latency_ms": 8943.1,
+            "peak_memory_mb": 25096.99
+        },
+        {
+            "id": 195,
+            "sample_id": "d4bc46084679d5f1301df1a824097be4c5c47203e0ca2682",
+            "input_token": 23153,
+            "output": "Eatonville.",
+            "ground_truth": "outside town",
+            "f1_score": 0.0,
+            "latency_ms": 5388.55,
+            "peak_memory_mb": 25492.42
+        },
+        {
+            "id": 196,
+            "sample_id": "52c910fb919a865d201b4d6a723f624290e2c663d282315a",
+            "input_token": 13467,
+            "output": "Brenda Tregennis, Mortimer Tregennis.",
+            "ground_truth": "Brenda Tregennis",
+            "f1_score": 66.67,
+            "latency_ms": 3358.16,
+            "peak_memory_mb": 21806.82
+        },
+        {
+            "id": 197,
+            "sample_id": "c22368c99a8cf7d7a3a2bc96d1faeffd21403576f605519b",
+            "input_token": 13467,
+            "output": "Charred ashes.",
+            "ground_truth": "The remains of afire in the fireplace.",
+            "f1_score": 0.0,
+            "latency_ms": 2799.01,
+            "peak_memory_mb": 20450.4
+        },
+        {
+            "id": 198,
+            "sample_id": "230ec746dd2dce443e9338acc52ffc45c3b79b6708ae7c0e",
+            "input_token": 36200,
+            "output": "American Radioactive Gas Corporation.",
+            "ground_truth": "Radioactive gas",
+            "f1_score": 66.67,
+            "latency_ms": 10002.21,
+            "peak_memory_mb": 25870.51
+        },
+        {
+            "id": 199,
+            "sample_id": "a3bfcf39ca219cf1af8a91c3f3e30bdcf3f16f7f8f0f1adb",
+            "input_token": 31077,
+            "output": "The Knight.",
+            "ground_truth": "Everyone except for Jof",
+            "f1_score": 0.0,
+            "latency_ms": 7810.62,
+            "peak_memory_mb": 27847.59
+        },
+        {
+            "id": 200,
+            "sample_id": "a813ddeac39b98eaa48da96b448ec147298ac8b1f370f212",
+            "input_token": 32899,
+            "output": "When Ryuji dies.",
+            "ground_truth": "She received a call from Ryuji during his last minutes alive.",
+            "f1_score": 15.38,
+            "latency_ms": 8737.28,
+            "peak_memory_mb": 27557.26
+        }
+    ]
+}

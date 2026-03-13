@@ -220,5 +220,6 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 .conda/
 
-data/longbench/
+data/longbench_v1/
 data/longbench_v2/
+run.log

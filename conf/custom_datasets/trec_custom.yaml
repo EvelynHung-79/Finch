@@ -1,6 +1,6 @@
 version_2_with_negative: False
 test:
-    _target_: src.context_compression.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
+    _target_: src.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
         prompt: "Given some examples of questions. Please determine the type of the question below."
@@ -17,7 +17,7 @@ test:
         dataset_config_name: null
         train_file: null
         validation_file: null
-        test_file: "data/longbench/trec.jsonl"
+        test_file: "data/longbench_v1/trec.jsonl"
         question_max_length: 64
-        context_max_length: 5177 # avg context length for trec
+        context_max_length: 128000 # avg context length for trec
         use_rag: False

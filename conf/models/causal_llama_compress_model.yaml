@@ -1,6 +1,12 @@
-_target_: "src.context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained"
+_target_: "src.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained"
 pretrained_model_name_or_path: None
 torch_dtype: bfloat16
+device_map: "cuda"
+low_cpu_mem_usage: True
+compression_rate: null
+pin_header: true
+per_head_vote: false
+vote_r: null
 config:
   _target_: "transformers.AutoConfig.from_pretrained"
   pretrained_model_name_or_path: None

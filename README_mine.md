@@ -5,6 +5,19 @@ source venv/bin/activate
 pip install --upgrade pip
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 pip install -r requirements.txt
+
+# Huggingface
+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0
+
+# Copy Dataset
+scp -P 28117 -r -i ~/.ssh/id_ed25519_evelyn_r76134115 ./longbench_v1/ root@38.147.83.26:/root/Finch/data/
+
+# Setup name and gmail
+git config user.name Evelyn
+git config user.email chia20010709@gmail.com
+
+# Clean GPU
+nvidia-smi --query-compute-apps=pid --format=csv,noheader,nounits | awk 'NF{print $1}' | xargs -r kill -9
 ```
 
 ### Remove last commit

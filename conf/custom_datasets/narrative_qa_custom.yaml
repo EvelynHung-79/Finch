@@ -1,6 +1,6 @@
 version_2_with_negative: False
 test:
-    _target_: src.context_compression.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
+    _target_: src.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
         prompt: "You are given a story, which can be either a novel or a movie script, and a question. Answer the question as concisely as you can, using a single phrase if possible. Do not provide any explanation."
@@ -17,7 +17,7 @@ test:
         dataset_config_name: null
         train_file: null
         validation_file: null
-        test_file: "data/longbench/narrativeqa.jsonl"
+        test_file: "data/longbench_v1/narrativeqa.jsonl"
         question_max_length: 64 # length of question
-        context_max_length: 18409 # avg context length for narrativeqa
+        context_max_length: 128000 # avg context length for narrativeqa
         use_rag: False

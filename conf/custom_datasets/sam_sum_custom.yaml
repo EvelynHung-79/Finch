@@ -1,6 +1,6 @@
 version_2_with_negative: False
 test:
-    _target_: src.context_compression.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
+    _target_: src.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
         prompt: "You are given some examples. Summarize the dialogue into a few short sentences."
@@ -17,7 +17,7 @@ test:
         dataset_config_name: null
         train_file: null
         validation_file: null
-        test_file: "data/longbench/samsum.jsonl"
+        test_file: "data/longbench_v1/samsum.jsonl"
         question_max_length: 600
-        context_max_length: 6258 # avg context length for samsum
+        context_max_length: 128000 # avg context length for samsum
         use_rag: False
