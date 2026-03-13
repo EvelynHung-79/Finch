@@ -73,7 +73,9 @@
       "Bash(find /root/Finch/venv -path *llama* -name config.py)",
       "Bash(find /root/Finch/venv/lib/python3.11/site-packages/transformers/models/llama -name *.py)",
       "Bash(grep -r \"Llama-3\\\\|llama-3\" /root/Finch/conf --include=*.yaml)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)"
     ],
     "additionalDirectories": [
       "/root/Finch/scripts/longbench_v1",
