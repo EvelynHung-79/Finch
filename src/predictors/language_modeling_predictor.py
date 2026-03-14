@@ -204,7 +204,11 @@ class LanguageModelingQAPredictor(ModelQAPredictor):
             
             ref_ex = example_id_to_ref.get(s_id, {})
             answer_col = getattr(self.data_config, "answer_column", "answers")
+            question_col = getattr(self.data_config, "question_column", "input")
             ground_truth = ref_ex.get(answer_col, "")[0]
+            input_question = ref_ex.get(question_col, "") if ref_ex else ""
+            if not isinstance(input_question, str):
+                input_question = str(input_question)
             
             sample_score = 0.0
             if ref_ex:
@@ -215,6 +219,7 @@ class LanguageModelingQAPredictor(ModelQAPredictor):
             details_list.append({
                 "id": len(details_list),
                 "input_token": data["input_token"],
+                "input_question": input_question,
                 "output": final_output,
                 "ground_truth": ground_truth,
                 "f1_score": round(sample_score, 2),

@@ -2,6 +2,9 @@ PYTHONPATH=. venv/bin/python3 -m accelerate.commands.launch --config_file \
   conf/accelerate/single_gpu.yaml \
   src/run.py \
   +experiments_longbench_v1=evaluate_triviaqa \
-  models.compression_rate=0.325 \
   models.target_token=3844 \
-  models.split_size=128
+  models.split_size=512 \
+  models.condition="question" \
+  models.normalize=True \
+  models.pin_header=True \
+  models.per_head_vote=True

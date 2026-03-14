@@ -1,0 +1,20 @@
+{
+  "fullKV_scores": {
+    "narrativeqa": 0.2950,
+    "qasper": 0.4457,
+    "multifieldqa_en": 0.5596,
+    "hotpotqa": 0.5795,
+    "2wikimqa": 0.4909,
+    "musique": 0.3255,
+    "gov_report": 0.3430,
+    "qmsum": 0.2512,
+    "multi_news": 0.2692,
+    "trec": 0.7300,
+    "triviaqa": 0.9173,
+    "samsum": 0.4375,
+    "passage_retrieval_en": 1.0000,
+    "passage_count": 0.1250,
+    "lcc": 0.6533,
+    "repobench-p": 0.5475
+  }
+}

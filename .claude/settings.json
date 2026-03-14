@@ -75,7 +75,9 @@
       "Bash(grep -r \"Llama-3\\\\|llama-3\" /root/Finch/conf --include=*.yaml)",
       "Bash(python3:*)",
       "Bash(git commit:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Read(//root/Finch/**)",
+      "Bash(find /root/Finch/conf -name *passage_retrieval* -o -name *retrieval*)"
     ],
     "additionalDirectories": [
       "/root/Finch/scripts/longbench_v1",

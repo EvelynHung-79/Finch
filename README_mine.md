@@ -17,7 +17,7 @@ git config user.name Evelyn
 git config user.email chia20010709@gmail.com
 
 # Clean GPU
-nvidia-smi --query-compute-apps=pid --format=csv,noheader,nounits | awk 'NF{print $1}' | xargs -r kill -9
+pkill -f "venv/bin/python3"
 ```
 
 ### Remove last commit

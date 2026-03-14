@@ -38,6 +38,8 @@ def qa_f1_score(prediction, ground_truth):
     f1 = (2 * precision * recall) / (precision + recall)
     return f1
 
+_rouge_scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
+
 def compute_longbench_metric(type, predictions, references):
     total_score = 0.
     for (prediction, ground_truths) in zip(predictions, references):
@@ -91,8 +93,7 @@ def compute_longbench_metric(type, predictions, references):
                 final_score = 0.0 if len(numbers) == 0 else right_num / len(numbers)
                 max_score=max(float(final_score), max_score)
             elif type == "longbench_summarization":
-                scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
-                scores = scorer.score(ground_truth, prediction)
+                scores = _rouge_scorer.score(ground_truth, prediction)
                 score = (scores['rouge1'].fmeasure + scores['rouge2'].fmeasure + scores['rougeL'].fmeasure) / 3
                 max_score = max(score, max_score)
         total_score += max_score

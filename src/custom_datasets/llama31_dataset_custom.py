@@ -99,7 +99,7 @@ class Llama31DatasetCustom(BaseDataset, ABC):
             add_special_tokens=False,
             max_length=max_length,
             padding="max_length" if self.pad_to_max_length else False,
-            truncation="only_first"
+            truncation="longest_first"
         )
 
         # 2. Tokenize question separately (for FINCH's prompt-guided compression)
@@ -127,7 +127,12 @@ class Llama31DatasetCustom(BaseDataset, ABC):
         )
 
         # Add EOS token to input_ids
-        labels = self.tokenizer(targets, add_special_tokens=False)
+        labels = self.tokenizer(
+            targets,
+            add_special_tokens=False,
+            max_length=self.max_answer_length,
+            truncation=True
+        )
         for idx, input_ids in enumerate(tokenized_examples["input_ids"]):
             tokenized_examples["input_ids"][idx] = input_ids + [self.tokenizer.eos_token_id]
             tokenized_examples["attention_mask"][idx] = tokenized_examples["attention_mask"][idx] + [1]
