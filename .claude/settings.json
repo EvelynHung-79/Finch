@@ -77,7 +77,10 @@
       "Bash(git commit:*)",
       "Bash(git add:*)",
       "Read(//root/Finch/**)",
-      "Bash(find /root/Finch/conf -name *passage_retrieval* -o -name *retrieval*)"
+      "Bash(find /root/Finch/conf -name *passage_retrieval* -o -name *retrieval*)",
+      "Read(//home/evelyn_r76134115/work/Finch/**)",
+      "Bash(grep -h \"prompt:\" /root/Finch/conf/custom_datasets/*.yaml)",
+      "Bash(do echo:*)"
     ],
     "additionalDirectories": [
       "/root/Finch/scripts/longbench_v1",

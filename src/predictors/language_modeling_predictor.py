@@ -209,6 +209,10 @@ class LanguageModelingQAPredictor(ModelQAPredictor):
             input_question = ref_ex.get(question_col, "") if ref_ex else ""
             if not isinstance(input_question, str):
                 input_question = str(input_question)
+            # For tasks with no question field (e.g. gov_report, lcc), fall back to
+            # question_prompt so input_question in the log is never an empty string.
+            if not input_question.strip():
+                input_question = getattr(self.data_config, "question_prompt", "") or ""
             
             sample_score = 0.0
             if ref_ex:

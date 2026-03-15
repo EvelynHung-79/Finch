@@ -3,7 +3,7 @@ test:
     _target_: src.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
-        prompt: "You are given a report by a government agency. Write a one-page summary of the report."
+        prompt: "You are given a report by a government agency. Write a one-page summary of the report.\n\nReport:\n{context}\n\nNow, write a one-page summary of the report.\n\nSummary:"
         question_prompt: "Now, write a one-page summary of the report."
         question_column: "input"
         context_column: "context"

@@ -12,6 +12,8 @@ models:
   mode: "attention_score"
   split_size: 512
   target_token: 2972
+  condition: "question"
+  normalize: True
   distance_metric: None
   config:
     pretrained_model_name_or_path: "meta-llama/Llama-3.1-8B-Instruct"

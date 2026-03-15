@@ -3,8 +3,8 @@ test:
     _target_: src.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
-        prompt: "Please complete the code given"
-        question_prompt: "What is the next line of code?"
+        prompt: "Please complete the code given below.\n{context}{input}Next line of code:\n"
+        question_prompt: null
         question_column: "input"
         context_column: "context"
         answer_column: "answers"

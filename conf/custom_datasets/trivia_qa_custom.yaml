@@ -3,7 +3,7 @@ test:
     _target_: src.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
-        prompt: "Answer the question based on the given passage. Only give me the answer and do not output any other words."
+        prompt: "Answer the question based on the given passage. Only give me the answer and do not output any other words. The following are some examples.\n\n{context}\n\n{input}"
         question_prompt: null
         question_column: "input"
         context_column: "context"

@@ -3,7 +3,7 @@ test:
     _target_: src.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
-        prompt: "You are given some examples. Summarize the dialogue into a few short sentences."
+        prompt: "Summarize the dialogue into a few short sentences. The following are some examples.\n\n{context}\n\n{input}"
         question_prompt: null
         question_column: "input"
         context_column: "context"

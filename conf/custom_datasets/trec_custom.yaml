@@ -3,7 +3,7 @@ test:
     _target_: src.custom_datasets.llama31_dataset_custom.Llama31DatasetCustom
     split: "test"
     data_config:
-        prompt: "Given some examples of questions. Please determine the type of the question below."
+        prompt: "Please determine the type of the question below. Here are some examples of questions.\n\n{context}\n{input}"
         question_prompt: null
         question_column: "input"
         context_column: "context"
