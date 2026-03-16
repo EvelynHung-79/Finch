@@ -75,6 +75,11 @@ class Llama31DatasetCustom(BaseDataset, ABC):
         # text continuation (e.g. tasks ending with "Type:", "Summary:", "Answer:").
         self.completion_mode = bool(getattr(data_config, 'completion_mode', False))
 
+        # extract_question_from_input: when the question_column field contains more than
+        # just the question (e.g. triviaqa where input = "Passage:\n...\nQuestion:\nXXX\nAnswer:"),
+        # extract only the line after "Question:" as the FINCH compression condition.
+        self.extract_question_from_input = bool(getattr(data_config, 'extract_question_from_input', False))
+
         tokenizer.add_special_tokens({'pad_token': '<pad>'})
         model.resize_token_embeddings(len(tokenizer))
         self.tokenizer.padding_side = "left"
@@ -98,26 +103,30 @@ class Llama31DatasetCustom(BaseDataset, ABC):
             f"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
         )
 
+    @staticmethod
+    def _extract_question_line(text):
+        """Extract the line after 'Question:' from a passage+question formatted input."""
+        lines = text.split('\n')
+        for i, line in enumerate(lines):
+            if line.strip() == 'Question:' and i + 1 < len(lines):
+                return lines[i + 1].strip()
+        return text.strip()
+
     def generate_question(self, _question):
         """Return the text used as FINCH's compression condition (condition=question)."""
+        q = self._extract_question_line(_question) if self.extract_question_from_input else _question.lstrip()
         if self.use_template:
-            return _question.lstrip()
-        return f"question: {_question.lstrip()}"
+            return q
+        return f"question: {q}"
 
     def generate_context(self, _context):
         """Format the context portion (processed by FINCH chunk-by-chunk)."""
         if self.completion_mode:
-            # Raw text continuation: wrap with bos + user header only (no system header).
+            # Raw text continuation: BOS + plain text, no chat role headers.
+            # (Same as FastKV / LongBench official evaluation for tasks like triviaqa.)
             if self.use_template:
-                return (
-                    f"<|begin_of_text|>"
-                    f"<|start_header_id|>user<|end_header_id|>\n\n"
-                    f"{self._before_context}{_context.lstrip()}{self._ctx_input_sep}"
-                )
-            return (
-                f"<|begin_of_text|>"
-                f"{self.system_prompt.replace('{context}', _context.lstrip())}"
-            )
+                return f"<|begin_of_text|>{self._before_context}{_context.lstrip()}{self._ctx_input_sep}"
+            return f"<|begin_of_text|>{self.system_prompt.replace('{context}', _context.lstrip())}"
         if self.use_template:
             return (
                 f"<|begin_of_text|>"

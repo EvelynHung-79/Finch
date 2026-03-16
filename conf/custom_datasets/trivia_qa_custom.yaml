@@ -12,7 +12,7 @@ test:
         use_fp16: False
         dataset_name: null
         pad_to_max_length: False
-        max_length: 512 # length of system prompt + question (not full sequence)
+        max_length: 2048 # must fit the full input field (passage+question+Answer:), max observed ~1870 tokens
         max_answer_length: 32
         dataset_config_name: null
         train_file: null
@@ -21,4 +21,5 @@ test:
         question_max_length: 2500
         context_max_length: 128000 # avg context length for triviaqa
         use_rag: False
-        completion_mode: True  # raw text continuation, no chat template headers
+        completion_mode: True  # raw text continuation (no chat role headers), matching FastKV/LongBench official eval
+        extract_question_from_input: True  # input field contains "Passage:\n...\nQuestion:\nXXX\nAnswer:", extract only the question for FINCH condition

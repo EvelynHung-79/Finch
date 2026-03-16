@@ -126,9 +126,14 @@ class LanguageModelingQAPredictor(ModelQAPredictor):
                         
                     decoded_text = self.tokenizer.batch_decode(generated_ids_answer, skip_special_tokens=True)
 
+                    is_completion_mode = getattr(self.data_config, 'completion_mode', False)
                     for i, text in enumerate(decoded_text):
                         s_id = sample_ids[i] if isinstance(sample_ids, list) else sample_ids
                         clean_text = text.replace("assistant\n", "").strip()
+                        # completion_mode: take only the first non-empty line so the model
+                        # doesn't include continuation of the passage after the answer.
+                        if is_completion_mode:
+                            clean_text = clean_text.split('\n')[0].strip()
                         
                         valid_scores = transition_scores[i][transition_scores[i] != -np.inf]
                         avg_score = valid_scores.mean().item() if len(valid_scores) > 0 else -1e9
