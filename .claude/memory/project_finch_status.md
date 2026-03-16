@@ -76,3 +76,10 @@ narrativeqa 的大 gap 來自迭代複合誤差，這是 FINCH 方法本身在�
 ## 當前 eval script 設定（narrativeqa）
 - target_token=9137, split_size=512, condition=question, normalize=True, pin_header=True
 - per_head_vote=True, vote_r=null（等於 k）
+
+## Completion Mode 修正（2026-03-15）
+trec / samsum / triviaqa / lcc / repobench-p 是 completion-style 任務（prompt 結尾為答案標籤 `Type:`/`Summary:`/`Answer:`/`Next line of code:`），模型應直接補全，不應套 chat template。
+**根因**：`generate_input()` 原本一律加 `<|eot_id|><|assistant|>` header，導致這些任務輸出格式混亂（幻覺 few-shot context 內容、輸出數字序列等）。
+**修正**：新增 `completion_mode: True` yaml 欄位，`llama31_dataset_custom.py` 讀取後在 `generate_input()` 跳過 chat template headers。
+**已更新 yaml**：trec / samsum / triviaqa / lcc / repobench-p。
+**待重跑**：上述五個任務。

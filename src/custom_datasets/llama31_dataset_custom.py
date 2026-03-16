@@ -71,6 +71,10 @@ class Llama31DatasetCustom(BaseDataset, ABC):
                 self._ctx_input_sep = after_context
                 self._after_input = ""
 
+        # completion_mode: skip Llama 3.1 chat template headers so the model does raw
+        # text continuation (e.g. tasks ending with "Type:", "Summary:", "Answer:").
+        self.completion_mode = bool(getattr(data_config, 'completion_mode', False))
+
         tokenizer.add_special_tokens({'pad_token': '<pad>'})
         model.resize_token_embeddings(len(tokenizer))
         self.tokenizer.padding_side = "left"
@@ -79,6 +83,11 @@ class Llama31DatasetCustom(BaseDataset, ABC):
 
     def generate_input(self, _question):
         """Format the question portion (appended after context_ids during generation)."""
+        if self.completion_mode:
+            # Raw text continuation: no chat headers, model completes directly after the label token.
+            if self.use_template:
+                return f"{_question.lstrip()}{self._after_input}"
+            return f"\nquestion: {_question.lstrip()}"
         if self.use_template:
             return (
                 f"{_question.lstrip()}{self._after_input}"
@@ -97,6 +106,18 @@ class Llama31DatasetCustom(BaseDataset, ABC):
 
     def generate_context(self, _context):
         """Format the context portion (processed by FINCH chunk-by-chunk)."""
+        if self.completion_mode:
+            # Raw text continuation: wrap with bos + user header only (no system header).
+            if self.use_template:
+                return (
+                    f"<|begin_of_text|>"
+                    f"<|start_header_id|>user<|end_header_id|>\n\n"
+                    f"{self._before_context}{_context.lstrip()}{self._ctx_input_sep}"
+                )
+            return (
+                f"<|begin_of_text|>"
+                f"{self.system_prompt.replace('{context}', _context.lstrip())}"
+            )
         if self.use_template:
             return (
                 f"<|begin_of_text|>"

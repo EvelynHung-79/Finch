@@ -46,9 +46,9 @@ class LanguageModelingQAPredictor(ModelQAPredictor):
         all_preds_for_metric = {}
         example_id_to_ref = {ex[self.data_config.id_column]: ex for ex in self.eval_examples}
 
-        dataset_index = 0 
+        dataset_index = 0
         aggregated_results = {}
-        
+
         for step, batch in tqdm(enumerate(dataloader), total=len(dataloader), desc="Predicting"):
             batch_size = batch["input_ids"].size(0)
             

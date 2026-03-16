@@ -21,3 +21,4 @@ test:
         question_max_length: 600
         context_max_length: 128000 # avg context length for samsum
         use_rag: False
+        completion_mode: True  # raw text continuation, no chat template headers
