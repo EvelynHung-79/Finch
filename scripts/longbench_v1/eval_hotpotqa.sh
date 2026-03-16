@@ -7,4 +7,5 @@ PYTHONPATH=. venv/bin/python3 -m accelerate.commands.launch --config_file \
   models.condition="question" \
   models.normalize=True \
   models.pin_header=True \
-  models.per_head_vote=True
+  models.per_head_vote=True 
+  #4320 \

@@ -7,5 +7,6 @@ PYTHONPATH=. venv/bin/python3 -m accelerate.commands.launch --config_file \
   models.condition="question" \
   models.normalize=True \
   models.pin_header=True \
-  models.per_head_vote=True
-  # trainers.evaluation_config.max_eval_samples=1
+  models.per_head_vote=True 
+  # trainers.evaluation_config.max_eval_samples=20
+  #2741 \

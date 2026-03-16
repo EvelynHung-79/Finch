@@ -7,10 +7,10 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install -r requirements.txt
 
 # Huggingface
-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0
+hf_MsunjexXeNDaolHSNtbppwsykJCmytScVab
 
 # Copy Dataset
-scp -P 28117 -r -i ~/.ssh/id_ed25519_evelyn_r76134115 ./longbench_v1/ root@38.147.83.26:/root/Finch/data/
+scp -r ./longbench_v1/ pod:/root/Finch/data/
 
 # Setup name and gmail
 git config user.name Evelyn
@@ -28,7 +28,7 @@ git push --force-with-lease
 
 ### Run Code in the background
 ```bash
-nohup bash ./scripts/longbench/run_everything_compress_llama.sh > run.log 2>&1 &
+nohup bash ./scripts/run_everything.sh > run.log 2>&1 &
 ```
 
 ### What considers a fair evaluation?
