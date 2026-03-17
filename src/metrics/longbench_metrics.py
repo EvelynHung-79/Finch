@@ -68,10 +68,14 @@ def compute_longbench_metric(type, predictions, references):
                 all_lines = prediction.lstrip('\n').split('\n')
                 prediction = ""
                 for line in all_lines:
-                    if ('`' not in line) and ('#' not in line) and ('//' not in line):
+                    # Skip markdown fences, pure comment lines, and C++ comment lines.
+                    # Use startswith('#') so inline comments (e.g. "code  # noqa") are kept.
+                    if ('`' not in line) and (not line.lstrip().startswith('#')) and ('//' not in line):
                         prediction = line
                         break
-                max_score = max(fuzz.ratio(prediction, ground_truth) / 100, max_score)
+                # Strip leading whitespace from ground_truth before comparison so that
+                # indentation differences (tabs vs spaces) don't penalise correct predictions.
+                max_score = max(fuzz.ratio(prediction, ground_truth.strip()) / 100, max_score)
             elif type == "count_score":
                 numbers = re.findall(r"\d+", prediction)
                 right_num = 0

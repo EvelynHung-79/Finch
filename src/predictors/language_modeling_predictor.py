@@ -127,12 +127,15 @@ class LanguageModelingQAPredictor(ModelQAPredictor):
                     decoded_text = self.tokenizer.batch_decode(generated_ids_answer, skip_special_tokens=True)
 
                     is_completion_mode = getattr(self.data_config, 'completion_mode', False)
+                    # extract_first_line (default True): take only the first line in completion_mode
+                    # to prevent passage continuation. Set False for code tasks (lcc, repobench-p)
+                    # where the model may wrap output in a markdown fence and the real code is on
+                    # the second line — the code_sim_score metric already extracts the right line.
+                    extract_first_line = getattr(self.data_config, 'extract_first_line', True)
                     for i, text in enumerate(decoded_text):
                         s_id = sample_ids[i] if isinstance(sample_ids, list) else sample_ids
                         clean_text = text.replace("assistant\n", "").strip()
-                        # completion_mode: take only the first non-empty line so the model
-                        # doesn't include continuation of the passage after the answer.
-                        if is_completion_mode:
+                        if is_completion_mode and extract_first_line:
                             clean_text = clean_text.split('\n')[0].strip()
                         
                         valid_scores = transition_scores[i][transition_scores[i] != -np.inf]

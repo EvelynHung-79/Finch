@@ -80,6 +80,15 @@ class Llama31DatasetCustom(BaseDataset, ABC):
         # extract only the line after "Question:" as the FINCH compression condition.
         self.extract_question_from_input = bool(getattr(data_config, 'extract_question_from_input', False))
 
+        # question_truncation_side: when the question/cross-file context is too long, truncate
+        # from 'left' to keep the END (most recent code).  Default 'right' for all other tasks.
+        self.question_truncation_side = getattr(data_config, 'question_truncation_side', 'right')
+
+        # extract_first_line: in completion_mode, take only the first output line.
+        # Set False for code tasks (lcc, repobench-p) so the metric can extract the real
+        # code line from inside a markdown fence block.
+        self.extract_first_line = bool(getattr(data_config, 'extract_first_line', True))
+
         tokenizer.add_special_tokens({'pad_token': '<pad>'})
         model.resize_token_embeddings(len(tokenizer))
         self.tokenizer.padding_side = "left"
@@ -161,6 +170,7 @@ class Llama31DatasetCustom(BaseDataset, ABC):
         #    FINCH compression condition (step 2), not the actual input sequence.
         inputs = [self.generate_input(q) for q in raw_questions]
         max_length = self.max_seq_length + self.max_answer_length
+        self.tokenizer.truncation_side = self.question_truncation_side
         tokenized_examples = self.tokenizer(
             inputs,
             targets,
@@ -169,6 +179,7 @@ class Llama31DatasetCustom(BaseDataset, ABC):
             padding="max_length" if self.pad_to_max_length else False,
             truncation="longest_first"
         )
+        self.tokenizer.truncation_side = 'right'  # restore default
 
         # 2. Tokenize question separately (for FINCH's prompt-guided compression).
         #    question_prompt overrides the condition signal when the raw input is

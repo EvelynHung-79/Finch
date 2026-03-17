@@ -14,12 +14,12 @@ export WANDB_MODE=disabled
 # Multi-doc
 # sh ./scripts/longbench_v1/eval_wikimqa.sh
 # sh ./scripts/longbench_v1/eval_hotpotqa.sh
-# sh ./scripts/longbench_v1/eval_musiqueqa.sh
+sh ./scripts/longbench_v1/eval_musiqueqa.sh
 
 # Summarization
-# sh ./scripts/longbench_v1/eval_govreport.sh
-# sh ./scripts/longbench_v1/eval_qmsum.sh
-# sh ./scripts/longbench_v1/eval_multinews.sh
+sh ./scripts/longbench_v1/eval_govreport.sh
+sh ./scripts/longbench_v1/eval_qmsum.sh
+sh ./scripts/longbench_v1/eval_multinews.sh
 
 # Few-Shot Learn
 # sh ./scripts/longbench_v1/eval_trec.sh
@@ -32,6 +32,6 @@ export WANDB_MODE=disabled
 
 # Code
 sh ./scripts/longbench_v1/eval_lcc.sh
-# sh ./scripts/longbench_v1/eval_repobench.sh
+sh ./scripts/longbench_v1/eval_repobench.sh
 
 # nohup bash ./scripts/run_everything.sh > run.log 2>&1 &

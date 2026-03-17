@@ -12,7 +12,7 @@ test:
         use_fp16: False
         dataset_name: null
         pad_to_max_length: False
-        max_length: 512 # length of system prompt + question (not full sequence)
+        max_length: 2048 # cross-file context can be long; 512 caused mid-license truncation
         max_answer_length: 64
         dataset_config_name: null
         train_file: null
@@ -22,3 +22,5 @@ test:
         context_max_length: 128000 # avg context length for repobench-p
         use_rag: False
         completion_mode: True  # raw text continuation, no chat template headers
+        extract_first_line: False  # let code_sim_score metric extract the real line from inside markdown fence
+        question_truncation_side: left  # keep END of cross-file context (most recent code), not the beginning

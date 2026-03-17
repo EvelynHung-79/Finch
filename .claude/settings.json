@@ -100,7 +100,8 @@
       "Bash(git -C /root/Finch diff --cached conf/predictors/qa_lm_predictor.yaml)",
       "Bash(git -C /root/Finch diff --cached conf/custom_datasets/trivia_qa_custom.yaml)",
       "Bash(git -C /root/Finch diff --cached conf/custom_datasets/lcc_custom.yaml)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "WebFetch(domain:arxiv.org)"
     ],
     "additionalDirectories": [
       "/root/Finch/scripts/longbench_v1",
