@@ -48,9 +48,24 @@ Llama 3.1 vs Llama 2 分數差，三個根本原因：
 ## 實驗設計原則
 - **target_token 不動（固定 9137）**：需要在同一基準下比較自己的方法 vs 原始 FINCH，不能改 target_token
 
+## Multi-doc QA condition 實驗（2026-03-18）
+
+**實驗**：2wikimqa 改 `condition=all`（原為 `condition=question`）
+
+| condition | F1 |
+|-----------|-----|
+| `question`（v3 baseline） | 32.89 |
+| `all`（實驗） | 24.37 |
+
+**結論**：condition=all 反而更差（-8.5 分）。
+原因：Llama 3.1 attention 本來就比 Llama 2 更平坦，condition=all 把 context self-attention 納入後偏向保留高頻詞，稀釋了 question attention 的聚焦信號，兩跳 evidence 都抓不到。
+**condition=question 仍是最佳設定，不需動 question_prompt。**
+
+Multi-hop 任務的低分是 FINCH 方法的固有限制：single-query compression signal 無法同時保留兩個語義獨立的 evidence，調參無法根本改善。
+
 ## 下一步候選
 - vote_r 方向已確認無效，不再調整
-- condition 改 `all` 可嘗試（目前 question）
+- condition=all 已驗證無效（2wikimqa -8.5 分），不再嘗試
 - 跑其他 LongBench 任務驗證 per_head_vote 泛化性（qasper, multifieldqa_en）
 
 ## 重要程式碼改動記錄

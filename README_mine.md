@@ -7,7 +7,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install -r requirements.txt
 
 # Huggingface
-hf_MsunjexXeNDaolHSNtbppwsykJCmytScVab
+_EWXDELkcgPsWjrlEIpUInlBMYXDFDZbnb
 
 # Copy Dataset
 scp -r ./longbench_v1/ pod:/root/Finch/data/

@@ -100,6 +100,13 @@ def compute_longbench_metric(type, predictions, references):
                 scores = _rouge_scorer.score(ground_truth, prediction)
                 score = (scores['rouge1'].fmeasure + scores['rouge2'].fmeasure + scores['rougeL'].fmeasure) / 3
                 max_score = max(score, max_score)
+            elif type == "choice_accuracy":
+                # LongBench v2: prediction should be a single letter A/B/C/D
+                pred_letter = prediction.strip().upper()
+                # Take only the first character if the model outputs more text
+                pred_letter = pred_letter[0] if pred_letter else ""
+                score = 1.0 if pred_letter == ground_truth.strip().upper() else 0.0
+                max_score = max(score, max_score)
         total_score += max_score
     score = round(100 * total_score / len(predictions), 2)
     return score

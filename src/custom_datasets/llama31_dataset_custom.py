@@ -197,15 +197,30 @@ class Llama31DatasetCustom(BaseDataset, ABC):
         )
 
         # 3. Tokenize context separately (full document, up to context_max_length)
-        #    Context includes chat headers so the full sequence is valid Llama 3.1 format
+        #    Context includes chat headers so the full sequence is valid Llama 3.1 format.
+        #    Use head+tail truncation: keep the first half and last half of the token budget
+        #    so that content near the end of the document is not silently discarded.
         context_texts = [self.generate_context(c) for c in contexts]
-        tokenized_contexts = self.tokenizer(
+        raw_context_ids = self.tokenizer(
             context_texts,
             add_special_tokens=False,
-            max_length=self.max_context_length,
-            padding="max_length" if self.pad_to_max_length else False,
-            truncation=True
-        )
+            truncation=False,
+        )["input_ids"]
+        truncated_ids = []
+        truncated_masks = []
+        for ids in raw_context_ids:
+            if len(ids) <= self.max_context_length:
+                truncated_ids.append(ids)
+                truncated_masks.append([1] * len(ids))
+            else:
+                half = self.max_context_length // 2
+                kept = ids[:half] + ids[-(self.max_context_length - half):]
+                truncated_ids.append(kept)
+                truncated_masks.append([1] * len(kept))
+        tokenized_contexts = {
+            "input_ids": truncated_ids,
+            "attention_mask": truncated_masks,
+        }
 
         # Add EOS token to input_ids
         labels = self.tokenizer(

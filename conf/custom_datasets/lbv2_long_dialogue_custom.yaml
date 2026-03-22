@@ -1,0 +1,23 @@
+version_2_with_negative: False
+test:
+    _target_: src.custom_datasets.llama31_dataset_v2.Llama31DatasetV2
+    split: "test"
+    data_config:
+        prompt: "Read the following context and answer the question by choosing the correct option (A, B, C, or D).\n\nPlease output ONLY the single letter (A, B, C, or D) of the correct option and nothing else.\n\nContext:\n{context}\n\n{input}\n\nAnswer:"
+        question_prompt: null
+        question_column: "input"
+        context_column: "context"
+        answer_column: "answers"
+        id_column: "_id"
+        use_fp16: False
+        dataset_name: null
+        pad_to_max_length: False
+        max_length: 512
+        max_answer_length: 4
+        dataset_config_name: null
+        train_file: null
+        validation_file: null
+        test_file: "data/longbench_v2/Long_dialogue_History_Understanding.json"
+        question_max_length: 256
+        context_max_length: 128000
+        use_rag: False

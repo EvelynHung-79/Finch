@@ -101,7 +101,13 @@
       "Bash(git -C /root/Finch diff --cached conf/custom_datasets/trivia_qa_custom.yaml)",
       "Bash(git -C /root/Finch diff --cached conf/custom_datasets/lcc_custom.yaml)",
       "Bash(git restore:*)",
-      "WebFetch(domain:arxiv.org)"
+      "WebFetch(domain:arxiv.org)",
+      "Bash(cat \"/root/Finch/logs/v3_result \\(new prompt template and penalty=1.0\\)/20260316_145204_2wikimqa.json\")",
+      "Bash(mkdir -p /root/.claude/projects/-root-Finch/memory)",
+      "Bash(cp /root/Finch/.claude/memory/project_finch_status.md /root/.claude/projects/-root-Finch/memory/)",
+      "Bash(/home/evelyn_r76134115/work/Finch/conf/custom_datasets/lbv2_single_doc_qa_custom.yaml:*)",
+      "Bash(ls /home/evelyn_r76134115/work/Finch/conf/custom_datasets/lbv2*)",
+      "Bash(grep \"target_token\" /home/evelyn_r76134115/work/Finch/scripts/longbench_v2/*.sh)"
     ],
     "additionalDirectories": [
       "/root/Finch/scripts/longbench_v1",
